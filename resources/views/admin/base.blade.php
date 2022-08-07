@@ -13,6 +13,7 @@
     <!-- project css file  -->
     <link rel="stylesheet" href="{{ public_path().'/admin/css/al.style.min.css' }}">
     <link rel="stylesheet" href="{{ public_path().'/admin/css/dataTables.min.css' }}">
+    <link rel="stylesheet" href="{{ public_path().'/admin/css/summernote.min.css' }}">
     <!-- project layout css file -->
     <link rel="stylesheet" href="{{ public_path().'/admin/css/layout.c.min.css' }}">
 </head>
@@ -89,262 +90,28 @@
             </form>
 
             <!-- Menu: tab -->
-            <nav>
+            <!--<nav>
                 <div class="nav nav-tabs tab-custom p-1 justify-content-between text-center rounded" role="tablist">
                     <a class="flex-fill py-1 px-2 rounded border-0 nav-link active" id="nav-menu-tab" data-bs-toggle="tab" href="#nav-menu" role="tab">Menu</a>
                     <a class="flex-fill py-1 px-2 rounded border-0 nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab">Profile</a>
                     <a class="flex-fill py-1 px-2 rounded border-0 nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact" role="tab">Contact</a>
                 </div>
-            </nav>
+            </nav>-->
             <!-- Menu: tab content -->
-            <div class="tab-content flex-grow-1 mt-1">
+            <!--<div class="tab-content flex-grow-1 mt-1">
                 <div class="tab-pane fade show active" id="nav-menu">
-                    <!-- Menu: main ul -->
                     <ul class="menu-list">
                         <li class="divider py-2"><small>MAIN</small></li>
-                        <li><a class="m-link active" href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-                        <li><a class="m-link" href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
-                        <li><a class="m-link" href="chat.html"><i class="fa fa-comments"></i> <span>Chat app</span></a></li>
-                        <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Pages"  href="#"><i class="fa fa-file"></i> <span>Pages</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
-        
-                            <!-- Menu: Sub menu ul -->
-                            <ul class="sub-menu collapse" id="menu-Pages">
-                                <li><a class="ms-link" href="profile.html">Profile</a></li>
-                                <li><a class="ms-link" href="timeline.html">Timeline</a></li>
-                                <li><a class="ms-link" href="imagegallery.html">Image Gallery</a></li>
-                                <li><a class="ms-link" href="invoices.html">Invoices</a></li>
-                                <li><a class="ms-link" href="pricing.html">Pricing</a></li>
-                                <li><a class="ms-link" href="teamsboard.html">Teams Board</a></li>
-                                <li><a class="ms-link" href="faqs.html">FAQs</a></li>
-                            </ul>
-                        </li>
-                        <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Authentication"  href="#"><i class="fa fa-lock"></i> <span>Authentication</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
-        
-                            <!-- Menu: Sub menu ul -->
-                            <ul class="sub-menu collapse" id="menu-Authentication">
-                                <li><a class="ms-link" href="auth-signin.html">Sign in</a></li>
-                                <li><a class="ms-link" href="auth-signup.html">Sign up</a></li>
-                                <li><a class="ms-link" href="auth-password-reset.html">Password reset</a></li>
-                                <li><a class="ms-link" href="auth-two-step.html">2-Step Authentication</a></li>
-                                <li><a class="ms-link" href="auth-404.html">404</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="m-link" href="../../../documentation/w-cards.html"><i class="fa fa-puzzle-piece"></i> <span>Widget's</span></a></li>
-        
-                        <li class="divider mt-4 py-2 border-top"><small>DOCUMENTATION</small></li>
-                        <li><a class="m-link" href="../../../documentation/stater-page.html"><i class="fa fa-user"></i> <span>Stater page</span></a></li>
-                        <li><a class="m-link" href="../../../documentation/charts.html"><i class="fa fa-pie-chart"></i> <span>Chart's</span></a></li>
-                        <li><a class="m-link" href="../../../documentation/table.html"><i class="fa fa-table"></i> <span>Table Example</span></a></li>
-                        <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Components"  href="#"><i class="fa fa-diamond"></i> <span>UI Components</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
-        
-                            <!-- Menu: Sub menu ul -->
-                            <ul class="sub-menu collapse" id="menu-Components">
-                                <li><a class="ms-link" href="ui-alerts.html">Alerts</a></li>
-                                <li><a class="ms-link" href="ui-badge.html">Badge</a></li>
-                                <li><a class="ms-link" href="ui-breadcrumb.html">Breadcrumb</a></li>
-                                <li><a class="ms-link" href="ui-buttons.html">Buttons</a></li>
-                                <li><a class="ms-link" href="ui-card.html">Card</a></li>
-                                <li><a class="ms-link" href="ui-carousel.html">Carousel</a></li>
-                                <li><a class="ms-link" href="ui-collapse.html">Collapse</a></li>
-                                <li><a class="ms-link" href="ui-dropdowns.html">Dropdowns</a></li>
-                                <li><a class="ms-link" href="ui-listgroup.html">List group</a></li>
-                                <li><a class="ms-link" href="ui-modal.html">Modal</a></li>
-                                <li><a class="ms-link" href="ui-navs.html">Navs</a></li>
-                                <li><a class="ms-link" href="ui-navbar.html">Navbar</a></li>
-                                <li><a class="ms-link" href="ui-pagination.html">Pagination</a></li>
-                                <li><a class="ms-link" href="ui-popovers.html">Popovers</a></li>
-                                <li><a class="ms-link" href="ui-progress.html">Progress</a></li>
-                                <li><a class="ms-link" href="ui-scrollspy.html">Scrollspy</a></li>
-                                <li><a class="ms-link" href="ui-spinners.html">Spinners</a></li>
-                                <li><a class="ms-link" href="ui-toasts.html">Toasts</a></li>
-                                <li><a class="ms-link" href="ui-tooltips.html">Tooltips</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="m-link" href="../../../documentation/index.html"><i class="fa fa-file-text"></i> <span>Documentation</span></a></li>
-                        <li><a class="m-link" href="../../../documentation/changelog.html"><i class="fa fa-pencil"></i> <span>Changelog</span> <span id="ALUIversion"></span></a></li>
+                        <li><a class="m-link active" href="/admin/page/create/"><i class="fa fa-book"></i> <span>Create Page</span></a></li>
                     </ul>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="position-relative mb-2">
-                                <p class="mb-1 text-uppercase text-muted">Storage</p>
-                                <h6 class="position-absolute top-0 end-0">35GB</h6>
-                                <div class="progress" style="height: 1px;">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-primary btn-block lift">
-                                <span>Upgrade Now</span>
-                                <span class="ms-2"><i class="fa fa-arrow-right"></i></span>
-                            </button>
-                        </div>
-                    </div>
                 </div>
                 <div class="tab-pane fade" id="nav-profile">
-                    <ul class="list-group custom text-light mt-1">
-                        <li class="list-group-item px-0 bg-transparent border-0">
-                            <a href="#"><img src="../../../assets/images/profile_av.png" alt="User" class="rounded w120"></a>
-                            <h5 class="mb-0 mt-3">Robert Hammer</h5>
-                            <small class="text-muted">UI UX Designer</small>
-                        </li>
-                        <li class="list-group-item px-0 bg-transparent border-0">
-                            <a class="p-1 me-2 text-secondary" href="javascript:void(0);" title="facebook"><i class="fa fa-facebook"></i></a>
-                            <a class="p-1 me-2 text-secondary" href="javascript:void(0);" title="twitter"><i class="fa fa-twitter"></i></a>
-                            <a class="p-1 me-2 text-secondary" href="javascript:void(0);" title="instagram"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li class="list-group-item px-0 bg-transparent border-0">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</li>
-                        <li class="list-group-item px-0 bg-transparent border-0">
-                            <div class="row g-2">
-                                <div class="col">
-                                    <h5 class="mb-0">852</h5>
-                                    <small class="text-muted">Following</small>
-                                </div>
-                                <div class="col">
-                                    <h5 class="mb-0">13k</h5>
-                                    <small class="text-muted">Followers</small>
-                                </div>
-                                <div class="col">
-                                    <h5 class="mb-0">234</h5>
-                                    <small class="text-muted">Post</small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-0 bg-transparent border-0">
-                            <small class="text-muted">Email address: </small>
-                            <p class="mb-0">robert.hammer@gmail.com</p>
-                        </li>
-                        <li class="list-group-item px-0 bg-transparent border-0">
-                            <small class="text-muted">Phone: </small>
-                            <p class="mb-0">+ 202-555-0191</p>
-                        </li>
-                        <li class="list-group-item px-0 bg-transparent border-0 mt-3">
-                            <div class="mb-3">
-                                <div class="mb-1 text-muted">Photoshop</div>
-                                <div class="progress" style="height: 3px;">
-                                    <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%"></div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="mb-1 text-muted">Wordpress</div>
-                                <div class="progress" style="height: 3px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 56%"></div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="mb-1 text-muted">HTML 5</div>
-                                <div class="progress" style="height: 3px;">
-                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%"></div>
-                                </div>
-                            </div>
-                            <div class="mb-0">
-                                <div class="mb-1 text-muted">Angular</div>
-                                <div class="progress" style="height: 3px;">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 43%"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-0 bg-transparent border-0">
-                            <button type="button" class="btn btn-primary btn-block lift">Update Profile</button>
-                        </li>
-                    </ul>
+                    
                 </div>
                 <div class="tab-pane fade" id="nav-contact">
-                    <ul class="list-group list-group-flush mb-0">
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar1.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Chris Fox</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar2.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Robert Hammer</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar3.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Airi Satou</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar4.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Bruno Nash</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar5.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Michael Silva</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar6.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Vivian Harrell</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar7.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Chris Fox</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar8.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Robert Hammer</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-2 py-3 bg-transparent d-flex">
-                            <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar9.jpg" alt="">
-                            <div class="flex-fill d-flex justify-content-between align-items-center ms-2">
-                                <a href="#" class="text-light">Airi Satou</a>
-                                <small>
-                                    <a class="px-1 text-secondary" href="#"><i class="fa fa-envelope"></i></a>
-                                    <a class="px-1 text-danger" href="#"><i class="fa fa-trash"></i></a>
-                                </small>
-                            </div>
-                        </li>
-                    </ul>
+                    
                 </div>
-            </div>
+            </div>-->
 
         </div>
     </div>
@@ -352,336 +119,29 @@
     <!-- main body area -->
     <div class="main px-xl-5 px-lg-4 px-md-3">
 
-        <!-- Body: Header -->
-        <div class="body-header border-bottom d-flex py-3">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <small class="text-muted">Welcome back</small>
-                        <h1 class="h4 mt-1">Project Dashboard</h1>
-                    </div>
-                    <div class="col-auto">
-                        <a href="https://themeforest.net/user/wrraptheme" title="Download" target="_blank" class="btn btn-white border lift">Download</a>
-                        <button type="button" class="btn btn-dark lift">Generate Report</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Body: Body -->
-        <div class="body d-flex py-lg-4 py-3">
-            <div class="container-fluid">
-                
-                <div class="row g-3">
-                    <div class="col-xl-4 col-lg-5 col-md-12">
-                        <div class="row g-3">
-                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between">
-                                            <div>
-                                                <h5 class="mb-0">Server</h5>
-                                                <small class="small">6% higher than last month</small>
-                                            </div>
-                                            <div class="text-end">
-                                                <h3 class="mb-0">62%</h3>
-                                                <small class="info">of 1Tb</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress mt-3" style="height: 2px;">
-                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between">
-                                            <div>
-                                                <h5 class="mb-0">Email</h5>
-                                                <small class="small">Total Registered email</small>
-                                            </div>
-                                            <div class="text-end">
-                                                <h3 class="mb-0">13</h3>
-                                                <small class="info">of 20</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress mt-3" style="height: 2px;">
-                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12 col-md-12">
-                                <div class="card">
-                                    <div class="card-header d-flex justify-content-between align-items-center bg-transparent border-bottom-0">
-                                        <h6 class="m-0">Income Analytics</h6>
-                                        <div class="dropdown">
-                                            <button class="btn btn-sm btn-link text-muted" type="button"><i class="fa fa-external-link"></i></button>
-                                            <button class="btn btn-sm btn-link text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                            <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow border-0">
-                                                    <li><a class="dropdown-item" href="#">Action<i class="fa fa-arrow-right"></i></a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action<i class="fa fa-arrow-right"></i></a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here<i class="fa fa-arrow-right"></i></a></li>
-                                                </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row flex-wrap align-items-center">
-                                            <div class="p-2">
-                                                <h6 class="mb-0 fw-bold">$3,056</h6>
-                                                <small class="text-muted">Income</small>
-                                            </div>
-                                            <div class="p-2 ms-lg-3 ms-1">
-                                                <h6 class="mb-0 fw-bold">$1,998</h6>
-                                                <small class="text-muted">Expense</small>
-                                            </div>
-                                            <div class="d-none d-sm-block ms-auto">
-                                                <div class="btn-group" role="group">
-                                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
-                                                    <label class="btn btn-sm btn-outline-secondary" for="btnradio2">Month</label>
-                                                
-                                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" checked="">
-                                                    <label class="btn btn-sm btn-outline-secondary" for="btnradio3">Year</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="apex-IncomeAnalytics"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12 col-md-12">
-                                <div class="card">
-                                    <div class="card-body p-md-4">
-                                        <p class="text-muted text-uppercase mb-0 small">Orange Limited</p>
-                                        <h5 class="mt-0 mb-3"><a href="#" class="text-primary">New Admin Design</a></h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled it...<a href="#" class="font-600 text-muted">view more</a></p>
-                                        
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item pe-lg-4">
-                                                <h4 class="mb-0">124</h4>
-                                                <p class="text-muted">Attachments</p>
-                                            </li>
-                                            <li class="list-inline-item pe-lg-4">
-                                                <h4 class="mb-0">452</h4>
-                                                <p class="text-muted">Comments</p>
-                                            </li>
-                                            <li class="list-inline-item pe-lg-4">
-                                                <h4 class="mb-0">85</h4>
-                                                <p class="text-muted">Tasks</p>
-                                            </li>
-                                        </ul>
-        
-                                        <div class="project-members mb-4">
-                                            <label class="me-3">Team :</label>
-                                            <a href="#" title=""><img class="avatar sm rounded" src="../../../assets/images/xs/avatar3.jpg" alt="friend"> </a>
-                                            <a href="#" title=""><img class="avatar sm rounded" src="../../../assets/images/xs/avatar1.jpg" alt="friend"> </a>
-                                            <a href="#" title=""><img class="avatar sm rounded" src="../../../assets/images/xs/avatar7.jpg" alt="friend"> </a>
-                                            <a href="#" title=""><img class="avatar sm rounded" src="../../../assets/images/xs/avatar9.jpg" alt="friend"> </a>
-                                        </div>
-        
-                                        <label class="small d-flex justify-content-between">Task completed: <span class="text-custom">55/85</span></label>
-                                        <div class="progress mt-1" style="height: 7px;">
-                                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- .row end -->
-                    </div>
-                    <div class="col-xl-8 col-lg-7 col-md-12">
-                        <div class="row g-3">
-                            <div class="col-xl-4 col-lg-6 col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <span class="text-muted">Sales</span>
-                                        <h4>$25,450</h4>
-                                    </div>
-                                    <div id="apexspark1"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <span class="text-muted">Expenses</span>
-                                        <h4>$25,450</h4>
-                                    </div>
-                                    <div id="apexspark2"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-12 col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <span class="text-muted">Profits</span>
-                                        <h4>$25,450</h4>
-                                    </div>
-                                    <div id="apexspark3"></div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header d-flex justify-content-between align-items-center bg-transparent border-bottom-0">
-                                        <h6 class="m-0">Project Timeline</h6>
-                                        <div class="dropdown">
-                                            <button class="btn btn-sm btn-link text-muted" type="button"><i class="fa fa-external-link"></i></button>
-                                            <button class="btn btn-sm btn-link text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                            <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow border-0">
-                                                    <li><a class="dropdown-item" href="#">Action<i class="fa fa-arrow-right"></i></a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action<i class="fa fa-arrow-right"></i></a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here<i class="fa fa-arrow-right"></i></a></li>
-                                                </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="apex-ProjectTimeline"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <table id="myProjectTable" class="table table-hover align-middle mb-0" style="width:100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>Title</th>
-                                                    <th>Date Start</th>
-                                                    <th>Days to Deadline</th>
-                                                    <th>Progress</th>
-                                                    <th>Priority</th>
-                                                    <th>Leader</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><a href="#">Spot Media</a></td>
-                                                    <td>18-05-2020</td>
-                                                    <td>12 days</td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" data-transitiongoal="95" aria-valuenow="95" style="width: 95%;">95%</div>
-                                                        </div>
-                                                    </td>
-                                                    <td><span class="badge bg-warning">MEDIUM</span></td>
-                                                    <td><img src="../../../assets/images/xs/avatar1.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Michael</a></td>
-                                                    <td><span class="badge bg-success">ACTIVE</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="#">E-Commerce Site</a></td>
-                                                    <td>24-05-2020</td>
-                                                    <td>30 days</td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">40%</div>
-                                                        </div>
-                                                    </td>
-                                                    <td><span class="badge bg-success">LOW</span></td>
-                                                    <td><img src="../../../assets/images/xs/avatar2.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Antonius</a></td>
-                                                    <td><span class="badge bg-warning">PENDING</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="#">Project 123GO</a></td>
-                                                    <td>20-09-2020</td>
-                                                    <td>50 days</td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">65%</div>
-                                                        </div>
-                                                    </td>
-                                                    <td><span class="badge bg-danger">HIGH</span></td>
-                                                    <td><img src="../../../assets/images/xs/avatar3.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Antonius</a></td>
-                                                    <td><span class="badge bg-success">ACTIVE</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="#">Wordpress Theme</a></td>
-                                                    <td>05-10-2020</td>
-                                                    <td>40 days</td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 77%;">77%</div>
-                                                        </div>
-                                                    </td>
-                                                    <td><span class="badge bg-warning">MEDIUM</span></td>
-                                                    <td><img src="../../../assets/images/xs/avatar4.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Michael</a></td>
-                                                    <td><span class="badge bg-success">ACTIVE</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="#">Redesign Landing Page</a></td>
-                                                    <td>15-11-2020</td>
-                                                    <td>30 days</td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">25%</div>
-                                                        </div>
-                                                    </td>
-                                                    <td><span class="badge bg-success">LOW</span></td>
-                                                    <td><img src="../../../assets/images/xs/avatar5.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Jason</a></td>
-                                                    <td><span class="badge bg-success">ACTIVE</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="#">Wordpress Theme</a></td>
-                                                    <td>05-10-2020</td>
-                                                    <td>N/A</td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
-                                                        </div>
-                                                    </td>
-                                                    <td><span class="badge bg-secondary">MEDIUM</span></td>
-                                                    <td><img src="../../../assets/images/xs/avatar6.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Michael</a></td>
-                                                    <td><span class="badge bg-secondary">CLOSED</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- .row end -->
-                    </div>
-                </div> <!-- .row end -->
-
-            </div>
-        </div>
+        @yield("content")
 
         <!-- Body: Footer -->
         <div class="body-footer d-flex">
             <div class="container-fluid">
                 <div class="col-12">
-                    <div class="card mb-1">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-lg-5 order-lg-2">
-                                    <div class="text-center p-5">
-                                        <img src="../../../assets/images/web-services.svg" alt="..." class="img-fluid" style="max-width: 220px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-7 px-5 order-lg-1">
-                                    <h3 class="fw-light">ENLIGHT <br>- your business with Our Solution</h3>
-                                    <p class="text-muted">Get access to the highly experienced dedicated development team for custom web and app development technology solutions as per your business needs</p>
-                                    <a class="btn btn-dark btn-lg lift" href="https://www.thememakker.com/hire-us/" target="_blank">Get Free Quote</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col">
-                                <p class="font-size-sm mb-0">© AL-UI. <span class="d-none d-sm-inline-block"><script>document.write(/\d{4}/.exec(Date())[0])</script> ThemeMakker.</span></p>
-                            </div>
-                            <div class="col-auto">
-                                <ul class="list-inline d-flex justify-content-end mb-0">
-                                    <li class="list-inline-item"><a class="list-separator-link" href="https://www.thememakker.com/about/">About</a></li>
-                                    <li class="list-inline-item"><a class="list-separator-link" href="https://www.thememakker.com/hire-us/">Hire us</a></li>
-                                    <li class="list-inline-item"><a class="list-separator-link" href="https://www.thememakker.com/all-templates/">Template</a></li>
-                                    <li class="list-inline-item"><a class="list-separator-link" href="https://themeforest.net/licenses/standard" target="_blank">License</a></li>
-                                </ul>
+                        <div class="card-body">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col">
+                                    <p class="font-size-sm mb-0">© AL-UI. <span class="d-none d-sm-inline-block"><script>document.write(/\d{4}/.exec(Date())[0])</script> ThemeMakker.</span></p>
+                                </div>
+                                <div class="col-auto">
+                                    <ul class="list-inline d-flex justify-content-end mb-0">
+                                        <li class="list-inline-item"><a class="list-separator-link" href="https://www.thememakker.com/about/">About</a></li>
+                                        <li class="list-inline-item"><a class="list-separator-link" href="https://www.thememakker.com/hire-us/">Hire us</a></li>
+                                        <li class="list-inline-item"><a class="list-separator-link" href="https://www.thememakker.com/all-templates/">Template</a></li>
+                                        <li class="list-inline-item"><a class="list-separator-link" href="https://themeforest.net/licenses/standard" target="_blank">License</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -1252,9 +712,11 @@
 <!-- Plugin Js -->
 <script src="{{ public_path().'/admin/bundles/apexcharts.bundle.js' }}"></script>
 <script src="{{ public_path().'/admin/bundles/dataTables.bundle.js' }}"></script>
+<script src="{{ public_path().'/admin/bundles/summernote.bundle.js' }}"></script>
 
 <!-- Jquery Page Js -->
 <script src="{{ public_path().'/admin/js/template.js' }}"></script>
+<script src="{{ public_path().'/admin/js/script.js' }}"></script>
 <script>
 // top sparklines
 $(document).ready(function() {
