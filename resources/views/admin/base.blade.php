@@ -90,15 +90,15 @@
             </form>
 
             <!-- Menu: tab -->
-            <!--<nav>
+            <nav>
                 <div class="nav nav-tabs tab-custom p-1 justify-content-between text-center rounded" role="tablist">
                     <a class="flex-fill py-1 px-2 rounded border-0 nav-link active" id="nav-menu-tab" data-bs-toggle="tab" href="#nav-menu" role="tab">Menu</a>
                     <a class="flex-fill py-1 px-2 rounded border-0 nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab">Profile</a>
                     <a class="flex-fill py-1 px-2 rounded border-0 nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact" role="tab">Contact</a>
                 </div>
-            </nav>-->
+            </nav>
             <!-- Menu: tab content -->
-            <!--<div class="tab-content flex-grow-1 mt-1">
+            <div class="tab-content flex-grow-1 mt-1">
                 <div class="tab-pane fade show active" id="nav-menu">
                     <ul class="menu-list">
                         <li class="divider py-2"><small>MAIN</small></li>
@@ -111,7 +111,7 @@
                 <div class="tab-pane fade" id="nav-contact">
                     
                 </div>
-            </div>-->
+            </div>
 
         </div>
     </div>

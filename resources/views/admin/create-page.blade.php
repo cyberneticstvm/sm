@@ -57,8 +57,16 @@
                                 <h5>Page Content</h5>
                             </div>
                             <div class="card-body">
-                                <form class="pageContent">
-                                    
+                                <form class="">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label for="TextInput" class="form-label">Page Title</label>
+                                            <input type="text" class="form-control" name="page_title" placeholder="Page Title" />
+                                        </div>
+                                    </div>
+                                    <div class="page-content">
+
+                                    </div>
                                 </form>
                             </div>
                         </div>
