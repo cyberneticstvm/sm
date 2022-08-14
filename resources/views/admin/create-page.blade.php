@@ -61,7 +61,7 @@
                                 <h5>Page Content</h5>
                             </div>
                             <div class="card-body">
-                                <form class="" method="post" action="{{ route('admin.page.save') }}">
+                                <form class="" method="post" action="{{ route('admin.page.save') }}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row g-3">
                                         <div class="col-12">
