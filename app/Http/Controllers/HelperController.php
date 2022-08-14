@@ -19,10 +19,10 @@ class HelperController extends Controller
     }
     public function upload(Request $request){
         $fileName=$request->file('file')->getClientOriginalName();
-        $path=$request->file('file')->storeAs('tinymce', $fileName, 'public');
-        return response()->json(['location'=>"/public/$path"]); 
+        /*$path=$request->file('file')->storeAs('tinymce', $fileName, 'public');
+        return response()->json(['location'=>"/storage/".$path]);*/
         
-        /*$imgpath = request()->file('file')->store('uploads', 'public'); 
-        return response()->json(['location' => "/storage/$imgpath"]);*/
+        $imgpath = request()->file('file')->store('uploads', 'public'); 
+        return response()->json(['location' => "/storage/$imgpath"]);
     }
 }
