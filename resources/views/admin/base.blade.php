@@ -9,13 +9,16 @@
     <meta name="keyword" content="ALUI, Bootstrap 5, ReactJs, Angular, Laravel, VueJs, ASP .Net, Admin Dashboard, Admin Theme">
     <title>:: ALUI ::</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
-
     <!-- project css file  -->
-    <link rel="stylesheet" href="{{ public_path().'/admin/css/al.style.min.css' }}">
+    
     <link rel="stylesheet" href="{{ public_path().'/admin/css/dataTables.min.css' }}">
-    <link rel="stylesheet" href="{{ public_path().'/admin/css/summernote.min.css' }}">
+    <link rel="stylesheet" href="{{ public_path().'/admin/css/select2.min.css' }}">
+    <link rel="stylesheet" href="{{ public_path().'/admin/css/al.style.min.css' }}">
+    
+    <!--<link rel="stylesheet" href="{{ public_path().'/admin/css/summernote.min.css' }}">-->
     <!-- project layout css file -->
     <link rel="stylesheet" href="{{ public_path().'/admin/css/layout.c.min.css' }}">
+    
 </head>
 
 <body>
@@ -102,7 +105,24 @@
                 <div class="tab-pane fade show active" id="nav-menu">
                     <ul class="menu-list">
                         <li class="divider py-2"><small>MAIN</small></li>
-                        <li><a class="m-link active" href="/admin/page/create/"><i class="fa fa-book"></i> <span>Create Page</span></a></li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Pages"  href="#"><i class="fa fa-file"></i> <span>Page Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="menu-Pages">
+                                <li><a class="ms-link" href="/admin/page/create/">Create Page</a></li>
+                                <li><a class="ms-link" href="/admin/page-list/">Page List</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Menus"  href="#"><i class="fa fa-tree"></i> <span>Menu Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="menu-Menus">
+                                <li><a class="ms-link" href="/admin/menu/create/">Create Menu</a></li>
+                                <li><a class="ms-link" href="/admin/menu-list/">Menu List</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="nav-profile">
@@ -712,258 +732,13 @@
 <!-- Plugin Js -->
 <script src="{{ public_path().'/admin/bundles/apexcharts.bundle.js' }}"></script>
 <script src="{{ public_path().'/admin/bundles/dataTables.bundle.js' }}"></script>
-<script src="{{ public_path().'/admin/bundles/summernote.bundle.js' }}"></script>
+<script src="{{ public_path().'/admin/bundles/select2.bundle.js' }}"></script>
+<!--<script src="{{ public_path().'/admin/bundles/summernote.bundle.js' }}"></script>-->
+<script src="{{ public_path().'/admin/tinymce/tinymce.min.js' }}"></script>
 
 <!-- Jquery Page Js -->
 <script src="{{ public_path().'/admin/js/template.js' }}"></script>
 <script src="{{ public_path().'/admin/js/script.js' }}"></script>
-<script>
-// top sparklines
-$(document).ready(function() {
-   
-   var randomizeArray = function (arg) {
-       var array = arg.slice();
-       var currentIndex = array.length,
-       temporaryValue, randomIndex;
- 
-       while (0 !== currentIndex) {  
-           randomIndex = Math.floor(Math.random() * currentIndex);
-           currentIndex -= 1;
-   
-           temporaryValue = array[currentIndex];
-           array[currentIndex] = array[randomIndex];
-           array[randomIndex] = temporaryValue;
-       }  
-       return array;
-   }
 
-   // data for the sparklines that appear below header area
-   var sparklineData = [47, 45, 54, 38, 56, 24, 65, 31];
-
-   // topb big chart    
-   var spark1 = {
-       chart: {
-           type: 'area',
-           height: 80,
-           sparkline: {
-           enabled: true
-           },
-       },
-       stroke: {
-           width: 1
-       },
-       series: [{
-           data: randomizeArray(sparklineData)
-       }],
-       fill: {
-            type: "gradient",
-            gradient: {
-                gradientToColors: ['var(--chart-color1)'],
-                shadeIntensity: 2,
-                opacityFrom: 0.7,
-                opacityTo: 0.2,
-                stops: [0, 100]
-            },
-        },
-        colors: ['var(--chart-color1)'],
-   }
-   var spark1 = new ApexCharts(document.querySelector("#apexspark1"), spark1);
-   spark1.render();
-   
-   var spark2 = {
-       chart: {
-           type: 'area',
-           height: 80,
-           sparkline: {
-           enabled: true
-           },
-       },
-       stroke: {
-           width: 1
-       },
-       series: [{
-           data: randomizeArray(sparklineData)
-       }],
-       fill: {
-            type: "gradient",
-            gradient: {
-                gradientToColors: ['var(--chart-color5)'],
-                shadeIntensity: 2,
-                opacityFrom: 0.7,
-                opacityTo: 0.2,
-                stops: [0, 100]
-            },
-        },
-        colors: ['var(--chart-color5)'],
-   }
-   var spark2 = new ApexCharts(document.querySelector("#apexspark2"), spark2);
-   spark2.render();
-   
-   var spark3 = {
-       chart: {
-           type: 'area',
-           height: 80,
-           sparkline: {
-           enabled: true
-           },
-       },
-       stroke: {
-           width: 1
-       },
-       series: [{
-           data: randomizeArray(sparklineData)
-       }],
-       fill: {
-            type: "gradient",
-            gradient: {
-                gradientToColors: ['var(--chart-color2)'],
-                shadeIntensity: 2,
-                opacityFrom: 0.7,
-                opacityTo: 0.2,
-                stops: [0, 100]
-            },
-        },
-        colors: ['var(--chart-color2)'],
-   }
-   var spark3 = new ApexCharts(document.querySelector("#apexspark3"), spark3);
-   spark3.render();
-
-});
-
-// project Timeline
-$(document).ready(function() {
-    var options = {
-        chart: {
-            height: 360,
-            type: 'rangeBar',
-            toolbar: {
-                show: false,
-            }
-        },        
-        plotOptions: {
-            bar: {
-                horizontal: true,                
-            }
-        },
-        colors: ['var(--chart-color1)', 'var(--chart-color2)', 'var(--chart-color3)'],
-
-        series: [{
-            name: 'Bob',            
-            data: [{
-                x: 'Design',
-                y: [new Date('2020-03-02').getTime(), new Date('2020-03-03').getTime()]
-            }, {
-                x: 'Code',
-                y: [new Date('2020-03-02').getTime(), new Date('2020-03-04').getTime()]
-             
-            }, {
-                x: 'Test',
-                y: [new Date('2020-03-04').getTime(), new Date('2020-03-07').getTime()]
-            }, {
-                x: 'Deployment',
-                y: [new Date('2020-03-11').getTime(), new Date('2020-03-12').getTime()]
-            }]
-        }, {
-            name: 'Joe',
-            data: [{
-                x: 'Design',
-                y: [new Date('2020-03-01').getTime(), new Date('2020-03-02').getTime()] 
-            }, {
-                x: 'Code',
-                y: [new Date('2020-03-03').getTime(), new Date('2020-03-07').getTime()] 
-            }, {
-                x: 'Test',
-                y: [new Date('2020-03-06').getTime(), new Date('2020-03-09').getTime()]
-            }, {
-                x: 'Deployment',
-                y: [new Date('2020-03-10').getTime(), new Date('2020-03-11').getTime()]
-            }]
-        },{
-            name: 'Michael',
-            data: [{
-                x: 'Design',
-                y: [new Date('2020-03-03').getTime(), new Date('2020-03-05').getTime()] 
-            }, {
-                x: 'Code',
-                y: [new Date('2020-03-01').getTime(), new Date('2020-03-09').getTime()] 
-            }, {
-                x: 'Test',
-                y: [new Date('2020-03-05').getTime(), new Date('2020-03-08').getTime()]
-            }, {
-                x: 'Deployment',
-                y: [new Date('2020-03-11').getTime(), new Date('2020-03-17').getTime()]
-            }]
-        }],
-        yaxis: {
-            min: new Date('2020-03-01').getTime(),
-            max: new Date('2020-03-14').getTime(),
-            max: new Date('2020-03-18').getTime()
-        },
-        xaxis: {
-           type: 'datetime'
-        },
-    }
-    var chart = new ApexCharts(document.querySelector("#apex-ProjectTimeline"),options);
-    
-    chart.render();
-});
-
-// Income Analytics
-$(document).ready(function() {
-    var options = {
-        chart: {
-            height: 336,
-            type: 'bar',
-            toolbar: {
-                show: false,
-            },
-        },
-        colors: ['var(--chart-color1)'],
-        grid: {
-            yaxis: {
-                lines: {
-                    show: false,
-                }
-            },
-            padding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            },
-        },
-        plotOptions: {
-            bar: {
-                horizontal: true,
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        series: [{
-            data: [ 1690, 1100, 1200, 1380, 880, 730, 608, 570, 340, 580]
-        }],
-        xaxis: {
-            categories: ['United States', 'France', 'Germany', 'India', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'China', 'Japan' ],
-        }
-    }
-    var chart = new ApexCharts(document.querySelector("#apex-IncomeAnalytics"),options);
-    
-    chart.render();
-});
-
-// project data table
-$(document).ready(function() {
-    $('#myProjectTable')
-    .addClass( 'nowrap' )
-    .dataTable( {
-        responsive: true,
-        columnDefs: [
-            { targets: [-1, -3], className: 'dt-body-right' }
-        ]
-    });
-});
-
-</script>
 </body>
 </html>

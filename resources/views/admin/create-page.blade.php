@@ -31,17 +31,21 @@
                                     <div class="col-3">
                                         <label for="TextInput" class="form-label">Control</label>
                                         <select class="form-control" name="control" id="control">
-                                            <option value="0">SELECT</option>
-                                            <option value="1">HORIZONTAL TAB</option>
-                                            <option value="2">VERTICAL TAB</option>
-                                            <option value="3">ACCORDION</option>
-                                            <option value="4">HYPERLINK</option>
-                                            <option value="5">RESPONSIVE COLUMN</option>
+                                        @foreach($controls as $control)
+                                            <option value="{{ $control->id }}">{{ $control->name }}</option>
+                                        @endforeach
                                         </select>
                                     </div>
                                     <div class="col-2">
                                         <label for="TextInput" class="form-label">Number</label>
-                                        <input type="number" min="1" max="9" step="1" class="form-control" name="number" id="number"  placeholder="0" />
+                                        <select class="form-control" name="number" id="number">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
                                     </div>
                                     <div class="col-2">
                                         <label for="TextInput" class="form-label">&nbsp;</label>
@@ -57,15 +61,24 @@
                                 <h5>Page Content</h5>
                             </div>
                             <div class="card-body">
-                                <form class="">
+                                <form class="" method="post" action="{{ route('admin.page.save') }}">
+                                    @csrf
                                     <div class="row g-3">
                                         <div class="col-12">
                                             <label for="TextInput" class="form-label">Page Title</label>
-                                            <input type="text" class="form-control" name="page_title" placeholder="Page Title" />
+                                            <input type="text" class="form-control" name="page_title" placeholder="Page Title" required />
                                         </div>
+                                        @error('page_title')
+                                        <small class="text-danger">{{ $errors->first('page_title') }}</small>
+                                        @enderror
                                     </div>
                                     <div class="page-content">
 
+                                    </div>
+                                    <div class="row g-3 mt-3">
+                                        <div class="col">
+                                            <button type="button" class="btn btn-submit btn-dark btn-create-page">SAVE</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
