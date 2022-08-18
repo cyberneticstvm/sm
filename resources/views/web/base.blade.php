@@ -6,11 +6,11 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Porto - Multipurpose Website Template</title>	
+		<title>Suchitwa Mission</title>	
 
 		<meta name="keywords" content="WebSite Template" />
-		<meta name="description" content="Porto - Multipurpose Website Template">
-		<meta name="author" content="okler.net">
+		<meta name="description" content="Suchitwa Mission">
+		<meta name="author" content="cybernetics.me">
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="{{ public_path().'/web/img/favicon.ico' }}" type="image/x-icon" />
