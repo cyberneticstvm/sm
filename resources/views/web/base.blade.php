@@ -117,45 +117,91 @@
 
 			@yield("content")
 
-			<footer id="footer" class="mt-0">
+			<footer id="footer">
 				<div class="container">
-					<div class="row py-5">
-						<div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-4 mb-lg-0">
-							<a href="/" class="logo pe-0 pe-lg-3 ps-3 ps-md-0">
-								<img alt="Suchitwa Mission" src="{{ public_path().'/web/img/sm/sm_logo.png' }}">
-							</a>
-						</div>
-						<div class="col-md-8 d-flex justify-content-center justify-content-md-end mb-4 mb-lg-0">
-							<div class="row">
-								<div class="col-md-6 mb-3 mb-md-0">
-									<div class="ms-3 text-center text-md-end">
-										<h5 class="text-3 mb-0 text-color-light">NEW YORK</h5>
-										<p class="text-3 text-color-hover-light mb-0"><i class="fab fa-whatsapp text-color-primary top-1 p-relative"></i><a href="tel:+1234567890" class="ps-1">(123) 465-7890</a></p>            
-									</div>
+					<div class="footer-ribbon">
+						<span>Get in Touch</span>
+					</div>
+					<div class="row py-5 my-4">
+						<div class="col-md-9 mb-4 mb-lg-0">
+							<h5 class="text-3 mb-3">ABOUT US</h5>
+							<p class="mt-2 mb-2">Suchitwa Mission is the Technical Support Group (TSG) in Waste Management sector under the Local Self Government Department, Government of Kerala.</p>
+							<p><a href="#" class="btn-flat btn-xs text-color-light"><strong class="text-2">VIEW MORE</strong><i class="fas fa-angle-right p-relative top-1 ps-2"></i></a></p>
+							<div class="row pt-3">
+								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
+									<h5 class="text-3 mb-3">Quick Links</h5>
+									<ul class="list list-icons list-icons-sm mb-0">
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">FAQs</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Acts & Rules</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Court Orders</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">RTI</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Feedback</a></li>
+									</ul>
 								</div>
-								<div class="col-md-6">
-									<div class="ms-3 text-center text-md-end">
-										<h5 class="text-3 mb-0 text-color-light">LOS ANGELES</h5>
-										<p class="text-3 text-color-hover-light mb-0"><i class="fab fa-whatsapp text-color-primary top-1 p-relative"></i><a href="tel:+1234567890" class="ps-1">(123) 465-7890</a></p>
-									</div>
+								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
+									<h5 class="text-3 mb-3">Useful Links</h5>
+									<ul class="list list-icons list-icons-sm mb-0">
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Home</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">About Us</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Empanel</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Sitemap</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-services.html">Contact Us</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
+									<h5 class="text-3 mb-3">PORTFOLIO</h5>
+									<ul class="list list-icons list-icons-sm mb-0">
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="portfolio-2-columns.html">2 Columns</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="portfolio-3-columns.html">3 Columns</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="portfolio-4-columns.html">4 Columns</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="portfolio-single-wide-slider.html">Single Project</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
+									<h5 class="text-3 mb-3">EXTRA</h5>
+									<ul class="list list-icons list-icons-sm mb-0">
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-team.html">Team</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-services.html">Services</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-careers.html">Careers</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-faq.html">FAQ</a></li>
+									</ul>
 								</div>
 							</div>
+						</div>
+						<div class="col-md-3 mb-4 mb-lg-0">
+							<h5 class="text-3 mb-3 pb-1">CONTACT US</h5>
+							<p class="text-8 text-color-light font-weight-bold"><a href="tel:0123456789" class="text-decoration-none text-color-light">(800) 123-4567</a></p>
+							<p class="mb-2">International: <a href="tel:0123456789" class="text-decoration-none">(333) 456-6670</a></p>
+							<p class="mb-2">Fax: (222) 531-8999</p>
+							<ul class="list list-icons list-icons-lg">
+								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
+								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p></li>
+							</ul>
+							<ul class="footer-social-icons social-icons mt-4">
+								<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2"></i></a></li>
+								<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter text-2"></i></a></li>
+								<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in text-2"></i></a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="footer-copyright footer-copyright-style-2">
+				<div class="footer-copyright">
 					<div class="container py-2">
 						<div class="row py-4">
-							<div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start mb-2 mb-lg-0">
-								<p>© Copyright 2022. All Rights Reserved.</p>
+							<div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+								<a href="index.html" class="logo pe-0 pe-lg-3">
+									<img alt="Porto Website Template" src="{{ public_path().'/web/img/sm/sm_logo.png' }}" class="opacity-5" height="32">
+								</a>
 							</div>
-							<div class="col-md-8 d-flex align-items-center justify-content-center justify-content-md-end mb-4 mb-lg-0">
-								<p><i class="far fa-envelope text-color-primary top-1 p-relative"></i><a href="mailto:mail@example.com" class="text-color-hover-light ps-1">mail@example.com</a></p>
-								<ul class="footer-social-icons social-icons social-icons-clean social-icons-icon-light ms-3">
-									<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2"></i></a></li>
-									<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter text-2"></i></a></li>
-									<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in text-2"></i></a></li>
-								</ul>
+							<div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
+								
+							</div>
+							<div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+								<nav id="sub-menu">
+									<ul>
+										<li>© Copyright {{ date('Y') }}. All Rights Reserved.</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>
