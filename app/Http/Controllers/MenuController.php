@@ -29,7 +29,8 @@ class MenuController extends Controller
     {
         $menu_types = DB::table('menu_types')->get();
         $pages = DB::table('pages')->where('publish', 1)->get();
-        return view('admin.create-menu', compact('menu_types', 'pages'));
+        $menus = Menu::where('parent', 0)->get();
+        return view('admin.create-menu', compact('menu_types', 'pages', 'menus'));
     }
 
     /**
@@ -41,6 +42,7 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            'menu_item_name' => 'required',
             'menu_type_id' => 'required',
             'page_id' => 'required',
             'order_by' => 'required',

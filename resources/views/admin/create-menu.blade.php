@@ -34,6 +34,13 @@
                                     @csrf
                                     <div class="row g-3">
                                         <div class="col-3">
+                                            <label for="TextInput" class="form-label">Menu Item Name</label>
+                                            <input type="text" class="form-control" name="menu_item_name" placeholder="Menu Item Name" />
+                                        </div>
+                                        @error('menu_item_name')
+                                        <small class="text-danger">{{ $errors->first('menu_item_name') }}</small>
+                                        @enderror
+                                        <div class="col-3">
                                             <label for="TextInput" class="form-label">Menu Type</label>
                                             <select class="form-control select2" name="menu_type_id">
                                             @foreach($menu_types as $menu)
@@ -59,8 +66,8 @@
                                             <label for="TextInput" class="form-label">Parent</label>
                                             <select class="form-control select2" name="parent">
                                                 <option value="0">Select</option>
-                                            @foreach($pages as $page)
-                                                <option value="{{ $page->id }}">{{ $page->page_title }}</option>
+                                            @foreach($menus as $menu)
+                                                <option value="{{ $menu->id }}">{{ $menu->menu_item_name }}</option>
                                             @endforeach
                                             </select>
                                             @error('parent')

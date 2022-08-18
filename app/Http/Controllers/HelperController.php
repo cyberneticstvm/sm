@@ -11,7 +11,10 @@ class HelperController extends Controller
 {
     public function index($slug){
         $page = DB::table('pages')->where('slug', $slug)->first();
-        return view('web.page', compact('page'));
+        $sections = DB::table('sections')->where('page_id', $page->id)->get();
+        //$contents = DB::table('contents')->where('page_id', $page->id)->get();
+        $contents = DB::table('contents')->where('page_id', $page->id)->get()->toArray();
+        return view('web.page', compact('page', 'sections', 'contents'));
     }
     public function getpagelist(){
         $data = DB::table('pages')->select('id', 'page_title as name')->get();

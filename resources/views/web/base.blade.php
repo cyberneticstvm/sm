@@ -56,8 +56,8 @@
 							<div class="header-column">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="index.html">
-											<img alt="Porto" width="82" height="40" src="{{ public_path().'/web/img/logo-default-slim-small.png' }}">
+										<a href="/">
+											<img alt="Suchitwa Mission" src="{{ public_path().'/web/img/sm/sm_logo.png' }}">
 										</a>
 									</div>
 								</div>
@@ -65,21 +65,27 @@
 							<div class="header-column justify-content-end">
 								<div class="header-row">
 									<div class="header-nav header-nav-links">
-										<div class="header-nav-main header-nav-main-square header-nav-main-font-alternative header-nav-main-effect-2 header-nav-main-sub-effect-1">
+										<div class="header-nav-main header-nav-main-square header-nav-main-font-alternative header-nav-main-effect-2 header-nav-main-sub-effect-1 text-primary">
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle active" href="index.html">
+														<a class="dropdown-item dropdown-toggle" href="/">
 															Home
-														</a>
-														<ul class="dropdown-menu">
-															<li>
-																<a class="dropdown-item" href="index.html">
-																	Landing Page
-																</a>
-															</li>
-														</ul>
+														</a>														
 													</li>
+													@foreach($main_menu as $key => $value)
+														@php $submenu = DB::table('menus')->where('parent', $value->id)->get(); @endphp
+														<li class="{{ (count($submenu)>0) ? 'dropdown' : '' }}"><a class="dropdown-item dropdown-toggle" href="#">{{ $value->menu_item_name }}</a>
+														@if($submenu)
+															<ul class="dropdown-menu">
+																@foreach($submenu as $skey => $sval)
+																	@php $page = DB::table('pages')->where('id', $sval->page_id)->get()->first(); @endphp
+																	<li><a class="dropdown-item" href="/web/{{ $page->slug }}/">{{ $sval->menu_item_name }}</a></li>
+																@endforeach
+															</ul>
+														@endif
+													</li>
+													@endforeach
 												</ul>
 											</nav>
 										</div>
@@ -109,16 +115,14 @@
 				</div>
 			</header>
 
-			<hr class="mt-0 mb-5">
-
 			@yield("content")
 
 			<footer id="footer" class="mt-0">
 				<div class="container">
 					<div class="row py-5">
 						<div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-4 mb-lg-0">
-							<a href="index.html" class="logo pe-0 pe-lg-3 ps-3 ps-md-0">
-								<img alt="Porto Website Template" src="img/logo-footer.png" height="32">
+							<a href="/" class="logo pe-0 pe-lg-3 ps-3 ps-md-0">
+								<img alt="Suchitwa Mission" src="{{ public_path().'/web/img/sm/sm_logo.png' }}">
 							</a>
 						</div>
 						<div class="col-md-8 d-flex justify-content-center justify-content-md-end mb-4 mb-lg-0">
