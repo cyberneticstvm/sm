@@ -214,6 +214,7 @@
 
 		<!-- Theme Base, Components and Settings -->
 		<script src="{{ public_path().'/web/js/theme.js' }}"></script>
+		<script src="{{ public_path().'/web/js/examples/examples.lightboxes.js' }}"></script>
 
 		<!-- Theme Custom -->
 		<script src="{{ public_path().'/web/js/custom.js' }}"></script>
