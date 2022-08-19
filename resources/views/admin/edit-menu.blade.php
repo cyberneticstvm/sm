@@ -30,12 +30,13 @@
                                 <h5>Create Menu</h5>
                             </div>
                             <div class="card-body">
-                                <form class="" method="post" action="{{ route('admin.menu.save') }}">
+                                <form class="" method="post" action="{{ route('admin.menu.update', $menu->id) }}">
                                     @csrf
+                                    @method("PUT")
                                     <div class="row g-3">
                                         <div class="col-3">
                                             <label for="TextInput" class="form-label">Menu Item Name</label>
-                                            <input type="text" class="form-control" name="menu_item_name" placeholder="Menu Item Name" />
+                                            <input type="text" class="form-control" name="menu_item_name" value="{{ $menu->menu_item_name }}" placeholder="Menu Item Name" />
                                         </div>
                                         @error('menu_item_name')
                                         <small class="text-danger">{{ $errors->first('menu_item_name') }}</small>
@@ -43,8 +44,8 @@
                                         <div class="col-3">
                                             <label for="TextInput" class="form-label">Menu Type</label>
                                             <select class="form-control select2" name="menu_type_id">
-                                            @foreach($menu_types as $menu)
-                                                <option value="{{ $menu->id }}">{{ $menu->name }}</option>
+                                            @foreach($menu_types as $men)
+                                                <option value="{{ $men->id }}" {{ ($men->id == $menu->menu_type_id ) ? 'selected' : '' }}>{{ $men->name }}</option>
                                             @endforeach
                                             </select>
                                             @error('menu_type_id')
@@ -55,7 +56,7 @@
                                             <label for="TextInput" class="form-label">Page</label>
                                             <select class="form-control select2" name="page_id">
                                             @foreach($pages as $page)
-                                                <option value="{{ $page->id }}">{{ $page->page_title }}</option>
+                                                <option value="{{ $page->id }}" {{ ($page->id == $menu->page_id ) ? 'selected' : '' }} >{{ $page->page_title }}</option>
                                             @endforeach
                                             </select>
                                             @error('page_id')
@@ -66,8 +67,8 @@
                                             <label for="TextInput" class="form-label">Parent</label>
                                             <select class="form-control select2" name="parent">
                                                 <option value="0">Select</option>
-                                            @foreach($menus as $menu)
-                                                <option value="{{ $menu->id }}">{{ $menu->menu_item_name }}</option>
+                                            @foreach($menus as $men)
+                                                <option value="{{ $men->id }}" {{ ($men->id == $menu->parent ) ? 'selected' : '' }}>{{ $men->menu_item_name }}</option>
                                             @endforeach
                                             </select>
                                             @error('parent')
@@ -76,7 +77,7 @@
                                         </div>
                                         <div class="col-2">
                                             <label for="TextInput" class="form-label">Order</label>
-                                            <input type="number" class="form-control" name="order_by" placeholder="0" />
+                                            <input type="number" class="form-control" name="order_by" value="{{ $menu->order_by }}" placeholder="0" />
                                         </div>
                                         @error('order_by')
                                         <small class="text-danger">{{ $errors->first('order_by') }}</small>
@@ -84,14 +85,14 @@
                                         <div class="col-2">
                                             <label for="TextInput" class="form-label">Page Status</label>
                                             <select class="form-control" name="publish">
-                                                <option value="1">Publish</option>
-                                                <option value="0">Save Only</option>
+                                                <option value="1" {{ ($menu->publish == 1) ? 'selected' : '' }}>Publish</option>
+                                                <option value="0" {{ ($menu->publish == 0) ? 'selected' : '' }}>Save Only</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="row g-3 mt-3">
                                         <div class="col">
-                                            <button type="submit" class="btn btn-submit btn-dark">SAVE</button>
+                                            <button type="submit" class="btn btn-submit btn-dark">UPDATE</button>
                                         </div>
                                     </div>
                                 </form>

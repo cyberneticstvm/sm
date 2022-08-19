@@ -61,12 +61,13 @@
                                 <h5>Page Content</h5>
                             </div>
                             <div class="card-body">
-                                <form class="" method="post" action="{{ route('admin.page.save') }}" enctype="multipart/form-data">
+                                <form class="" method="post" action="{{ route('admin.page.update', $page->id) }}" enctype="multipart/form-data">
                                     @csrf
+                                    @method("PUT")
                                     <div class="row g-3">
                                         <div class="col-9">
                                             <label for="TextInput" class="form-label">Page Title</label>
-                                            <input type="text" class="form-control" name="page_title" placeholder="Page Title" required />
+                                            <input type="text" class="form-control" name="page_title" value="{{ $page->page_title }}" required />
                                         </div>
                                         @error('page_title')
                                         <small class="text-danger">{{ $errors->first('page_title') }}</small>
@@ -74,17 +75,43 @@
                                         <div class="col-3">
                                             <label for="TextInput" class="form-label">Page Status</label>
                                             <select class="form-control" name="publish">
-                                                <option value="1">Publish</option>
-                                                <option value="0">Save Only</option>
+                                                <option value="1" {{ ($page->publish == 1) ? 'selected' : '' }}>Publish</option>
+                                                <option value="0" {{ ($page->publish == 0) ? 'selected' : '' }}>Save Only</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="page-content">
-
+                                        @forelse($sections as $section)
+                                            <div class='border p-3 mt-3 section'>
+                                                @if($section->control_id == 1)
+                                                <h5 class='text-primary'>HORIZONTAL TAB</h5>
+                                                @endif
+                                                @if($section->control_id == 2)
+                                                <h5 class='text-primary'>VERTICAL TAB</h5>
+                                                @endif
+                                                @if($section->control_id == 3)
+                                                <h5 class='text-primary'>ACCORDION</h5>
+                                                @endif
+                                                @if($section->control_id == 4)
+                                                <h5 class='text-primary'>RESPONSIVE COLUMN</h5>
+                                                @endif
+                                                @php $c=1; @endphp
+                                                @foreach($contents as $content)
+                                                    @if($section->id == $content->section_id)
+                                                    <div class='mt-3 row'><div class='col mt-3'><select class='form-control ctype' name='content_type[]' data-section="{{ $section->control_id }}"><option value='1' {{ ($content->content_type == 1) ? 'selected' : '' }}>New Content</option></select></div></div><div class='mt-3 row'><div class='col content'></div></div>
+                                                    <input type='hidden' name='cctype[]' value={{ $content->content_type }} /><input type='hidden' name='sectype[]' value="{{ $section->control_id }}" /><input type='text' class='form-control' name='content_title[]' value="{{ $content->content_title }}" placeholder="Content Title" required/><textarea id="ta_{{ $c++ }}" class='form-control textarea' name='ccontent[]' data-content="{{ $content->content }}" required></textarea>
+                                                    @endif
+                                                @endforeach
+                                                <div class='text-end mt-1'><a href='javascript:void(0)' class='text-danger' onclick="$(this).parent().parent().remove()">Remove this section</a></div>
+                                                <input type='hidden' name='stype[]' value="{{ $section->control_id }}" /><input type='hidden' name='scount[]' value="{{ $section->control_count }}" />                                                                                   
+                                            </div>
+                                        @empty
+                                        
+                                        @endforelse
                                     </div>
                                     <div class="row g-3 mt-3">
                                         <div class="col">
-                                            <button type="button" class="btn btn-submit btn-dark btn-create-page">SAVE</button>
+                                            <button type="button" class="btn btn-submit btn-dark btn-create-page">UPDATE</button>
                                         </div>
                                     </div>
                                 </form>

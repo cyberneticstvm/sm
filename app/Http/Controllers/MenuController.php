@@ -16,7 +16,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus = Menu::get();
+        $menus = Menu::leftJoin('menu_types as mt', 'menus.menu_type_id', '=', 'mt.id')->leftJoin('pages as p', 'p.id', 'menus.page_id')->select('menus.id', 'menus.menu_item_name', 'menus.publish', 'menus.parent', 'mt.name as tname', 'p.page_title as page')->where('menus.publish', 1)->orderBy('menu_item_name')->get();
         return view('admin.menu-list', compact('menus'));
     }
 
@@ -48,7 +48,6 @@ class MenuController extends Controller
             'order_by' => 'required',
         ]);
         $input = $request->all();
-        $input['publish'] = 1;
         $menu = Menu::create($input);
         return redirect()->route('admin.menu-list')
                         ->with('success','Menu created successfully');
@@ -73,7 +72,11 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-        //
+        $menu = Menu::find($id);
+        $menu_types = DB::table('menu_types')->get();
+        $pages = DB::table('pages')->where('publish', 1)->get();
+        $menus = Menu::where('parent', 0)->get();
+        return view('admin.edit-menu', compact('menu', 'menu_types', 'pages', 'menus'));
     }
 
     /**
@@ -85,7 +88,17 @@ class MenuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'menu_item_name' => 'required',
+            'menu_type_id' => 'required',
+            'page_id' => 'required',
+            'order_by' => 'required',
+        ]);
+        $input = $request->all();
+        $menu = Menu::find($id);
+        $menu->update($input);
+        return redirect()->route('admin.menu-list')
+                        ->with('success','Menu updated successfully');
     }
 
     /**
@@ -96,6 +109,8 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Menu::find($id)->delete();
+        return redirect()->route('admin.menu-list')
+                        ->with('success','Menu deleted successfully');
     }
 }

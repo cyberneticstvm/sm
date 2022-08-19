@@ -3,36 +3,90 @@
 @section("content")
 <div role="main" class="main">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7 text-center text-lg-start">
-                <h2 class="font-weight-bold text-8 line-height-2 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500"><span class="text-5">Hello, we are a <span class="text-color-primary">Digital Agency</span> From New York City.</span></h2>
-            </div>
-            <div class="col-lg-3 text-center text-lg-end">
-                <h4 class="text-4 line-height-6 font-weight-normal appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="800"><span class="opacity-6">Lorem ipsum dolor sit amet, conur adipiscing elit phasellus blandit massa enim.</span></h4>
-            </div>
-            <div class="col-lg-2 text-center text-lg-end">
-                <a class="btn btn-outline btn-rounded btn-primary btn-with-arrow mb-5 mb-lg-2 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="1100" href="#">Contact Us <span><i class="fas fa-chevron-right"></i></span></a>
-            </div>
-        </div>
         <div class="row">
-            <div class="col mb-5">
+            <div class="col-lg-12 mb-5 mt-5">
                 @if($sections)
                     @foreach($sections as $skey => $section)
                         @if($section->control_id == 1)
-                            <!--Horizontal Tab--> 
+                            <div class="tabs mt-5">
+                                <ul class="nav nav-tabs">
+                                @for($i=0; $i<$section->control_count; $i++)
+                                    @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
+                                    @if($contents)                                        
+                                        @foreach($contents as $cval => $content)
+                                            @if($content->section_id == $section->id)
+                                                @if($content->content_type == 1)
+                                                    <li class="nav-item">
+                                                        <a class="nav-link {{ ($i == 0) ? 'active' : '' }}" href="#{{ $contents[$i]->content_title }}" data-bs-toggle="tab">{{ $contents[$i]->content_title }}</a>
+                                                    </li>
+                                                    @break                                    
+                                                @endif
+                                            @endif
+                                        @endforeach                                        
+                                    @endif                                    
+                                @endfor
+                                </ul>
+                                <div class="tab-content">
+                                    @for($i=0; $i<$section->control_count; $i++)
+                                        @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
+                                        @if($contents)
+                                            @if($content->section_id == $section->id)
+                                                @if($content->content_type == 1)
+                                                    <div id="{{ $contents[$i]->content_title }}" class="tab-pane {{ ($i == 0) ? 'active' : '' }}">
+                                                        {!! $contents[$i]->content !!}
+                                                    </div>                                       
+                                                @endif
+                                            @endif                                            
+                                        @endif
+                                    @endfor
+                                </div>
+                            </div>
                         @endif
                         @if($section->control_id == 2)
-                            <!--Vertical Tab--> 
+                            <div class="tabs mt-5 tabs-vertical tabs-left">
+                                <ul class="nav nav-tabs">
+                                @for($i=0; $i<$section->control_count; $i++)
+                                    @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
+                                    @if($contents)                                        
+                                        @foreach($contents as $cval => $content)
+                                            @if($content->section_id == $section->id)
+                                                @if($content->content_type == 1)
+                                                    <li class="nav-item">
+                                                        <a class="nav-link {{ ($i == 0) ? 'active' : '' }}" href="#{{ $contents[$i]->content_title }}" data-bs-toggle="tab">{{ $contents[$i]->content_title }}</a>
+                                                    </li>
+                                                    @break                                    
+                                                @endif
+                                            @endif
+                                        @endforeach                                        
+                                    @endif                                    
+                                @endfor
+                                </ul>
+                                <div class="tab-content">
+                                    @for($i=0; $i<$section->control_count; $i++)
+                                        @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
+                                        @if($contents)
+                                            @if($content->section_id == $section->id)
+                                                @if($content->content_type == 1)
+                                                    <div id="{{ $contents[$i]->content_title }}" class="tab-pane {{ ($i == 0) ? 'active' : '' }}">
+                                                        {!! $contents[$i]->content !!}
+                                                    </div>                                     
+                                                @endif
+                                            @endif                                            
+                                        @endif
+                                    @endfor
+                                </div>
+                            </div>
                         @endif
                         @if($section->control_id == 3)
                             <!--Accordion-->                            
-                            <div class="accordion" id="accordion12">
+                            <div class="accordion mt-5" id="accordion12">
                                 @for($i=0; $i<$section->control_count; $i++)
+                                @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
                                     <div class="card card-default">
                                         <div class="card-header" id="collapse12HeadingOne">
                                             <h4 class="card-title m-0">
                                                 <a class="accordion-toggle" data-bs-toggle="collapse" data-bs-target="#collapse12One{{$i}}" aria-expanded="true" aria-controls="collapse12One">
-                                                    Accordion Title 1
+                                                    {!! $contents[$i]->content_title !!}
                                                 </a>
                                             </h4>
                                         </div>
@@ -57,7 +111,25 @@
                             </div>                            
                         @endif
                         @if($section->control_id == 4)
-                            <!--Responsive Column--> 
+                            <div class="row mt-5">
+                                @for($i=0; $i<$section->control_count; $i++)
+                                @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
+                                    <div class="col">
+                                        @if($contents)
+                                            @foreach($contents as $cval => $content)                                            
+                                                @if($content->section_id == $section->id)
+                                                    @if($content->content_type == 1)
+                                                        {!! $contents[$i]->content !!}
+                                                        @break
+                                                    @else
+                                                        {{ $content->content }}
+                                                    @endif
+                                                @endif                                            
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                @endfor
+                            </div>
                         @endif
                     @endforeach
                 @endif

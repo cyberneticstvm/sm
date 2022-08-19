@@ -27,7 +27,7 @@ $(function() {
         var num = parseInt($("#number").val());
         $(".page-content").append("<div class='border p-3 mt-3 section'><h5 class='text-primary'>"+sec+"</h5>");
         for(var i=1; i<=num; i++){
-            $(".section").last().append("<div class='mt-3 row'><div class='col mt-3'><select class='form-control ctype' name='content_type[]' data-section='"+cntrl+"'><option value='0'>Select</option><option value='1'>New Content</option><option value='2'>Existing Content</option></select></div></div><div class='mt-3 row'><div class='col content'></div></div>");
+            $(".section").last().append("<div class='mt-3 row'><div class='col mt-3'><select class='form-control ctype' name='content_type[]' data-section='"+cntrl+"'><option value='0'>Select</option><option value='1'>New Content</option></select></div></div><div class='mt-3 row'><div class='col content'></div></div>");
         }
         $(".section").last().append("<div class='text-end mt-1'><a href='javascript:void(0)' class='text-danger' onclick='$(this).parent().parent().remove()'>Remove this section</a></div>");
         $(".page-content").append("<input type='hidden' name='stype[]' value='"+cntrl+"' /><input type='hidden' name='scount[]' value='"+num+"'/></div>");
@@ -38,7 +38,7 @@ $(function() {
         var type = $(this).val();
         var cntrl = $(this).data('section');
         if(type == 1){
-            dis.find(".content").html("<input type='hidden' name='cctype[]' value='"+type+"' /><input type='hidden' name='sectype[]' value='"+cntrl+"'/><textarea class='form-control textarea' name='ccontent[]' required></textarea>");
+            dis.find(".content").html("<input type='hidden' name='cctype[]' value='"+type+"' /><input type='hidden' name='sectype[]' value='"+cntrl+"'/><input type='text' class='form-control' name='content_title[]' placeholder='Content Title' /><textarea class='form-control textarea' name='ccontent[]' required></textarea>");
             //$('textarea').last().summernote();
             tinymce.init({
                 selector: '.textarea',
@@ -67,7 +67,7 @@ $(function() {
                 }
             });
         }else{
-            $.ajax({
+            /*$.ajax({
                 type: 'GET',
                 url: '/get-page-list/',
                 success: function(data){
@@ -79,8 +79,25 @@ $(function() {
                 error: function(XMLHttpRequest, textStatus, errorThrown){
                     console.log(XMLHttpRequest);
                 },
-            });
+            });*/
         }
+    });
+
+    var c = 1;
+    $(".textarea").each(function(){
+        var data = $(this).data('content');
+        tinymce.init({
+            selector: '#ta_'+c,
+            plugins: 'advlist link image lists table',
+            automatic_uploads: true,
+            images_upload_url: "/tinymce/upload/",
+            setup: function (editor) {
+                editor.on('init', function () {
+                    editor.setContent(data);
+                });
+            }
+        });
+        c++
     });
 
     $(".btn-create-page").click(function(){
