@@ -50,7 +50,7 @@
                                             </td>
                                         </tr>
                                     @empty
-                                        <tr><td colspan="2" class="">No records found</td></tr>
+                                        <tr><td colspan="8" class="text-center">No records found</td></tr>
                                     @endforelse
                                 </tbody></table>
                             </div>
