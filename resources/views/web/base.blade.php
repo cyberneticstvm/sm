@@ -80,7 +80,7 @@
 															<ul class="dropdown-menu">
 																@foreach($submenu as $skey => $sval)
 																	@php $page = DB::table('pages')->where('id', $sval->page_id)->get()->first(); @endphp
-																	<li><a class="dropdown-item" href="/web/{{ $page->slug }}/">{{ ($sval->menu_item_name) ? $sval->menu_item_name : '/' }}</a></li>
+																	<li><a class="dropdown-item" href="{{ ('/web/'.$page->slug) ? $page->slug : '/' }}/">{{ $sval->menu_item_name }}</a></li>
 																@endforeach
 															</ul>
 														@endif
