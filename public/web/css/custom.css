@@ -9,7 +9,7 @@
     background: #012b59 !important;
 }
 .vid-sec{
-    background:url('/web/img/sm/extras/vbg.jpg' );
+    background:url('../img/sm/extras/vbg.jpg' );
     background-repeat: repeat;
     background-position: center;
     height: 100%;
