@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\HelperController;
 
 /*
@@ -34,6 +35,13 @@ Route::get('/admin/menu-list/', [MenuController::class, 'index'])->name('admin.m
 Route::get('/admin/menu/edit/{id}/', [MenuController::class, 'edit'])->name('admin.menu.edit');
 Route::put('/admin/menu/edit/{id}/', [MenuController::class, 'update'])->name('admin.menu.update');
 Route::delete('/admin/menu/delete/{id}/', [MenuController::class, 'destroy'])->name('admin.menu.delete');
+
+Route::get('/admin/slider/create/', [SliderController::class, 'create'])->name('admin.slider.create');
+Route::post('/admin/slider/create/', [SliderController::class, 'store'])->name('admin.slider.save');
+Route::get('/admin/slider-list/', [SliderController::class, 'index'])->name('admin.slider-list');
+Route::get('/admin/slider/edit/{id}/', [SliderController::class, 'edit'])->name('admin.slider.edit');
+Route::put('/admin/slider/edit/{id}/', [SliderController::class, 'update'])->name('admin.slider.update');
+Route::delete('/admin/slider/delete/{id}/', [SliderController::class, 'destroy'])->name('admin.slider.delete');
 
 Route::get('/web/{slug}/', [HelperController::class, 'index']);
 Route::post('/tinymce/upload/', [HelperController::class, 'upload']);
