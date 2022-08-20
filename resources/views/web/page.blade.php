@@ -111,10 +111,11 @@
                             </div>                            
                         @endif
                         @if($section->control_id == 4)
+                            @php $col = 12/$section->control_count; @endphp
                             <div class="row mt-5">
                                 @for($i=0; $i<$section->control_count; $i++)
                                 @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
-                                    <div class="col">
+                                    <div class="col-lg-{{ $col }}">
                                         @if($contents)
                                             @foreach($contents as $cval => $content)                                            
                                                 @if($content->section_id == $section->id)
