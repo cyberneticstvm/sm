@@ -102,5 +102,17 @@ $(function() {
 
     $(".btn-create-page").click(function(){
         $(this).closest('form').submit();
-    })
+    });
+
+    tinymce.init({
+        selector: 'textarea#news-events',
+        plugins: 'advlist link image lists table',
+        automatic_uploads: true,
+        images_upload_url: "/tinymce/upload/",
+        toolbar: 'undo redo | formatselect | ' +
+        'bold italic backcolor | alignleft aligncenter ' +
+        'alignright alignjustify | bullist numlist outdent indent | ' +
+        'removeformat | help',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+    });
 });

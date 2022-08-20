@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\NewsAndEvents;
+
+use DB;
 
 class NewsEventsController extends Controller
 {
@@ -13,7 +16,8 @@ class NewsEventsController extends Controller
      */
     public function index()
     {
-        //
+        $news = DB::table('news_and_events as n')->leftJoin('districts as d', 'n.district', '=', 'd.id')->select('n.id', 'n.title', 'n.img_url', 'n.date', 'n.content', 'd.name')->get();
+        return view('admin.news-events-list', compact('news'));
     }
 
     /**
@@ -23,7 +27,8 @@ class NewsEventsController extends Controller
      */
     public function create()
     {
-        //
+        $districts = DB::table('districts')->get();
+        return view('admin.create-news-events', compact('districts'));
     }
 
     /**
@@ -34,7 +39,22 @@ class NewsEventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'date' => 'required',
+            'district' => 'required',
+            'img_url' => 'required',
+            'content' => 'required',
+        ]);
+        $input = $request->all();
+        if(!empty($request->file('img_url'))):        
+            $fileName=$request->file('img_url')->getClientOriginalName();
+            $path=$request->file('img_url')->storeAs('news-events', $fileName, 'public');
+            $input['img_url'] = $path;
+        endif;
+        $ne = NewsAndEvents::create($input);
+        return redirect()->route('admin.news-events-list')
+                        ->with('success','Record created successfully');
     }
 
     /**
@@ -56,7 +76,9 @@ class NewsEventsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $districts = DB::table('districts')->get();
+        $ne = NewsAndEvents::find($id);
+        return view('admin.edit-news-events', compact('districts', 'ne'));
     }
 
     /**
@@ -68,7 +90,22 @@ class NewsEventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'date' => 'required',
+            'district' => 'required',
+            'content' => 'required',
+        ]);
+        $input = $request->all();
+        if(!empty($request->file('img_url'))):        
+            $fileName=$request->file('img_url')->getClientOriginalName();
+            $path=$request->file('img_url')->storeAs('news-events', $fileName, 'public');
+            $input['img_url'] = $path;
+        endif;
+        $ne = NewsAndEvents::find($id);
+        $ne->update($input);
+        return redirect()->route('admin.news-events-list')
+                        ->with('success','Record updated successfully');
     }
 
     /**
@@ -79,6 +116,8 @@ class NewsEventsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        NewsAndEvents::find($id)->delete();
+        return redirect()->route('admin.news-events-list')
+                        ->with('success','Record deleted successfully');
     }
 }
