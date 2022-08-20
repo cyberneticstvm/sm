@@ -81,6 +81,7 @@
                                         </div>
                                     </div>
                                     <div class="page-content">
+                                        @php $c=1; @endphp
                                         @forelse($sections as $section)
                                             <div class='border p-3 mt-3 section'>
                                                 @if($section->control_id == 1)
@@ -94,8 +95,7 @@
                                                 @endif
                                                 @if($section->control_id == 4)
                                                 <h5 class='text-primary'>RESPONSIVE COLUMN</h5>
-                                                @endif
-                                                @php $c=1; @endphp
+                                                @endif                                
                                                 @foreach($contents as $content)
                                                     @if($section->id == $content->section_id)
                                                     <div class='mt-3 row'><div class='col mt-3'><select class='form-control ctype' name='content_type[]' data-section="{{ $section->control_id }}"><option value='1' {{ ($content->content_type == 1) ? 'selected' : '' }}>New Content</option></select></div></div><div class='mt-3 row'><div class='col content'></div></div>

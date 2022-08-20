@@ -51,6 +51,35 @@
 		<div class="body">
 			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
 				<div class="header-body border-top-0">
+					<div class="header-top header-top-default border-bottom-0 bg-color-primary">
+						<div class="container">
+							<div class="header-row py-2">
+								<div class="header-column justify-content-start">
+									<div class="header-row">
+										<nav class="header-nav-top">
+											<ul class="nav nav-pills text-uppercase text-2">													
+												<li class="nav-item av-item-anim-icon">														
+													<a class="nav-link ps-0 text-light opacity-7" href="about-us.html"><i class="fas fa-phone"></i> +91 1234567890</a>
+												</li>												
+												<li class="nav-item av-item-anim-icon">														
+													<a class="nav-link text-light opacity-7 pe-0" href="contact-us.html"><i class="fas fa-envelope"></i> mail@suchitwamission.com</a>
+												</li>											
+											</ul>										
+										</nav>
+									</div>
+								</div>
+								<div class="header-column justify-content-end">
+									<div class="header-row">
+										<ul class="header-social-icons social-icons d-none d-sm-block social-icons-clean social-icons-icon-light">
+											<li class="social-icons-facebook"><a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+											<li class="social-icons-twitter"><a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+											<li class="social-icons-linkedin"><a href="https://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="header-container container">
 						<div class="header-row">
 							<div class="header-column">

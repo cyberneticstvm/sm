@@ -34,23 +34,24 @@
                         What's New
                     </div>
                     <div class="card-body wnew">
-                        <marquee direction="up"><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p></marquee>
+                        <marquee direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll"><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p></marquee>
                     </div>
                 </div>
                 <div class="card rounded-0 card-info bg-primary text-center text-white mt-1">Plastic Ban</div>
                 <div class="card rounded-0 card-info bg-info text-center text-white mt-1">Take a Break</div>
                 <div class="card rounded-0 card-info bg-warning text-center text-white mt-1">Government Orders</div>
-                <div class="card rounded-0 card-info bg-danger text-center text-white mt-1">Quick Links</div>
+                <div class="card rounded-0 card-info bg-danger text-center mt-1"><a href="#quickLinksModal" data-bs-toggle="modal" class="text-white">Quick Links</a></div>
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-3 mb-4 mb-lg-0">
                 <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                     <div class="featured-box">
                         <div class="box-content px-lg-4 px-xl-5 py-lg-5">
                             <img src="{{ public_path().'/web/img/sm/icons/ban.png' }}" alt="Plastic Ban" class="img-fluid" />
-                            <h2 class="font-weight-normal text-5">Plastic <br />Ban</h2>
-                            <a href="#" class="btn btn-outline btn-primary rounded-0 mb-2">Learn More</a>
+                            <h5 class="font-weight-normal">Plastic Ban</h5>
                         </div>
                     </div>
                 </div>
@@ -60,8 +61,7 @@
                     <div class="featured-box">
                         <div class="box-content px-lg-4 px-xl-5 py-lg-5">
                             <img src="{{ public_path().'/web/img/sm/icons/scheme.png' }}" alt="Schemes" class="img-fluid" />
-                            <h2 class="font-weight-normal text-5">Schemes <br />&nbsp;</h2>
-                            <a href="#" class="btn btn-outline btn-primary rounded-0 mb-2">Learn More</a>
+                            <h5 class="font-weight-normal">Schemes</h5>
                         </div>
                     </div>
                 </div>
@@ -71,8 +71,7 @@
                     <div class="featured-box">
                         <div class="box-content px-lg-4 px-xl-5 py-lg-5">
                             <img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" />
-                            <h2 class="font-weight-normal text-5">IEC / Capacity <br />Building</h2>
-                            <a href="#" class="btn btn-outline btn-primary rounded-0 mb-2">Learn More</a>
+                            <h5 class="font-weight-normal">IEC / Capacity Building</h5>
                         </div>
                     </div>
                 </div>
@@ -82,8 +81,7 @@
                     <div class="featured-box">
                         <div class="box-content px-lg-4 px-xl-5 py-lg-5">
                             <img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" />
-                            <h2 class="font-weight-normal text-5">Service <br />Providers</h2>
-                            <a href="#" class="btn btn-outline btn-primary rounded-0 mb-2">Learn More</a>
+                            <h5 class="font-weight-normal">Service Providers</h5>
                         </div>
                     </div>
                 </div>
@@ -149,7 +147,7 @@
                     <div class="featured-box featured-box-tertiary featured-box-effect-6">
                         <div class="box-content">
                             <img src="{{ public_path().'/web/img/sm/icons/green.png' }}" alt="Green Protocol" class="img-fluid" />
-                            <h4 class="font-weight-normal text-5 mt-3"><strong class="font-weight-extra-bold">Green </strong>Protocol</h4>
+                            <h4 class="font-weight-normal text-5 mt-3">Green <strong class="font-weight-extra-bold">Protocol</strong></h4>
                         </div>
                     </div>
                 </div>
@@ -168,10 +166,10 @@
         <section class="vid-sec">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 vid-desc">
+                    <div class="col-lg-6 vid-desc p-3">
                         <h4>My Waste My Responsibility</h4>
                         <p class="text-justify text-dark mt-3">Waste management is an important part of our daily living, especially if you are living in a city. Remember, managing food and bio degradable waste at home, keeping non bio degradable waste clean and dry and handing over to scrap dealers or local body collection systems are as important as consuming food!</p>
-                        <div class="mt-3"><a href="#" class="btn btn-outline btn-primary rounded-0 mb-2">More Videos</a></div>
+                        <div class="mt-3 text-center"><a href="#" class="btn btn-outline btn-primary rounded-0 mb-2">More Videos</a></div>
                     </div>
                     <div class="col-lg-6 text-end">
                         <a class="mt-1 mb-1 me-1 popup-youtube" href="https://www.youtube.com/watch?v=cDmUo436SiU"><img src="{{ public_path().'/web/img/sm/extras/video.jpg' }}" alt="video" class="img-fluid"/></a>
@@ -181,9 +179,9 @@
         </section>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-12"><h4 class="">News & Updates</h4></div>
             <div class="col">
-                <h4 class="mt-5 mb-5">News & Updates</h4>
                 <div class="blog-posts">
                     <div class="row">
                         <div class="col-md-4">
@@ -257,12 +255,13 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-12 text-end"><a href="#" class="btn btn-outline btn-primary rounded-0">See All News</a></div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <div class="owl-carousel owl-theme" data-plugin-options="{'items': 8, 'autoplay': true, 'autoplayTimeout': 3000}">
+                <div class="owl-carousel owl-theme" data-plugin-options="{'items': 9, 'autoplay': true, 'autoplayTimeout': 3000}">
                     <div>
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log1.png' }}" alt="">
                     </div>
@@ -291,6 +290,27 @@
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log9.png' }}" alt="">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="quickLinksModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="defaultModalLabel">Quick Links</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="list list-icons list-primary list-borders">
+                    <li><i class="fa fa-check"></i><a href="#">Suchitwa Padavi</a></li>
+                    <li><i class="fa fa-check"></i><a href="#">Collectors @ School</a></li>
+                    <li><i class="fa fa-check"></i><a href="#">IEC-Capacity Building</a></li>
+                    <li><i class="fa fa-check"></i><a href="#">Service Providers</a></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
