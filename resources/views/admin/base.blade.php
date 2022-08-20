@@ -115,7 +115,7 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Menus"  href="#"><i class="fa fa-tree"></i> <span>Menu Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Menus"  href="#"><i class="fa fa-bars"></i> <span>Menu Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="menu-Menus">
@@ -130,6 +130,33 @@
                             <ul class="sub-menu collapse" id="slider-Menus">
                                 <li><a class="ms-link" href="/admin/slider/create/">Create Slider Item</a></li>
                                 <li><a class="ms-link" href="/admin/slider-list/">Slider Item List</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#go-Menus"  href="#"><i class="fa fa-file-pdf-o"></i> <span>GOs Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="go-Menus">
+                                <li><a class="ms-link" href="/admin/gos/create/">Create GO</a></li>
+                                <li><a class="ms-link" href="/admin/gos-list/">GO List</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#ne-Menus"  href="#"><i class="fa fa-calendar"></i> <span>News & Events Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="ne-Menus">
+                                <li><a class="ms-link" href="/admin/news-events/create/">Create News & events</a></li>
+                                <li><a class="ms-link" href="/admin/news-events-list/">News & events List</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#wn-Menus"  href="#"><i class="fa fa-bookmark"></i> <span>What's New Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="wn-Menus">
+                                <li><a class="ms-link" href="/admin/whats-new/create/">Create What's New</a></li>
+                                <li><a class="ms-link" href="/admin/whats-new-list/">What's New List</a></li>
                             </ul>
                         </li>
                     </ul>

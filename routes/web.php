@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\GosController;
+use App\Http\Controllers\NewsEventsController;
+use App\Http\Controllers\WhatsNewController;
 use App\Http\Controllers\HelperController;
 
 /*
@@ -42,6 +45,27 @@ Route::get('/admin/slider-list/', [SliderController::class, 'index'])->name('adm
 Route::get('/admin/slider/edit/{id}/', [SliderController::class, 'edit'])->name('admin.slider.edit');
 Route::put('/admin/slider/edit/{id}/', [SliderController::class, 'update'])->name('admin.slider.update');
 Route::delete('/admin/slider/delete/{id}/', [SliderController::class, 'destroy'])->name('admin.slider.delete');
+
+Route::get('/admin/gos/create/', [GosController::class, 'create'])->name('admin.gos.create');
+Route::post('/admin/gos/create/', [GosController::class, 'store'])->name('admin.gos.save');
+Route::get('/admin/gos-list/', [GosController::class, 'index'])->name('admin.gos-list');
+Route::get('/admin/gos/edit/{id}/', [GosController::class, 'edit'])->name('admin.gos.edit');
+Route::put('/admin/gos/edit/{id}/', [GosController::class, 'update'])->name('admin.gos.update');
+Route::delete('/admin/gos/delete/{id}/', [GosController::class, 'destroy'])->name('admin.gos.delete');
+
+Route::get('/admin/news-events/create/', [NewsEventsController::class, 'create'])->name('admin.news-events.create');
+Route::post('/admin/news-events/create/', [NewsEventsController::class, 'store'])->name('admin.news-events.save');
+Route::get('/admin/news-events-list/', [NewsEventsController::class, 'index'])->name('admin.news-events-list');
+Route::get('/admin/news-events/edit/{id}/', [NewsEventsController::class, 'edit'])->name('admin.news-events.edit');
+Route::put('/admin/news-events/edit/{id}/', [NewsEventsController::class, 'update'])->name('admin.news-events.update');
+Route::delete('/admin/news-events/delete/{id}/', [NewsEventsController::class, 'destroy'])->name('admin.news-events.delete');
+
+Route::get('/admin/whats-new/create/', [WhatsNewController::class, 'create'])->name('admin.whats-new.create');
+Route::post('/admin/whats-new/create/', [WhatsNewController::class, 'store'])->name('admin.whats-new.save');
+Route::get('/admin/whats-new-list/', [WhatsNewController::class, 'index'])->name('admin.whats-new-list');
+Route::get('/admin/whats-new/edit/{id}/', [WhatsNewController::class, 'edit'])->name('admin.whats-new.edit');
+Route::put('/admin/whats-new/edit/{id}/', [WhatsNewController::class, 'update'])->name('admin.whats-new.update');
+Route::delete('/admin/whats-new/delete/{id}/', [WhatsNewController::class, 'destroy'])->name('admin.whats-new.delete');
 
 Route::get('/web/{slug}/', [HelperController::class, 'index']);
 Route::post('/tinymce/upload/', [HelperController::class, 'upload']);
