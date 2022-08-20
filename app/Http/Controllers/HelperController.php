@@ -22,7 +22,7 @@ class HelperController extends Controller
     }
     public function upload(Request $request){
         $fileName=$request->file('file')->getClientOriginalName();
-        $path=$request->file('file')->storeAs('tinymce', $fileName, 'public');
+        $path=$request->file('file')->storeAs('tinymce', $fileName, public_path());
         return response()->json(['location'=>"/storage/".$path]);
         
         /*$imgpath = request()->file('file')->store('uploads', 'public'); 
