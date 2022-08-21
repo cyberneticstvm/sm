@@ -38,8 +38,11 @@ $(function() {
         var type = $(this).val();
         var cntrl = $(this).data('section');
         if(type == 1){
-            dis.find(".content").html("<input type='hidden' name='cctype[]' value='"+type+"' /><input type='hidden' name='sectype[]' value='"+cntrl+"'/><input type='text' class='form-control' name='content_title[]' placeholder='Content Title' /><textarea class='form-control textarea' name='ccontent[]' required></textarea>");
-            CKEDITOR.replaceAll('textarea');
+            dis.find(".content").html("<input type='hidden' name='cctype[]' value='"+type+"' /><input type='hidden' name='sectype[]' value='"+cntrl+"'/><input type='text' class='form-control' name='content_title[]' placeholder='Content Title' /><textarea class='form-control' name='ccontent[]' required></textarea>");
+            //var ele = dis.find('textarea').last().attr('class');
+            var cls = (Math.random() + 1).toString(36).substring(7);
+            dis.find('textarea').last().addClass(cls);
+            CKEDITOR.replaceAll(cls);
         }else{
             /*$.ajax({
                 type: 'GET',
