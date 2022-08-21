@@ -17,7 +17,7 @@ class GosController extends Controller
      */
     public function index()
     {
-        $gos = GovtOrder::leftJoin('go_types as t', 'govt_orders.type_id', '=', 't.id')->select('govt_orders.id', 'govt_orders.go_subject', 'govt_orders.go_date', 'govt_orders.order_by', 'govt_orders.go_doc', 't.name')->orderByDesc('govt_orders.go_date')->get();
+        $gos = GovtOrder::leftJoin('go_types as t', 'govt_orders.type_id', '=', 't.id')->select('govt_orders.id', 'govt_orders.go_notification_number', 'govt_orders.go_subject', 'govt_orders.go_date', 'govt_orders.order_by', 'govt_orders.go_doc', 't.name')->orderByDesc('govt_orders.go_date')->get();
         return view('admin.gos-list', compact('gos'));
     }
 

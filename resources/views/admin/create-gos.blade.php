@@ -66,7 +66,14 @@
                                             <small class="text-danger">{{ $errors->first('go_doc') }}</small>
                                             @enderror
                                         </div>
-                                        <div class="col-lg-12">
+                                        <div class="col-lg-3">
+                                            <label for="TextInput" class="form-label">Notification No.</label>
+                                            <input type="text" class="form-control" name="go_notification_number" placeholder="Notification" required/>
+                                            @error('go_notification_number')
+                                            <small class="text-danger">{{ $errors->first('go_notification_number') }}</small>
+                                            @enderror
+                                        </div>
+                                        <div class="col-lg-9">
                                             <label for="TextInput" class="form-label">Subject</label>
                                             <input type="text" class="form-control" name="go_subject" placeholder="Subject" required/>
                                             @error('go_subject')

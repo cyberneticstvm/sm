@@ -12,6 +12,7 @@ class GovtOrder extends Model
     protected $fillable = [
         'type_id',
         'go_subject',
+        'go_notification_number',
         'go_date',
         'go_doc',
         'order_by',

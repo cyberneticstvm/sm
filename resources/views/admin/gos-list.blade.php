@@ -22,20 +22,20 @@
 <div class="body d-flex py-lg-4 py-3">
     <div class="container-fluid">        
         <div class="row g-3">
-            <div class="col-xl-12 col-lg-12 col-md-12">
+            <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="row g-3">
-                    <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12">
+                    <div class="col-lg-12 col-md-6 col-sm-12">
                         <div class="card mt-3">
                             <div class="card-body">
                                 <h5>GOs List</h5>
                             </div>
                             <div class="card-body table-responsive">
-                                <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Subject</th><th>Document</th><th>Type</th><th>Date</th><th>Order</th><th>Edit</th><th>Delete</th></tr></thead><tbody>
+                                <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Notification</th><th>Document</th><th>Type</th><th>Date</th><th>Order</th><th>Edit</th><th>Delete</th></tr></thead><tbody>
                                     @php $c = 1; @endphp
                                     @forelse ($gos as $key => $go)
                                         <tr>
                                             <td>{{ $c++ }}</td>
-                                            <td>{{ $go->go_subject }}</td>
+                                            <td>{{ $go->go_notification_number }}</td>
                                             <td><a href="{{ public_path().'/storage/'.$go->go_doc }}" target="_blank">{{ $go->go_doc }}</a></td>
                                             <td>{{ $go->name }}</td>
                                             <td>{{ $go->go_date }}</td>
