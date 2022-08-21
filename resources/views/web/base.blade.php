@@ -37,6 +37,8 @@
 		<link rel="stylesheet" href="{{ public_path().'/web/css/theme-blog.css' }}">
 		<link rel="stylesheet" href="{{ public_path().'/web/css/theme-shop.css' }}">
 
+		<link rel="stylesheet" href="{{ public_path().'/admin/css/dataTables.min.css' }}">
+
 		<!-- Skin CSS -->
 		<link id="skinCSS" rel="stylesheet" href="{{ public_path().'/web/css/skins/default.css' }}">
 
@@ -244,6 +246,7 @@
 		<!-- Theme Base, Components and Settings -->
 		<script src="{{ public_path().'/web/js/theme.js' }}"></script>
 		<script src="{{ public_path().'/web/js/examples/examples.lightboxes.js' }}"></script>
+		<script src="{{ public_path().'/admin/bundles/dataTables.bundle.js' }}"></script>
 
 		<!-- Theme Custom -->
 		<script src="{{ public_path().'/web/js/custom.js' }}"></script>

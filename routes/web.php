@@ -76,4 +76,5 @@ Route::post('/admin/file/upload/', [HelperController::class, 'fileUpload'])->nam
 Route::delete('/admin/file/delete/{id}/', [HelperController::class, 'deleteFile'])->name('admin.file.delete');
 
 Route::get('/web/{slug}/', [HelperController::class, 'index']);
+Route::get('/government-orders/', [HelperController::class, 'gorder']);
 Route::post('/tinymce/upload/', [HelperController::class, 'upload'])->name('upp');

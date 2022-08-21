@@ -11,10 +11,14 @@ class HelperController extends Controller
 {
     public function index($slug){
         $page = DB::table('pages')->where('slug', $slug)->first();
-        $sections = DB::table('sections')->where('page_id', $page->id)->get();
+        $sections = DB::table('sections')->where('page_id', $page->id)->get();        
         //$contents = DB::table('contents')->where('page_id', $page->id)->get();
         //$contents = DB::table('contents')->where('page_id', $page->id)->get()->toArray();
         return view('web.page', compact('page', 'sections'));
+    }
+    public function gorder(){
+        $gos = DB::table('govt_orders')->orderByDesc('go_date')->get();
+        return view('web.government-orders', compact('gos'));
     }
     public function getpagelist(){
         $data = DB::table('pages')->select('id', 'page_title as name')->get();
