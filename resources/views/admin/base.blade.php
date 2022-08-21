@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="{{ public_path().'/admin/css/select2.min.css' }}">
     <link rel="stylesheet" href="{{ public_path().'/admin/css/al.style.min.css' }}">
     
-    <!--<link rel="stylesheet" href="{{ public_path().'/admin/css/summernote.min.css' }}">-->
     <!-- project layout css file -->
     <link rel="stylesheet" href="{{ public_path().'/admin/css/layout.c.min.css' }}">
     
@@ -773,16 +772,21 @@
 <!-- Jquery Core Js -->
 <script src="{{ public_path().'/admin/bundles/libscripts.bundle.js' }}"></script>
 
+<script src="{{ public_path().'/admin/ckeditor/ckeditor.js' }}"></script>
+
 <!-- Plugin Js -->
-<script src="{{ public_path().'/admin/bundles/apexcharts.bundle.js' }}"></script>
 <script src="{{ public_path().'/admin/bundles/dataTables.bundle.js' }}"></script>
 <script src="{{ public_path().'/admin/bundles/select2.bundle.js' }}"></script>
-<!--<script src="{{ public_path().'/admin/bundles/summernote.bundle.js' }}"></script>-->
-<script src="{{ public_path().'/admin/tinymce/tinymce.min.js' }}"></script>
 
 <!-- Jquery Page Js -->
 <script src="{{ public_path().'/admin/js/template.js' }}"></script>
 <script src="{{ public_path().'/admin/js/script.js' }}"></script>
 
+<script type="text/javascript">
+    CKEDITOR.replaceAll('textarea', {
+        filebrowserUploadUrl: "{{route('upp', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>
 </body>
 </html>

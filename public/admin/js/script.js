@@ -39,33 +39,7 @@ $(function() {
         var cntrl = $(this).data('section');
         if(type == 1){
             dis.find(".content").html("<input type='hidden' name='cctype[]' value='"+type+"' /><input type='hidden' name='sectype[]' value='"+cntrl+"'/><input type='text' class='form-control' name='content_title[]' placeholder='Content Title' /><textarea class='form-control textarea' name='ccontent[]' required></textarea>");
-            //$('textarea').last().summernote();
-            tinymce.init({
-                selector: '.textarea',
-                plugins: 'advlist link image lists table',
-                automatic_uploads: true,
-                images_upload_url: "/tinymce/upload/",
-                file_picker_callback: function(cb, value, meta) {
-                    var input = document.createElement('input');
-                    input.setAttribute('type', 'file');
-                    input.setAttribute('accept', 'image/*');
-                    input.onchange = function() {
-                        var file = this.files[0];
-    
-                        var reader = new FileReader();
-                        reader.readAsDataURL(file);
-                        reader.onload = function () {
-                            var id = 'blobid' + (new Date()).getTime();
-                            var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
-                            var base64 = reader.result.split(',')[1];
-                            var blobInfo = blobCache.create(id, file, base64);
-                            blobCache.add(blobInfo);
-                            cb(blobInfo.blobUri(), { title: file.name });
-                        };
-                    };
-                    input.click();
-                }
-            });
+            CKEDITOR.replaceAll('textarea');
         }else{
             /*$.ajax({
                 type: 'GET',
@@ -83,56 +57,8 @@ $(function() {
         }
     });
 
-    var c = 1;
-    $(".textarea").each(function(){
-        var data = $(this).data('content');
-        tinymce.init({
-            selector: '#ta_'+c,
-            plugins: 'advlist link image lists table',
-            automatic_uploads: true,
-            images_upload_url: "/tinymce/upload/",
-            setup: function (editor) {
-                editor.on('init', function () {
-                    editor.setContent(data);
-                });
-            }
-        });
-        c++
-    });
-
     $(".btn-create-page").click(function(){
         $(this).closest('form').submit();
     });
 
-    tinymce.init({
-        selector: 'textarea#news-events',
-        plugins: 'advlist link image lists table',
-        automatic_uploads: true,
-        images_upload_url: "/tinymce/upload/",
-        file_picker_callback: function(cb, value, meta) {
-            var input = document.createElement('input');
-            input.setAttribute('type', 'file');
-            input.setAttribute('accept', 'image/*');
-            input.onchange = function() {
-                var file = this.files[0];
-
-                var reader = new FileReader();
-                reader.readAsDataURL(file);
-                reader.onload = function () {
-                    var id = 'blobid' + (new Date()).getTime();
-                    var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
-                    var base64 = reader.result.split(',')[1];
-                    var blobInfo = blobCache.create(id, file, base64);
-                    blobCache.add(blobInfo);
-                    cb(blobInfo.blobUri(), { title: file.name });
-                };
-            };
-            input.click();
-        },
-        toolbar: 'undo redo | formatselect | ' +
-        'bold italic backcolor | alignleft aligncenter ' +
-        'alignright alignjustify | bullist numlist outdent indent | ' +
-        'removeformat | help',
-        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-    });
 });

@@ -68,7 +68,7 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <label for="TextInput" class="form-label">Content</label>
-                                            <textarea class="form-control" id="news-events" name="content"></textarea>
+                                            <textarea class="form-control textarea" id="news-events" name="content"></textarea>
                                         </div>                                        
                                     </div>
                                     <div class="row g-3 mt-3">
