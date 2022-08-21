@@ -13,7 +13,7 @@
 		<meta name="author" content="cybernetics.me">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="{{ public_path().'/web/img/favicon.ico' }}" type="image/x-icon" />
+		<link rel="shortcut icon" href="{{ public_path().'/web/img/sm/favicon.png' }}" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 		<!-- Mobile Metas -->

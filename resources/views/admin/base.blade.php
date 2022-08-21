@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Responsive Bootstrap 5 admin template and web Application ui kit.">
-    <meta name="keyword" content="ALUI, Bootstrap 5, ReactJs, Angular, Laravel, VueJs, ASP .Net, Admin Dashboard, Admin Theme">
-    <title>:: ALUI ::</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    <meta name="description" content="Suchitwa Mission">
+    <meta name="keyword" content="Suchitwa Mission">
+    <title>Suchitwa Mission - Admin Portal</title>
+    <link rel="icon" href="{{ public_path().'/admin/images/favicon.png' }}" type="image/x-icon"> <!-- Favicon-->
     <!-- project css file  -->
     
     <link rel="stylesheet" href="{{ public_path().'/admin/css/dataTables.min.css' }}">
