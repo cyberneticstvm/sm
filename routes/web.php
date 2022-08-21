@@ -24,6 +24,10 @@ Route::get('/', function () {
     return view('web.index');
 });
 
+Route::get('/administrator/', function () {
+    return view('admin.dash');
+});
+
 Route::get('/admin/page/create/', [PageController::class, 'create'])->name('admin.create-page');
 Route::post('/admin/page/create/', [PageController::class, 'store'])->name('admin.page.save');
 Route::get('/admin/page-list/', [PageController::class, 'index'])->name('admin.page-list');

@@ -49,7 +49,7 @@ class PageController extends Controller
         $input['slug'] = str_replace(' ', '-', Str::lower($input['page_title']));
         try{
             $page = Page::create($input);
-            if($input['stype'] && count($input['stype']) > 0):
+            if(!empty($input['stype']) && count($input['stype']) > 0):
                 for($i=0; $i<count($input['stype']); $i++):
                     if($input['stype'][$i] > 0):
                         $sid = DB::table('sections')->insertGetId([
@@ -129,7 +129,7 @@ class PageController extends Controller
             $page->update($input);
             DB::table('sections')->where('page_id', $id)->delete();
             DB::table('contents')->where('page_id', $id)->delete();
-            if($input['stype'] && count($input['stype']) > 0):
+            if(!empty($input['stype']) && count($input['stype']) > 0):
                 for($i=0; $i<count($input['stype']); $i++):
                     if($input['stype'][$i] > 0):
                         $sid = DB::table('sections')->insertGetId([
