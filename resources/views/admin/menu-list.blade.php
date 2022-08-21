@@ -30,7 +30,7 @@
                                 <h5>Menu List</h5>
                             </div>
                             <div class="card-body table-responsive">
-                                <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Menu Item</th><th>Menu type</th><th>Parent</th><th>Page</th><th>Publish Status</th><th>Edit</th><th>Delete</th></tr></thead><tbody>
+                                <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Menu Item</th><th>Menu type</th><th>Parent</th><th>Page</th><th>Publish Status</th><th>View</th><th>Edit</th><th>Delete</th></tr></thead><tbody>
                                     @php $c = 1; @endphp
                                     @forelse ($menus as $menu)
                                         <tr>
@@ -40,6 +40,7 @@
                                             <td>{{ DB::table('menus')->where('id', $menu->parent)->value('menu_item_name') }}</td>
                                             <td>{{ $menu->page }}</td>
                                             <td>{{ $menu->publish }}</td>
+                                            <td class="text-center"><a href="/web/{{ $menu->slug }}/" target="_blank"><i class="fa fa-eye text-info"></i></a></td>
                                             <td class="text-center"><a href="{{ route('admin.menu.edit', $menu->id) }}"><i class="fa fa-pencil text-warning"></i></a></td>
                                             <td>
                                             <form method="post" action="{{ route('admin.menu.delete', $menu->id) }}">
@@ -50,7 +51,7 @@
                                             </td>
                                         </tr>
                                     @empty
-                                        <tr><td colspan="8" class="text-center">No records found</td></tr>
+                                        <tr><td colspan="9" class="text-center">No records found</td></tr>
                                     @endforelse
                                 </tbody></table>
                             </div>

@@ -16,7 +16,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus = Menu::leftJoin('menu_types as mt', 'menus.menu_type_id', '=', 'mt.id')->leftJoin('pages as p', 'p.id', 'menus.page_id')->select('menus.id', 'menus.menu_item_name', 'menus.publish', 'menus.parent', 'mt.name as tname', 'p.page_title as page')->where('menus.publish', 1)->orderBy('menu_item_name')->get();
+        $menus = Menu::leftJoin('menu_types as mt', 'menus.menu_type_id', '=', 'mt.id')->leftJoin('pages as p', 'p.id', 'menus.page_id')->select('menus.id', 'menus.menu_item_name', 'menus.publish', 'menus.parent', 'mt.name as tname', 'p.page_title as page', 'p.slug')->where('menus.publish', 1)->orderBy('menu_item_name')->get();
         return view('admin.menu-list', compact('menus'));
     }
 

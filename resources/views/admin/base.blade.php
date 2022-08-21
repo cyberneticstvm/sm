@@ -159,6 +159,14 @@
                                 <li><a class="ms-link" href="/admin/whats-new-list/">What's New List</a></li>
                             </ul>
                         </li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#up-Menus"  href="#"><i class="fa fa-file-o"></i> <span>File Upload</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="up-Menus">
+                                <li><a class="ms-link" href="/admin/file/upload/">Upload</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="nav-profile">

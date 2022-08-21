@@ -28,4 +28,26 @@ class HelperController extends Controller
         /*$imgpath = request()->file('file')->store('uploads', 'public'); 
         return response()->json(['location' => "/storage/$imgpath"]);*/
     }
+    public function listUpload(){
+        $uploads = DB::table('file_uploads')->orderByDesc('id')->get();
+        return view('admin.file-upload', compact('uploads'));
+    }
+    public function fileUpload(Request $request){
+        $this->validate($request, [
+            'file' => 'required',
+        ]);
+        $input = $request->all();
+        $type = $request->file->getClientOriginalExtension();
+        $fileName=$request->file('file')->getClientOriginalName();
+        $path=$request->file('file')->storeAs('uploads', $fileName, 'public');        
+        $upload = DB::table('file_uploads')->insert(['url' => $path, 'type' => $type]);
+
+        $uploads = DB::table('file_uploads')->orderByDesc('id')->get();
+        return view('admin.file-upload', compact('uploads'));
+    }
+    public function deleteFile($id){
+        DB::table('file_uploads')->where('id', $id)->delete();
+        return redirect()->route('admin.listUpload')
+                        ->with('success','File deleted successfully');
+    }
 }

@@ -71,5 +71,9 @@ Route::get('/admin/whats-new/edit/{id}/', [WhatsNewController::class, 'edit'])->
 Route::put('/admin/whats-new/edit/{id}/', [WhatsNewController::class, 'update'])->name('admin.whats-new.update');
 Route::delete('/admin/whats-new/delete/{id}/', [WhatsNewController::class, 'destroy'])->name('admin.whats-new.delete');
 
+Route::get('/admin/file/upload/', [HelperController::class, 'listUpload'])->name('admin.listUpload');
+Route::post('/admin/file/upload/', [HelperController::class, 'fileUpload'])->name('admin.fileUpload');
+Route::delete('/admin/file/delete/{id}/', [HelperController::class, 'deleteFile'])->name('admin.file.delete');
+
 Route::get('/web/{slug}/', [HelperController::class, 'index']);
 Route::post('/tinymce/upload/', [HelperController::class, 'upload']);
