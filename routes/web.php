@@ -24,7 +24,7 @@ Route::get('/', function () {
     return view('web.index');
 });
 
-Route::get('/administrator/', function () {
+Route::get('/admin/dash/', function () {
     return view('admin.dash');
 });
 

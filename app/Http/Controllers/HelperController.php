@@ -43,7 +43,8 @@ class HelperController extends Controller
         $upload = DB::table('file_uploads')->insert(['url' => $path, 'type' => $type]);
 
         $uploads = DB::table('file_uploads')->orderByDesc('id')->get();
-        return view('admin.file-upload', compact('uploads'));
+        return redirect()->route('admin.listUpload')
+                        ->with('success','File uploaded successfully');
     }
     public function deleteFile($id){
         DB::table('file_uploads')->where('id', $id)->delete();
