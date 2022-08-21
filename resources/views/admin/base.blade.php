@@ -233,7 +233,7 @@
                             <ul class="list-unstyled list mb-0">
                                 <li class="py-4 border-bottom">
                                     <a href="javascript:void(0);" class="d-flex">
-                                        <img class="avatar rounded-circle" src="../../../assets/images/xs/avatar1.jpg" alt="">
+                                        <img class="avatar rounded-circle" src="{{ public_path().'/admin/images/xs/avatar1.jpg' }}" alt="">
                                         <div class="flex-fill ms-3">
                                             <p class="d-flex justify-content-between mb-0 text-muted"><span class="fw-bold">Chris Morise</span> <small>2MIN</small></p>
                                             <span class="text-muted">changed an issue from "In Progress" to <span class="badge bg-success">Review</span></span>
@@ -251,7 +251,7 @@
                                 </li>
                                 <li class="py-4 border-bottom">
                                     <a href="javascript:void(0);" class="d-flex">
-                                        <img class="avatar rounded-circle" src="../../../assets/images/xs/avatar3.jpg" alt="">
+                                        <img class="avatar rounded-circle" src="{{ public_path().'/admin/images/xs/avatar3.jpg' }}" alt="">
                                         <div class="flex-fill ms-3">
                                             <p class="d-flex justify-content-between mb-0 text-muted"><span class="fw-bold">Orlando Lentz</span> <small>1HR</small></p>
                                             <span class="text-muted">There are many variations of passages</span>
@@ -260,7 +260,7 @@
                                 </li>
                                 <li class="py-4 border-bottom">
                                     <a href="javascript:void(0);" class="d-flex">
-                                        <img class="avatar rounded-circle" src="../../../assets/images/xs/avatar4.jpg" alt="">
+                                        <img class="avatar rounded-circle" src="{{ public_path().'/admin/images/xs/avatar4.jpg' }}" alt="">
                                         <div class="flex-fill ms-3">
                                             <p class="d-flex justify-content-between mb-0 text-muted"><span class="fw-bold">Kelly</span> <small>1DAY</small></p>
                                             <span class="text-muted">Contrary to popular belief <span class="badge bg-danger">Code</span></span>
@@ -269,7 +269,7 @@
                                 </li>
                                 <li class="py-4 border-bottom">
                                     <a href="javascript:void(0);" class="d-flex">
-                                        <img class="avatar rounded-circle" src="../../../assets/images/xs/avatar5.jpg" alt="">
+                                        <img class="avatar rounded-circle" src="{{ public_path().'/admin/images/xs/avatar5.jpg' }}" alt="">
                                         <div class="flex-fill ms-3">
                                             <p class="d-flex justify-content-between mb-0 text-muted"><span class="fw-bold">Hammer</span> <small>13MIN</small></p>
                                             <span class="text-muted">making it over 2000 years old</span>
@@ -278,7 +278,7 @@
                                 </li>
                                 <li class="py-4 border-bottom">
                                     <a href="javascript:void(0);" class="d-flex">
-                                        <img class="avatar rounded-circle" src="../../../assets/images/xs/avatar6.jpg" alt="">
+                                        <img class="avatar rounded-circle" src="{{ public_path().'/admin/images/xs/avatar6.jpg' }}" alt="">
                                         <div class="flex-fill ms-3">
                                             <p class="d-flex justify-content-between mb-0 text-muted"><span class="fw-bold">Orlando Lentz</span> <small>1HR</small></p>
                                             <span class="text-muted">There are many variations of passages</span>
@@ -287,7 +287,7 @@
                                 </li>
                                 <li class="py-4">
                                     <a href="javascript:void(0);" class="d-flex">
-                                        <img class="avatar rounded-circle" src="../../../assets/images/xs/avatar7.jpg" alt="">
+                                        <img class="avatar rounded-circle" src="{{ public_path().'/admin/images/xs/avatar7.jpg' }}" alt="">
                                         <div class="flex-fill ms-3">
                                             <p class="d-flex justify-content-between mb-0 text-muted"><span class="fw-bold">savera</span> <small>1DAY</small></p>
                                             <span class="text-muted">The generated Lorem Ipsum</span>
@@ -409,7 +409,7 @@
                         <small class="dropdown-header">Members</small>              
                         <a class="dropdown-item py-2" href="#">
                             <div class="d-flex align-items-center">
-                                <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar1.jpg" alt="">
+                                <img class="avatar sm rounded-circle" src="{{ public_path().'/admin/images/xs/avatar1.jpg' }}" alt="">
                                 <div class="text-truncate ms-2">
                                     <span>Robert Hammer <i class="fa fa-check-circle text-primary" data-bs-toggle="tooltip" data-placement="top" title="" data-original-title="Top endorsed"></i></span>
                                 </div>
@@ -417,7 +417,7 @@
                         </a>              
                         <a class="dropdown-item py-2" href="#">
                             <div class="d-flex align-items-center">
-                                <img class="avatar sm rounded-circle" src="../../../assets/images/xs/avatar2.jpg" alt="">
+                                <img class="avatar sm rounded-circle" src="{{ public_path().'/admin/images/xs/avatar2.jpg' }}" alt="">
                                 <div class="text-truncate ms-2">
                                     <span>Orlando Lentz</span>
                                 </div>
@@ -451,7 +451,7 @@
                     <div class="row g-3">
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-default.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-default.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Default</h6>
                                 </div>
@@ -459,7 +459,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../index-mini-sidebar.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-mini-sidebar.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-mini-sidebar.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Default + Menu Collapse</h6>
                                 </div>
@@ -467,7 +467,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift border border-primary bg-primary text-light" href="index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-c.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-c.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Menu + Tab view</h6>
                                 </div>
@@ -475,7 +475,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-g/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-g.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-g.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Icon menu with Grid view</h6>
                                 </div>
@@ -483,7 +483,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-i/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-i.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-i.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Dual tone icon + menu list</h6>
                                 </div>
@@ -494,7 +494,7 @@
                     <div class="row g-3">
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-d/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-d.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-d.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Header <span class="text-muted small">(Fluid)</span></h6>
                                 </div>
@@ -502,7 +502,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-d-container/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-d-container.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-d-container.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Header <span class="text-muted small">(Container)</span></h6>
                                 </div>
@@ -510,7 +510,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-d-sub-header/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-d-sub-header.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-d-sub-header.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Header + Sub menu <span class="text-muted small">(Fluid)</span></h6>
                                 </div>
@@ -518,7 +518,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-d-sub-header-container/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-d-sub-header-container.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-d-sub-header-container.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Header + Submenu <span class="text-muted small">(Container)</span></h6>
                                 </div>
@@ -526,7 +526,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-f/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-f.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-f.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Header + Submenu, Overlay <span class="text-muted small">(Fluid)</span></h6>
                                 </div>
@@ -534,7 +534,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-f-container/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-f-container.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-f-container.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Header + Submenu, Overlay <span class="text-muted small">(Container)</span></h6>
                                 </div>
@@ -542,7 +542,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-l/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-l.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-l.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Megamenu + Animation Overlay</h6>
                                 </div>
@@ -550,7 +550,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-q/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-q.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-q.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Header + Megamenu sticky</h6>
                                 </div>
@@ -561,7 +561,7 @@
                     <div class="row g-3">
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-b/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-b.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-b.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Default</h6>
                                 </div>
@@ -569,7 +569,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-e/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-e.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-e.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Default</h6>
                                 </div>
@@ -577,7 +577,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-h/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-h.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-h.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Default</h6>
                                 </div>
@@ -585,7 +585,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-k/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-k.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-k.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Default</h6>
                                 </div>
@@ -593,7 +593,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-p/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-p.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-p.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Background BG</h6>
                                 </div>
@@ -601,7 +601,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <a class="card lift" href="../layout-n/index.html">
-                                <img class="card-img-top" src="../../../assets/images/layout/layout-n.svg" alt="" />
+                                <img class="card-img-top" src="{{ public_path().'/admin/images/layout/layout-n.svg' }}" alt="" />
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-0">Sidebar with Tab</h6>
                                 </div>
@@ -685,11 +685,11 @@
                         </div>
                         <div class="bg-images">
                             <ul class="list-unstyled d-flex justify-content-between">
-                                <li class="sidebar-img-1 sidebar-img-active"><a class="rounded sidebar-img" id="img-1" href="#"><img src="../../../assets/images/sidebar-bg/sidebar-1.jpg" alt="" /></a></li>
-                                <li class="sidebar-img-2"><a class="rounded sidebar-img" id="img-2" href="#"><img src="../../../assets/images/sidebar-bg/sidebar-2.jpg" alt="" /></a></li>
-                                <li class="sidebar-img-3"><a class="rounded sidebar-img" id="img-3" href="#"><img src="../../../assets/images/sidebar-bg/sidebar-3.jpg" alt="" /></a></li>
-                                <li class="sidebar-img-4"><a class="rounded sidebar-img" id="img-4" href="#"><img src="../../../assets/images/sidebar-bg/sidebar-4.jpg" alt="" /></a></li>
-                                <li class="sidebar-img-5"><a class="rounded sidebar-img" id="img-5" href="#"><img src="../../../assets/images/sidebar-bg/sidebar-5.jpg" alt="" /></a></li>
+                                <li class="sidebar-img-1 sidebar-img-active"><a class="rounded sidebar-img" id="img-1" href="#"><img src="{{ public_path().'/admin/images/sidebar-bg/sidebar-1.jpg' }}" alt="" /></a></li>
+                                <li class="sidebar-img-2"><a class="rounded sidebar-img" id="img-2" href="#"><img src="{{ public_path().'/admin/images/sidebar-bg/sidebar-2.jpg' }}" alt="" /></a></li>
+                                <li class="sidebar-img-3"><a class="rounded sidebar-img" id="img-3" href="#"><img src="{{ public_path().'/admin/images/sidebar-bg/sidebar-3.jpg' }}" alt="" /></a></li>
+                                <li class="sidebar-img-4"><a class="rounded sidebar-img" id="img-4" href="#"><img src="{{ public_path().'/admin/images/sidebar-bg/sidebar-4.jpg' }}" alt="" /></a></li>
+                                <li class="sidebar-img-5"><a class="rounded sidebar-img" id="img-5" href="#"><img src="{{ public_path().'/admin/images/sidebar-bg/sidebar-5.jpg' }}" alt="" /></a></li>
                             </ul>
                         </div>
                     </div>
