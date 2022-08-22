@@ -6,4 +6,8 @@ $(function(){
     });
 
     $('table').addClass('table-striped table-bordered')
-})
+});
+
+$(window).resize(function(){
+    //alert(document.getElementById("leftdiv").style.height)
+});

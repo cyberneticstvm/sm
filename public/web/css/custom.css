@@ -1,10 +1,6 @@
 .text-justify{
     text-align: justify;
 }
-.wnew{
-    height: 160px;
-    overflow-y: scroll;
-}
 .section{
     background: #012b59 !important;
 }

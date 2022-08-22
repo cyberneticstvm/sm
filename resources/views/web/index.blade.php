@@ -2,9 +2,9 @@
 
 @section("content")
 <div role="main" class="main">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <div class="owl-carousel owl-theme nav-inside" data-plugin-options="{'items': 1, 'margin': 10, 'autoplay': true, 'autoplayTimeout': 5000, 'loop': true, 'nav': true, 'dots': false}">
                     <div>
                         <div class="img-thumbnail border-0 p-0 d-block">
@@ -28,19 +28,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="card text-center">
                     <div class="card-header bg-color-dark text-white">
                         What's New
                     </div>
-                    <div class="card-body wnew">
-                        <marquee direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll"><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p></marquee>
+                    <div class="card-body">
+                        <marquee class="wnew" direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll"><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p></marquee>
+                    </div>
+                    <div class="">                
+                        <div class="card rounded-0 card-info bg-primary text-center text-white mt-1 pt-1 pb-1">Plastic Ban</div>
+                        <div class="card rounded-0 card-info bg-info text-center text-white mt-1 pt-1 pb-1">Take a Break</div>
+                        <div class="card rounded-0 card-info bg-dark text-center text-white mt-1 pt-1 pb-1">Government Orders</div>
+                        <div class="card rounded-0 card-info bg-danger text-center mt-1 pt-1 pb-1"><a href="#quickLinksModal" data-bs-toggle="modal" class="text-white">Quick Links</a></div>
                     </div>
                 </div>
-                <div class="card rounded-0 card-info bg-primary text-center text-white mt-1">Plastic Ban</div>
-                <div class="card rounded-0 card-info bg-info text-center text-white mt-1">Take a Break</div>
-                <div class="card rounded-0 card-info bg-warning text-center text-white mt-1">Government Orders</div>
-                <div class="card rounded-0 card-info bg-danger text-center mt-1"><a href="#quickLinksModal" data-bs-toggle="modal" class="text-white">Quick Links</a></div>
             </div>
         </div>
     </div>
