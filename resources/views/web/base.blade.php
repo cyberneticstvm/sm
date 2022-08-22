@@ -101,7 +101,7 @@
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
 														<a class="dropdown-item dropdown-toggle" href="/">
-															Home
+															HOME
 														</a>														
 													</li>
 													@foreach($main_menu as $key => $value)
@@ -110,8 +110,20 @@
 														@if($submenu)
 															<ul class="dropdown-menu">
 																@foreach($submenu as $skey => $sval)
-																	@php $slug = DB::table('pages')->where('id', $sval->page_id)->value('slug'); @endphp
-																	<li><a class="dropdown-item" href="/web/{{ $slug }}/">{{ $sval->menu_item_name }}</a></li>
+																	@php 
+																	$nextmenu = DB::table('menus')->where('parent', $sval->id)->get();
+																	$slug = DB::table('pages')->where('id', $sval->page_id)->value('slug'); @endphp
+																	<li class="{{ (count($nextmenu)>0) ? 'dropdown-submenu' : '' }}"><a class="dropdown-item" href="/web/{{ $slug }}/">{{ $sval->menu_item_name }}</a>
+																		@if(!empty($nextmenu))	
+																		<ul class="dropdown-menu">
+																			@forelse($nextmenu as $key => $next)
+																			@php $nextslug = DB::table('pages')->where('id', $next->page_id)->value('slug'); @endphp
+																				<li><a class="dropdown-item" href="/web/{{ $nextslug }}/">{{ $next->menu_item_name }}</a></li>
+																			@empty
+																			@endforelse
+																		</ul>
+																		@endif
+																	</li>
 																@endforeach
 															</ul>
 														@endif

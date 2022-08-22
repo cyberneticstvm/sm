@@ -16,7 +16,7 @@
                                     @if($contents)                                        
                                         @foreach($contents as $cval => $content)
                                             @if($content->section_id == $section->id)
-                                                @if($content->content_type == 1)
+                                                @if($content->content_type == 1 && !empty($contents[$i]->content_title))
                                                     <li class="nav-item">
                                                         <a class="nav-link {{ ($i == 0) ? 'active' : '' }}" href="#{{ str_replace(' ', '_', $contents[$i]->content_title) }}" data-bs-toggle="tab">{{ $contents[$i]->content_title }}</a>
                                                     </li>
@@ -32,8 +32,8 @@
                                         @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
                                         @if($contents)
                                             @foreach($contents as $cval => $content)
-                                                @if($contents[$i]->section_id == $section->id)
-                                                    @if($contents[$i]->content_type == 1)
+                                                @if($content->section_id == $section->id)
+                                                    @if($content->content_type == 1 && !empty($contents[$i]->content_title))
                                                         <div id="{{ str_replace(' ', '_', $contents[$i]->content_title) }}" class="tab-pane {{ ($i == 0) ? 'active' : '' }}">
                                                             {!! $contents[$i]->content !!}
                                                         </div>
@@ -54,7 +54,7 @@
                                     @if($contents)                                        
                                         @foreach($contents as $cval => $content)
                                             @if($content->section_id == $section->id)
-                                                @if($content->content_type == 1)
+                                                @if($content->content_type == 1 && !empty($contents[$i]->content_title))
                                                     <li class="nav-item">
                                                         <a class="nav-link {{ ($i == 0) ? 'active' : '' }}" href="#{{ str_replace(' ', '_', $contents[$i]->content_title) }}" data-bs-toggle="tab">{{ $contents[$i]->content_title }}</a>
                                                     </li>
@@ -70,8 +70,8 @@
                                         @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
                                         @if($contents)
                                             @foreach($contents as $cval => $content)
-                                                @if($contents[$i]->section_id == $section->id)
-                                                    @if($contents[$i]->content_type == 1)
+                                                @if($content->section_id == $section->id)
+                                                    @if($content->content_type == 1 && !empty($contents[$i]->content_title))
                                                         <div id="{{ str_replace(' ', '_', $contents[$i]->content_title) }}" class="tab-pane {{ ($i == 0) ? 'active' : '' }}">
                                                             {!! $contents[$i]->content !!}
                                                         </div>
@@ -102,7 +102,7 @@
                                                 @if($contents)
                                                     @foreach($contents as $cval => $content)
                                                         @if($content->section_id == $section->id)
-                                                            @if($content->content_type == 1)
+                                                            @if($content->content_type == 1 && !empty($contents[$i]->content))
                                                                 {!! $contents[$i]->content !!}
                                                                 @break
                                                             @endif

@@ -29,7 +29,7 @@ class MenuController extends Controller
     {
         $menu_types = DB::table('menu_types')->get();
         $pages = DB::table('pages')->where('publish', 1)->get();
-        $menus = Menu::where('parent', 0)->get();
+        $menus = Menu::get();
         return view('admin.create-menu', compact('menu_types', 'pages', 'menus'));
     }
 
@@ -75,7 +75,7 @@ class MenuController extends Controller
         $menu = Menu::find($id);
         $menu_types = DB::table('menu_types')->get();
         $pages = DB::table('pages')->where('publish', 1)->get();
-        $menus = Menu::where('parent', 0)->get();
+        $menus = Menu::get();
         return view('admin.edit-menu', compact('menu', 'menu_types', 'pages', 'menus'));
     }
 
