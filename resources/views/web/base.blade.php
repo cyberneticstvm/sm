@@ -49,7 +49,7 @@
 		<script src="{{ public_path().'/web/vendor/modernizr/modernizr.min.js' }}"></script>
 
 	</head>
-	<body data-plugin-page-transition>
+	<body data-plugin-page-transition onload="Resize()">
 		<div class="body">
 			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
 				<div class="header-body border-top-0">

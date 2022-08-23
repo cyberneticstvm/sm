@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
+use App\Models\NewsAndEvents;
 use DB;
 
 class HelperController extends Controller
@@ -20,6 +21,14 @@ class HelperController extends Controller
         //$contents = DB::table('contents')->where('page_id', $page->id)->get();
         //$contents = DB::table('contents')->where('page_id', $page->id)->get()->toArray();
         return view('web.page', compact('page', 'sections'));
+    }
+    public function seeallnews(){
+        $news = DB::table('news_and_events')->orderBy('date')->get();
+        return view('web.see-all-news', compact('news'));
+    }
+    public function singlenews($id){
+        $news = NewsAndEvents::find($id);
+        return view('web.see-single-news', compact('news'));
     }
     public function gorder(){
         $gos = DB::table('govt_orders')->orderByDesc('go_date')->get();

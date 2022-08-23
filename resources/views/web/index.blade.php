@@ -168,79 +168,35 @@
     <div class="container">
         <div class="row mt-5 mb-5">
             <div class="col-lg-6"><h4 class="">News & Updates</h4></div>
-            <div class="col-lg-6 text-end"><a href="#" class="btn btn-outline btn-primary rounded-0">See All News</a></div>
+            <div class="col-lg-6 text-end"><a href="/see-all-news-and-events/" class="btn btn-outline btn-primary rounded-0">See All News</a></div>
             <div class="col">
                 <div class="blog-posts">
                     <div class="row">
+                        @forelse($news as $key => $ne)
                         <div class="col-md-4">
                             <article class="post post-medium border-0 pb-0 mb-5">
                                 <div class="post-image">
-                                    <a href="/">
-                                        <img src="{{ public_path().'/web/img/sm/extras/2332smartgarbage.jpg' }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="">
+                                    <a href="#">
+                                        <img src="{{ public_path().'/storage/'.$ne->img_url }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="">
                                     </a>
                                 </div>
 
                                 <div class="post-content">
-
-                                    <!--h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2"><a href="blog-post.html">Thiruvananthapuram</a></h2-->
 									<div class="post-meta mt-1">
-                                        <span><i class="far fa-folder"></i> 23 August 2022 </span>
-										<span><i class="far fa-user"></i> Trivandrum </span>
+                                        <span><i class="far fa-folder"></i>{{ $ne-date }}</span>
+										<span><i class="far fa-user"></i> {{ DB::table('districts')->where('id', $ne->district)->value('name') }} </span>
                                     </div>
-                                    <p class="text-justify">Suchitwa Mission has launched a mobile application to monitor solid waste management activities in local bodies Suchitwa...</p>
+                                    <p class="text-justify">{{ $ne->title }}</p>
 
                                     <div class="post-meta">
-                                        <span class="d-block mt-1"><a href="blog-post.html" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
+                                        <span class="d-block mt-1"><a href="route('/news-and-events/', $ne->id)" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
                                     </div>
 
                                 </div>
                             </article>
                         </div>
-                        <div class="col-md-4">
-                            <article class="post post-medium border-0 pb-0 mb-5">
-                                <div class="post-image">
-                                    <a href="/">
-                                        <img src="{{ public_path().'/web/img/sm/extras/5040pappancode.jpg' }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="post-content">
-
-                                    <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2"><a href="blog-post.html">Thiruvananthapuram</a></h2>
-                                    <p class="text-justify">Take a Break - Public Toilet Complex inauguration in Pappanamcode KSRTC Depo in Trivandrum by Minister Govidan Master...</p>
-
-                                    <div class="post-meta">
-                                        <span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-                                        <span><i class="far fa-folder"></i> <a href="#">News</a>, <a href="#">Design</a> </span>
-                                        <span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-                                        <span class="d-block mt-2"><a href="blog-post.html" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-                                    </div>
-
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="post post-medium border-0 pb-0 mb-5">
-                                <div class="post-image">
-                                    <a href="/">
-                                        <img src="{{ public_path().'/web/img/sm/extras/5877thelineer.jpg' }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="post-content">
-
-                                    <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2"><a href="blog-post.html">Thiruvananthapuram</a></h2>
-                                    <p class="text-justify">Thelineer Ozhukum Navakeralam Project Laughing Ceremony to aim clean all water resources ...</p>
-
-                                    <div class="post-meta">
-                                        <span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-                                        <span><i class="far fa-folder"></i> <a href="#">News</a>, <a href="#">Design</a> </span>
-                                        <span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-                                        <span class="d-block mt-2"><a href="blog-post.html" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+                        @empty
+                        @endforelse                        
                     </div>
                 </div>
             </div>
