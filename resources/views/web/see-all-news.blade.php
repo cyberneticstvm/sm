@@ -4,8 +4,8 @@
 <div role="main" class="main">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 mt-5">
-                <h3>See All News and Events</h3>
+            <div class="col-lg-12 pt-3 bg-eee">
+                <h2>See All News and Events</h2>
             </div>
             @forelse($news as $key => $ne)
             <div class="col-md-4">

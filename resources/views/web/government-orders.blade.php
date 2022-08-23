@@ -4,8 +4,10 @@
 <div role="main" class="main">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 mt-5">
-                <h3>Government Orders</h3>
+            <div class="col-lg-12 pt-3 bg-eee">
+                <h2>Government Orders</h2>
+            </div>
+            <div class="col-lg-12 mt-3">
                 <div class="tabs">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">

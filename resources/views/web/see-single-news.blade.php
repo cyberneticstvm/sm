@@ -4,8 +4,8 @@
 <div role="main" class="main">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 mt-5">
-                <h3>{{ $news->title }}</h3>
+            <div class="col-lg-12 pt-3 bg-eee">
+                <h2>{{ $news->title }}</h2>
             </div>
             <div class="col-md-12">
                 <div class="post-image">
