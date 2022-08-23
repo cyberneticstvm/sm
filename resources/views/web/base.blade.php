@@ -215,6 +215,15 @@
 										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-faq.html">FAQ</a></li>
 									</ul>
 								</div>
+								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
+									<h5 class="text-3 mb-3">Portfolio</h5>
+									<ul class="list list-icons list-icons-sm mb-0">
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-team.html">Team</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-services.html">Services</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-careers.html">Careers</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-faq.html">FAQ</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 						<div class="col-md-3 mb-4 mb-lg-0">
