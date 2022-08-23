@@ -256,10 +256,11 @@
             </div>
             <div class="modal-body">
                 <ul class="list list-icons list-primary list-borders">
-                    <li><i class="fa fa-check"></i><a href="#">Suchitwa Padavi</a></li>
-                    <li><i class="fa fa-check"></i><a href="#">Collectors @ School</a></li>
-                    <li><i class="fa fa-check"></i><a href="#">IEC-Capacity Building</a></li>
-                    <li><i class="fa fa-check"></i><a href="#">Service Providers</a></li>
+                    @forelse($qlinks as $key => $qlink)
+                    $slug = DB::table('pages')->where('id', $qlink->page_id)->value('slug');
+                        <li><i class="fa fa-check"></i><a href="{{ '/web/'.$slug.'/' }}">{{ $qlink->menu_item_name }}</a></li>
+                    @empty
+                    @endforelse
                 </ul>
             </div>
             <div class="modal-footer">

@@ -14,7 +14,8 @@ class HelperController extends Controller
         $sliders = DB::table('sliders')->orderBy('order_by')->get();
         $news = DB::table('news_and_events')->orderBy('date')->limit(3)->get();
         $whats = DB::table('whats_news')->orderBy('created_at')->limit(5)->get();
-        return view('web.index', compact('sliders', 'news', 'whats'));
+        $qlinks = DB::table('menus')->where('menu_type_id', 2)->get();
+        return view('web.index', compact('sliders', 'news', 'whats', 'qlinks'));
     }
     public function index($slug){
         $page = DB::table('pages')->where('slug', $slug)->first();
