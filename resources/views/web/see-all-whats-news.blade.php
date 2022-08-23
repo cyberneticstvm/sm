@@ -10,7 +10,7 @@
             @forelse($news as $key => $ne)
             <div class="col-md-12 mt-3">
                 <ul class="list list-icons list-primary list-borders">
-                    @if($what->doc_type == 'url')
+                    @if($ne->doc_type == 'url')
                         <li><i class="fa fa-check"></i><a href="{{ $ne->url }}" target="_blank">{{ $ne->title }}</a></li>
                     @else
                         <li><i class="fa fa-check"></i><a href="{{ public_path().'/storage/'.$ne->document }}" target="_blank">{{ $ne->title }}</a></li>
