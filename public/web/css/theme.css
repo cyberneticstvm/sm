@@ -352,7 +352,7 @@ pre {
 	font-size: 0.9em;
 	padding: 6px 10px;
 	display: inline-block;
-	letter-spacing: -0.5px;
+	/*letter-spacing: -0.5px;*/
 }
 
 #header .header-nav-top .nav > li > a [class*="fa-"], #header .header-nav-top .nav > li > a .icons, #header .header-nav-top .nav > li > span [class*="fa-"], #header .header-nav-top .nav > li > span .icons {
@@ -1517,7 +1517,7 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 		font-style: normal;
 		font-weight: 600;
 		padding: 0.5rem 1rem;
-		letter-spacing: -0.5px;
+		/*letter-spacing: -0.5px;*/
 		text-decoration: none;
 	}
 
@@ -1813,7 +1813,7 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 
 	#header .header-nav-main.header-nav-main-font-alternative nav > ul > li > a {
 		font-family: 'Open Sans', sans-serif;
-		font-size: 0.85rem;
+		font-size: 1rem;
 		font-weight: 600;
 	}
 
