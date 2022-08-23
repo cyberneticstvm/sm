@@ -17,7 +17,7 @@
                     </div>
                     <div class="post-content">
                         <div class="post-meta mt-1">
-                            <span><i class="far fa-folder"></i>{{ $ne-date }}</span>
+                            <span><i class="far fa-folder"></i>{{ $ne->date }}</span>
                             <span><i class="far fa-user"></i> {{ DB::table('districts')->where('id', $ne->district)->value('name') }} </span>
                         </div>
                         <p class="text-justify">{{ $ne->title }}</p>
