@@ -28,6 +28,10 @@ class HelperController extends Controller
         $news = DB::table('news_and_events')->orderBy('date')->get();
         return view('web.see-all-news', compact('news'));
     }
+    public function seeallwhatsnew(){
+        $news = DB::table('whats_news')->orderByDesc('created_at')->get();
+        return view('web.see-all-whats-news', compact('news'));
+    }
     public function singlenews($id){
         $news = NewsAndEvents::find($id);
         return view('web.see-single-news', compact('news'));

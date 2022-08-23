@@ -84,5 +84,6 @@ Route::get('/web/{slug}/', [HelperController::class, 'index']);
 Route::get('/government-orders/', [HelperController::class, 'gorder']);
 Route::get('/photo-gallery/', [HelperController::class, 'photogallery']);
 Route::get('/see-all-news-and-events/', [HelperController::class, 'seeallnews']);
+Route::get('/see-all-whats-new/', [HelperController::class, 'seeallwhatsnew']);
 Route::get('/news-and-events/{id}/', [HelperController::class, 'singlenews']);
 Route::post('/tinymce/upload/', [HelperController::class, 'upload'])->name('upp');

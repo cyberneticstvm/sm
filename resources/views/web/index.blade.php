@@ -18,7 +18,7 @@
             <div class="col-lg-3">
                 <div class="card text-center">
                     <div class="card-header bg-color-dark text-white">
-                        <div class="row"><div class="col text-start">What's New</div><div class="col text-end"><a href="#">See All What's New</a></div></div>
+                        <div class="row"><div class="col text-start">What's New</div><div class="col text-end"><a href="/see-all-whats-new/">See All What's New</a></div></div>
                     </div>
                     <div class="card-body">
                         <marquee id="mqdiv" direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll">
@@ -257,8 +257,8 @@
             <div class="modal-body">
                 <ul class="list list-icons list-primary list-borders">
                     @forelse($qlinks as $key => $qlink)
-                    $slug = DB::table('pages')->where('id', $qlink->page_id)->value('slug');
-                        <li><i class="fa fa-check"></i><a href="{{ '/web/'.$slug.'/' }}">{{ $qlink->menu_item_name }}</a></li>
+                    @php $slug = DB::table('pages')->where('id', $qlink->page_id)->value('slug'); @endphp
+                        <li><i class="fa fa-check"></i><a href="{{ (!empty($slug)) ? '/web/'.$slug.'/' : '#' }}">{{ $qlink->menu_item_name }}</a></li>
                     @empty
                     @endforelse
                 </ul>
