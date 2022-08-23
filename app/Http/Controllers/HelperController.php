@@ -20,6 +20,10 @@ class HelperController extends Controller
         $gos = DB::table('govt_orders')->orderByDesc('go_date')->get();
         return view('web.government-orders', compact('gos'));
     }
+    public function photogallery(){
+        $albums = DB::table('albums')->orderByDesc('created_at')->get();
+        return view('web.photo-gallery', compact('albums'));
+    }
     public function getpagelist(){
         $data = DB::table('pages')->select('id', 'page_title as name')->get();
         return response()->json($data);

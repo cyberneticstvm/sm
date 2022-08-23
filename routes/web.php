@@ -7,6 +7,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\GosController;
 use App\Http\Controllers\NewsEventsController;
 use App\Http\Controllers\WhatsNewController;
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\HelperController;
 
 /*
@@ -71,10 +72,18 @@ Route::get('/admin/whats-new/edit/{id}/', [WhatsNewController::class, 'edit'])->
 Route::put('/admin/whats-new/edit/{id}/', [WhatsNewController::class, 'update'])->name('admin.whats-new.update');
 Route::delete('/admin/whats-new/delete/{id}/', [WhatsNewController::class, 'destroy'])->name('admin.whats-new.delete');
 
+Route::get('/admin/album/create/', [AlbumController::class, 'create'])->name('admin.album.create');
+Route::post('/admin/album/create/', [AlbumController::class, 'store'])->name('admin.album.save');
+Route::get('/admin/album-list/', [AlbumController::class, 'index'])->name('admin.album-list');
+Route::get('/admin/album/edit/{id}/', [AlbumController::class, 'edit'])->name('admin.album.edit');
+Route::put('/admin/album/edit/{id}/', [AlbumController::class, 'update'])->name('admin.album.update');
+Route::delete('/admin/album/delete/{id}/', [AlbumController::class, 'destroy'])->name('admin.album.delete');
+
 Route::get('/admin/file/upload/', [HelperController::class, 'listUpload'])->name('admin.listUpload');
 Route::post('/admin/file/upload/', [HelperController::class, 'fileUpload'])->name('admin.fileUpload');
 Route::delete('/admin/file/delete/{id}/', [HelperController::class, 'deleteFile'])->name('admin.file.delete');
 
 Route::get('/web/{slug}/', [HelperController::class, 'index']);
 Route::get('/government-orders/', [HelperController::class, 'gorder']);
+Route::get('/photo-gallery/', [HelperController::class, 'photogallery']);
 Route::post('/tinymce/upload/', [HelperController::class, 'upload'])->name('upp');

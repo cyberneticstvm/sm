@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Suchitwa Mission">
     <meta name="keyword" content="Suchitwa Mission">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Suchitwa Mission - Admin Portal</title>
     <link rel="icon" href="{{ public_path().'/admin/images/favicon.png' }}" type="image/x-icon"> <!-- Favicon-->
     <!-- project css file  -->
@@ -123,7 +124,7 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#slider-Menus"  href="#"><i class="fa fa-image"></i> <span>Slider Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#slider-Menus"  href="#"><i class="fa fa-sliders"></i> <span>Slider Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="slider-Menus">
@@ -156,6 +157,15 @@
                             <ul class="sub-menu collapse" id="wn-Menus">
                                 <li><a class="ms-link" href="/admin/whats-new/create/">Create What's New</a></li>
                                 <li><a class="ms-link" href="/admin/whats-new-list/">What's New List</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#album-Menus"  href="#"><i class="fa fa-picture-o"></i> <span>Album Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="album-Menus">
+                                <li><a class="ms-link" href="/admin/album/create/">Create New Album</a></li>
+                                <li><a class="ms-link" href="/admin/album-list/">Album List</a></li>
                             </ul>
                         </li>
                         <li class="collapsed">
