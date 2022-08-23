@@ -13,7 +13,7 @@
                 <div class="card">
                     <img class="card-img-top" src="{{ public_path().'/storage/albums/'.$image->album_id.'/'.$image->img_name }}" alt="Card Image">
                     <div class="card-body">
-                        <p class="card-text mb-2 pb-1">{{ $album->album_title }}</p>
+                        <p class="card-text text-justify">{{ $album->album_title }}</p>
                     </div>
                 </div>
             </div>
