@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="post-image">
                     <a href="#">
-                        <img src="{{ public_path().'/storage/'.$ne->img_url }}" class="img-fluid rounded-0" alt="">
+                        <img src="{{ public_path().'/storage/'.$news->img_url }}" class="img-fluid rounded-0" alt="">
                     </a>
                 </div>
             </div>

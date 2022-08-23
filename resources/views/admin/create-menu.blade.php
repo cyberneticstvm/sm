@@ -54,6 +54,7 @@
                                         <div class="col-3">
                                             <label for="TextInput" class="form-label">Page</label>
                                             <select class="form-control select2" name="page_id">
+                                                <option value="0">Not Applicable</option>
                                             @foreach($pages as $page)
                                                 <option value="{{ $page->id }}">{{ $page->page_title }}</option>
                                             @endforeach
@@ -62,6 +63,13 @@
                                             <small class="text-danger">{{ $errors->first('page_id') }}</small>
                                             @enderror
                                         </div>
+                                        <div class="col-3">
+                                            <label for="TextInput" class="form-label">Page URL <small>(If page is not applicable)</small></label>
+                                            <input type="text" class="form-control" name="page_url" placeholder="Page URL" />
+                                        </div>
+                                        @error('page_url')
+                                        <small class="text-danger">{{ $errors->first('page_url') }}</small>
+                                        @enderror
                                         <div class="col-3">
                                             <label for="TextInput" class="form-label">Parent</label>
                                             <select class="form-control select2" name="parent">

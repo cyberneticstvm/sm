@@ -13,6 +13,7 @@ class Menu extends Model
         'menu_item_name',
         'menu_type_id',
         'page_id',
+        'page_url',
         'parent',
         'publish',
         'order_by',
