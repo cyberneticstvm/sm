@@ -4,8 +4,8 @@
 <div role="main" class="main bggrey">
     <div class="container bg-white">
         <div class="row">
-            <div class="col-lg-12 mt-5"><h2>{{ $page->page_title }}</h2></div>
-            <div class="col-lg-12 mb-5">
+            <div class="col-lg-12 mt-1"><h2>{{ $page->page_title }}</h2></div>
+            <div class="col-lg-12">
                 @if($sections)
                     @foreach($sections as $skey => $section)
                         @if($section->control_id == 1)
