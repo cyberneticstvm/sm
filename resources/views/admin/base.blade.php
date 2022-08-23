@@ -106,7 +106,7 @@
                     <ul class="menu-list">
                         <li class="divider py-2"><small>MAIN</small></li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Pages"  href="#"><i class="fa fa-file"></i> <span>Page Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Pages"  href="#"><i class="fa fa-file"></i> <span>Page Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="menu-Pages">
@@ -115,7 +115,7 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Menus"  href="#"><i class="fa fa-bars"></i> <span>Menu Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#menu-Menus"  href="#"><i class="fa fa-bars"></i> <span>Menu Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="menu-Menus">
@@ -124,7 +124,7 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#slider-Menus"  href="#"><i class="fa fa-sliders"></i> <span>Slider Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#slider-Menus"  href="#"><i class="fa fa-sliders"></i> <span>Slider</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="slider-Menus">
@@ -133,7 +133,7 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#go-Menus"  href="#"><i class="fa fa-file-pdf-o"></i> <span>GOs Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#go-Menus"  href="#"><i class="fa fa-file-pdf-o"></i> <span>GOs & Circulars</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="go-Menus">
@@ -142,7 +142,7 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#ne-Menus"  href="#"><i class="fa fa-calendar"></i> <span>News & Events Mananger</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#ne-Menus"  href="#"><i class="fa fa-calendar"></i> <span>News & Events</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="ne-Menus">
@@ -151,7 +151,7 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#wn-Menus"  href="#"><i class="fa fa-bookmark"></i> <span>What's New Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#wn-Menus"  href="#"><i class="fa fa-bookmark"></i> <span>What's New</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="wn-Menus">

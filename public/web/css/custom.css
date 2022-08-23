@@ -16,4 +16,20 @@
 }
 .popup-youtube img{
     padding: 10px 10px;
+    border-radius: 10% !important;
+}
+
+.bggrey{background-color: #dee1e6; }
+.wtzblk {padding-left: 0px;}
+.fbox {
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+}
+.fbtm {margin-bottom: 0px;}
+.npad {padding: 0px;}
+.pdzero {margin: 0px; !important;}
+.vid-desc{
+    padding: 50px;
+    font-size: 1rem;
 }

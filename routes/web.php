@@ -20,10 +20,7 @@ use App\Http\Controllers\HelperController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('web.index');
-});
+Route::get('/', [HelperController::class, 'home']);
 
 Route::get('/admin/dash/', function () {
     return view('admin.dash');

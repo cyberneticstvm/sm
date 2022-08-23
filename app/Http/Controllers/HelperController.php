@@ -9,6 +9,11 @@ use DB;
 
 class HelperController extends Controller
 {
+    public function home(){
+        $sliders = DB::table('sliders')->orderBy('order_by')->get();
+        $news = DB::table('news_and_events')->orderBy('date')->limit(3)->get();
+        return view('web.index', compact('sliders', 'news'));
+    }
     public function index($slug){
         $page = DB::table('pages')->where('slug', $slug)->first();
         $sections = DB::table('sections')->where('page_id', $page->id)->get();        
