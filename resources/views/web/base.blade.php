@@ -231,7 +231,7 @@
 				</div>
 				<div class="footer-copyright">
 					<div class="container py-2">
-						<div class="row py-4">
+						<div class="row py-1">
 							<div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
 								<!--<a href="index.html" class="logo pe-0 pe-lg-3">
 									<img alt="Porto Website Template" src="{{ public_path().'/web/img/sm/sm_logo.png' }}" class="" height="32">
