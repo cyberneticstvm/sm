@@ -6,7 +6,7 @@
 }
 .vid-sec{
     background:url('../img/sm/extras/vbg.jpg' );
-    background-repeat: repeat;
+    /*background-repeat: repeat;*/
     background-position: center;
     height: 100%;
 }
