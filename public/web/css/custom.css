@@ -20,6 +20,14 @@
     border-radius: 10% !important;
 }
 
+#footer{
+    background: #01295a !important;
+    border-top: 4px solid #049124;
+}
+#footer .footer-copyright{
+    background: #fff;
+}
+
 .bggrey{background-color: #dee1e6; }
 .wtzblk {padding-left: 0px;}
 .fbox {
