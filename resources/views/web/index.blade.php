@@ -21,7 +21,16 @@
                         What's New
                     </div>
                     <div class="card-body">
-                        <marquee id="mqdiv" direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll"><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p><p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur adipiscing lit onsectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing onsectetur adipiscing elit elit onsectetur.</p></marquee>
+                        <marquee id="mqdiv" direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll">
+                        @forelse($whats as $key => $what)
+                            @if($what->doc_type == 'url')
+                                <p class="text-justify"><a href="{{ $what->url }}" target="_blank">{{ $what->title }}</a></p>
+                            @else
+                                <p class="text-justify"><a href="{{ public_path().'/storage/'.$what->document }}" target="_blank">{{ $what->title }}</a></p>
+                            @endif
+                        @empty
+                        @endforelse
+                    </marquee>
                     </div>              
                     <div class="card rounded-0 card-info bg-primary text-center text-white mt-1 pt-1 pb-1">Plastic Ban</div>
                     <div class="card rounded-0 card-info bg-info text-center text-white mt-1 pt-1 pb-1">Take a Break</div>

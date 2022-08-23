@@ -13,7 +13,8 @@ class HelperController extends Controller
     public function home(){
         $sliders = DB::table('sliders')->orderBy('order_by')->get();
         $news = DB::table('news_and_events')->orderBy('date')->limit(3)->get();
-        return view('web.index', compact('sliders', 'news'));
+        $whats = DB::table('whats_news')->orderBy('created_at')->limit(5)->get();
+        return view('web.index', compact('sliders', 'news', 'whats'));
     }
     public function index($slug){
         $page = DB::table('pages')->where('slug', $slug)->first();
