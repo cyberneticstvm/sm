@@ -113,12 +113,12 @@
 																	@php 
 																	$nextmenu = DB::table('menus')->where('parent', $sval->id)->get();
 																	$slug = DB::table('pages')->where('id', $sval->page_id)->value('slug'); @endphp
-																	<li class="{{ (count($nextmenu)>0) ? 'dropdown-submenu' : '' }}"><a class="dropdown-item" href="{{ ($sval->page_id == 0) ? $nextmenu->page_url : '/web/'.$slug.'/' }}">{{ $sval->menu_item_name }}</a>
+																	<li class="{{ (count($nextmenu)>0) ? 'dropdown-submenu' : '' }}"><a class="dropdown-item" href="{{ ($sval->page_id == 0) ? '/'.$nextmenu->page_url : '/web/'.$slug.'/' }}">{{ $sval->menu_item_name }}</a>
 																		@if(!empty($nextmenu))	
 																		<ul class="dropdown-menu">
 																			@forelse($nextmenu as $key => $next)
 																			@php $nextslug = DB::table('pages')->where('id', $next->page_id)->value('slug'); @endphp
-																				<li><a class="dropdown-item" href="{{ ($next->page_id == 0) ? $next->page_url : '/web/'.$nextslug.'/' }}">{{ $next->menu_item_name }}</a></li>
+																				<li><a class="dropdown-item" href="{{ ($next->page_id == 0) ? '/'.$next->page_url : '/web/'.$nextslug.'/' }}">{{ $next->menu_item_name }}</a></li>
 																			@empty
 																			@endforelse
 																		</ul>
