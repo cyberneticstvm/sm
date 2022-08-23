@@ -8,7 +8,7 @@
                 <h2>See All News and Events</h2>
             </div>
             @forelse($news as $key => $ne)
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3">
                 <article class="post post-medium border-0 pb-0 mb-5">
                     <div class="post-image">
                         <a href="#">

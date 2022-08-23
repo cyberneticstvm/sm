@@ -9,7 +9,7 @@
             </div>
             @forelse($albums as $key => $album)
             @php $image = DB::table('album_images')->where('album_id', $album->id)->get()->first(); @endphp
-            <div class="col-lg-4">
+            <div class="col-lg-4 mt-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ public_path().'/storage/albums/'.$image->album_id.'/'.$image->img_name }}" alt="Card Image">
                     <div class="card-body">

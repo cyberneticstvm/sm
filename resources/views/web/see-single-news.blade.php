@@ -7,7 +7,7 @@
             <div class="col-lg-12 pt-3 bg-eee">
                 <h2>{{ $news->title }}</h2>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 mt-3">
                 <div class="post-image">
                     <a href="#">
                         <img src="{{ public_path().'/storage/'.$news->img_url }}" class="img-fluid rounded-0" alt="">
