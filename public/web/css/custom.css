@@ -24,6 +24,9 @@ h2{
     margin-bottom: 10px !important;
     color: #01295a !important;
 }
+.bg-eee{
+    background-color: #eee;
+}
 
 #footer{
     background: #01295a !important;
