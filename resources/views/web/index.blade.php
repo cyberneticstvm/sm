@@ -18,7 +18,7 @@
             <div class="col-lg-3">
                 <div class="card text-center">
                     <div class="card-header bg-color-dark text-white">
-                        What's New
+                        <div class="row"><div class="col text-start">What's New</div><div class="col text-end"><a href="#">See All What's New</a></div></div>
                     </div>
                     <div class="card-body">
                         <marquee id="mqdiv" direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll">
