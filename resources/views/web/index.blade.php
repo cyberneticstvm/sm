@@ -186,7 +186,7 @@
                                         <span><i class="far fa-folder"></i>{{ $ne->date }}</span>
 										<span><i class="far fa-user"></i> {{ DB::table('districts')->where('id', $ne->district)->value('name') }} </span>
                                     </div>
-                                    <p class="text-justify">{{ Str::limit($ne->title, 60, '...') }}</p>
+                                    <p class="text-justify">{{ Str::limit($ne->title, 75, '...') }}</p>
 
                                     <div class="post-meta">
                                         <span class="d-block mt-1"><a href="/news-and-events/{{ $ne->id }}/" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
