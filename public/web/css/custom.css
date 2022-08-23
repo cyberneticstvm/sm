@@ -1,5 +1,6 @@
 .text-justify{
     text-align: justify;
+    line-height: 22px !important;
 }
 .section{
     background: #012b59 !important;

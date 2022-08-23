@@ -168,7 +168,7 @@
 					<div class="row py-5 my-4">
 						<div class="col-md-3 mb-4 mb-lg-0">
 							<h5 class="text-3 mb-3 pb-1">ABOUT US</h5>
-							<p class="text-justify">Suchitwa Mission is the Technical Support Group (TSG) in Waste Management sector under the Local Self Government Department, Government of Kerala.</p><p class="text-justify">The Mission is also the Nodal agency for implementing Swachh Bharat Mission (Urban), Swachh Bharat Mission (Rural) and Communication and Capacity Development Unit (CCDU) in the State</p>
+							<p class="text-justify">Suchitwa Mission is the Technical Support Group (TSG) in Waste Management sector under the Local Self Government Department, Government of Kerala. The Mission is also the Nodal agency for implementing Swachh Bharat Mission (Urban), Swachh Bharat Mission (Rural) and Communication and Capacity Development Unit (CCDU) in the State</p>
 						</div>
 						<div class="col-md-6 mb-4 mb-lg-0">
 							<div class="row pt-3">
