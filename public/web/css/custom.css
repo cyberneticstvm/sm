@@ -31,6 +31,7 @@ h2{
 #footer{
     background: #01295a !important;
     border-top: 4px solid #049124;
+    margin-top: 20px !important;
 }
 #footer .footer-copyright{
     background: #191828;
