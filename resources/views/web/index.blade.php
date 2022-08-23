@@ -75,7 +75,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid npad">
         <section class="section bg-info m-0">
             <div class="container">
                 <div class="row counters counters-text-light">
@@ -149,7 +149,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid npad">
         <section class="vid-sec">
             <div class="container">
                 <div class="row">
