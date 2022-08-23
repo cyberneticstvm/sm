@@ -8,6 +8,16 @@
                 <h3>Photo Gallery</h3>
             </div>
             @forelse($albums as $key => $album)
+            @php $image = DB::table('album_images')->where('album_id', $album->id)->get()->first(); @endphp
+                <div class="card">
+                    <img class="card-img-top" src="{{ public_path().'/storage/albums/'.$image->album_id.'/'.$image->img_name }}" alt="Card Image">
+                    <div class="card-body">
+                        <p class="card-text mb-2 pb-1">{{ $album->album_title }}</p>
+                    </div>
+                </div>
+            @empty
+            @endforelse
+            <!--@forelse($albums as $key => $album)
                 @php $images = DB::table('album_images')->where('album_id', $album->id)->get(); @endphp
                 <div class="col-lg-12">
                     <h4>{{ $album->album_title }}</h4>
@@ -24,7 +34,7 @@
                     </div>
                 </div>
             @empty
-            @endforelse
+            @endforelse-->
         </div>
     </div>
 </div>
