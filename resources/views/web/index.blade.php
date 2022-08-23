@@ -189,7 +189,7 @@
                                     <p class="text-justify">{{ $ne->title }}</p>
 
                                     <div class="post-meta">
-                                        <span class="d-block mt-1"><a href="route('/news-and-events/', $ne->id)" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
+                                        <span class="d-block mt-1"><a href="/news-and-events/{{ $ne->id }}/" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
                                     </div>
 
                                 </div>
