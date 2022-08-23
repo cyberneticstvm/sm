@@ -166,6 +166,21 @@
 						<span>Get in Touch</span>
 					</div>
 					<div class="row py-5 my-4">
+						<div class="col-md-3 mb-4 mb-lg-0">
+							<h5 class="text-3 mb-3 pb-1">CONTACT US</h5>
+							<p class="text-8 text-color-light font-weight-bold"><a href="tel:0123456789" class="text-decoration-none text-color-light">(800) 123-4567</a></p>
+							<p class="mb-2">International: <a href="tel:0123456789" class="text-decoration-none">(333) 456-6670</a></p>
+							<p class="mb-2">Fax: (222) 531-8999</p>
+							<ul class="list list-icons list-icons-lg">
+								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
+								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p></li>
+							</ul>
+							<ul class="footer-social-icons social-icons mt-4">
+								<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2"></i></a></li>
+								<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter text-2"></i></a></li>
+								<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in text-2"></i></a></li>
+							</ul>
+						</div>
 						<div class="col-md-9 mb-4 mb-lg-0">
 							<h5 class="text-3 mb-3">ABOUT US</h5>
 							<p class="mt-2 mb-2">Suchitwa Mission is the Technical Support Group (TSG) in Waste Management sector under the Local Self Government Department, Government of Kerala.</p>
@@ -211,21 +226,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3 mb-4 mb-lg-0">
-							<h5 class="text-3 mb-3 pb-1">CONTACT US</h5>
-							<p class="text-8 text-color-light font-weight-bold"><a href="tel:0123456789" class="text-decoration-none text-color-light">(800) 123-4567</a></p>
-							<p class="mb-2">International: <a href="tel:0123456789" class="text-decoration-none">(333) 456-6670</a></p>
-							<p class="mb-2">Fax: (222) 531-8999</p>
-							<ul class="list list-icons list-icons-lg">
-								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
-								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p></li>
-							</ul>
-							<ul class="footer-social-icons social-icons mt-4">
-								<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2"></i></a></li>
-								<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter text-2"></i></a></li>
-								<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in text-2"></i></a></li>
-							</ul>
-						</div>
+						
 					</div>
 				</div>
 				<div class="footer-copyright">
