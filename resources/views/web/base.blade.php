@@ -187,7 +187,8 @@
 									<ul class="list list-icons list-icons-sm mb-0">
 										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Home</a></li>
 										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">About Us</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Empanel</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://empanel.suchitwamission.com" target="_blank">Empanel</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://dashboard.suchitwamission.com" target="_blank">Schemes</a></li>
 										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Sitemap</a></li>
 										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-services.html">Contact Us</a></li>
 									</ul>
