@@ -56,7 +56,7 @@
                 <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                     <div class="featured-box bggrey">
                         <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                            <img src="{{ public_path().'/web/img/sm/icons/scheme.png' }}" alt="Schemes" class="img-fluid" />
+                            <a href="/web/schemes/"><img src="{{ public_path().'/web/img/sm/icons/scheme.png' }}" alt="Schemes" class="img-fluid" /></a>
                             <h5 class="font-weight-normal">Schemes</h5>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                 <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                     <div class="featured-box bggrey">
                         <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                            <img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" />
+                            <a href="/web/iec-capacity-building/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" /></a>
                             <h5 class="font-weight-normal">IEC / Capacity Building</h5>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                 <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                     <div class="featured-box bggrey">
                         <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                            <img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" />
+                            <a href="/web/resource-persons--service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" /></a>
                             <h5 class="font-weight-normal">Service Providers</h5>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                 <div class="col-lg-3">
                     <div class="featured-box featured-box-primary featured-box-effect-6">
                         <div class="box-content">
-                            <img src="{{ public_path().'/web/img/sm/icons/rules.png' }}" alt="Rules" class="img-fluid" />
+                            <a href="/web/state-rules/"><img src="{{ public_path().'/web/img/sm/icons/rules.png' }}" alt="Rules" class="img-fluid" /></a>
                             <h4 class="font-weight-normal text-5 mt-3">State <strong class="font-weight-extra-bold">Rules</strong></h4>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                 <div class="col-lg-3">
                     <div class="featured-box featured-box-secondary featured-box-effect-6">
                         <div class="box-content">
-                            <img src="{{ public_path().'/web/img/sm/icons/policy.png' }}" alt="Policy" class="img-fluid" />
+                        <a href="/web/state-policy/"><img src="{{ public_path().'/web/img/sm/icons/policy.png' }}" alt="Policy" class="img-fluid" /></a>
                             <h4 class="font-weight-normal text-5 mt-3">State <strong class="font-weight-extra-bold">Policy</strong></h4>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                 <div class="col-lg-3">
                     <div class="featured-box featured-box-tertiary featured-box-effect-6">
                         <div class="box-content">
-                            <img src="{{ public_path().'/web/img/sm/icons/green.png' }}" alt="Green Protocol" class="img-fluid" />
+                        <a href="/web/what-is-green-protocol/"><img src="{{ public_path().'/web/img/sm/icons/green.png' }}" alt="Green Protocol" class="img-fluid" /></a>
                             <h4 class="font-weight-normal text-5 mt-3">Green <strong class="font-weight-extra-bold">Protocol</strong></h4>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                 <div class="col-lg-3">
                     <div class="featured-box featured-box-quaternary featured-box-effect-6">
                         <div class="box-content">
-                            <img src="{{ public_path().'/web/img/sm/icons/success.png' }}" alt="Success Models" class="img-fluid" />
+                        <a href="/web/success-models/"><img src="{{ public_path().'/web/img/sm/icons/success.png' }}" alt="Success Models" class="img-fluid" /></a>
                             <h4 class="font-weight-normal text-5 mt-3">Success <strong class="font-weight-extra-bold">Models</strong></h4>
                         </div>
                     </div>
