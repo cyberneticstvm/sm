@@ -39,12 +39,9 @@
                                     <div class="col-2">
                                         <label for="TextInput" class="form-label">Number</label>
                                         <select class="form-control" name="number" id="number">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
+                                            @for($i=1;$i<=15;$i++)
+                                                <option value="{{ $i }}">{{ $i }}</option>
+                                            @endfor
                                         </select>
                                     </div>
                                     <div class="col-2">
