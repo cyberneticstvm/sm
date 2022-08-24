@@ -24,9 +24,9 @@
                         <marquee id="mqdiv" direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll">
                         @forelse($whats as $key => $what)
                             @if($what->doc_type == 'url')
-                                <p class="text-justify"><a href="{{ $what->url }}" target="_blank">{{ $what->title }}</a></p>
+                                <p class="text-justify"><a class="text-decoration-none" href="{{ $what->url }}" target="_blank">{{ $what->title }}</a></p>
                             @else
-                                <p class="text-justify"><a href="{{ public_path().'/storage/'.$what->document }}" target="_blank">{{ $what->title }}</a></p>
+                                <p class="text-justify"><a class="text-decoration-none" href="{{ public_path().'/storage/'.$what->document }}" target="_blank">{{ $what->title }}</a></p>
                             @endif
                         @empty
                         @endforelse
