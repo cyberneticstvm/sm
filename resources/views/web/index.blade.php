@@ -32,7 +32,7 @@
                         @endforelse
                     </marquee>
                     </div>              
-                    <div class="card rounded-0 card-info bg-eee text-center text-white mt-1 pt-1 pb-1"><a class="text-decoration-none" href="{{ public_path().'/web/img/sm/icons/ban.png' }}">Plastic Ban</></div>
+                    <div class="card rounded-0 card-info bg-eee text-center text-white mt-1 pt-1 pb-1"><a class="text-decoration-none" href="/web/plastic-ban/">Plastic Ban</></div>
                     <div class="card rounded-0 card-info bg-info text-center text-white mt-1 pt-1 pb-1">Take a Break</div>
                     <div class="card rounded-0 card-info bg-warning text-center text-white mt-1 pt-1 pb-1"><a class="text-decoration-none" href="/government-orders/">Government Orders</a></div>
                     <div class="card rounded-0 card-info bg-danger text-center mt-1 pt-1 pb-1"><a class="text-decoration-none" href="#quickLinksModal" data-bs-toggle="modal" class="text-white">Quick Links</a></div>
