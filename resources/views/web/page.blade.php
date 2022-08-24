@@ -4,7 +4,7 @@
 <div role="main" class="main bggrey">
     <div class="container bg-white">
         <div class="row">
-            <div class="col-lg-12 pt-3 bg-eee"><h4>{{ ucwords(strtolower(trans($page->page_title))) }}</h4></div>
+            <div class="col-lg-12 pt-3 bg-eee"><h4 class="px-3 text-white">{{ ucwords(strtolower(trans($page->page_title))) }}</h4></div>
             <div class="col-lg-12">
                 @if($sections)
                     @foreach($sections as $skey => $section)
@@ -120,7 +120,7 @@
                             <div class="row">                                
                                 @for($i=0; $i<$section->control_count; $i++)
                                 @php $contents = DB::table('contents')->where('page_id', $page->id)->where('section_id', $section->id)->get()->toArray(); @endphp
-                                    <div class="col-lg-{{ $col }} table-responsive">
+                                    <div class="col-lg-{{ $col }} table-responsive px-5">
                                     <h5>{{ $contents[$i]->content_title }}</h5>
                                         @if($contents)
                                             @foreach($contents as $cval => $content)                                            

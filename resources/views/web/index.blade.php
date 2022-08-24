@@ -42,7 +42,7 @@
     </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="col mb-4 mb-lg-0">
                 <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                     <div class="featured-box bggrey">
                         <div class="box-content px-lg-3 px-xl-4 py-lg-4">
@@ -211,35 +211,35 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid bggrey pt-3">
         <div class="row">
             <div class="col">
                 <div class="owl-carousel owl-theme" data-plugin-options="{'items': 9, 'autoplay': true, 'autoplayTimeout': 3000}">
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log1.png' }}" alt="">
                     </div>
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log2.png' }}" alt="">
                     </div>
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log3.png' }}" alt="">
                     </div>
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log4.png' }}" alt="">
                     </div>
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log5.png' }}" alt="">
                     </div>
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log6.png' }}" alt="">
                     </div>
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log7.png' }}" alt="">
                     </div>
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log8.png' }}" alt="">
                     </div>
-                    <div>
+                    <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log9.png' }}" alt="">
                     </div>
                 </div>

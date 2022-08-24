@@ -213,13 +213,13 @@
 							</div>
 						</div>
 						<div class="col-md-3 mb-4 mb-lg-0">
-							<h5 class="text-3 mb-3 pb-1">CONTACT US</h5>
-							<p class="text-8 text-color-light font-weight-bold"><a href="tel:0123456789" class="text-decoration-none text-color-light">(800) 123-4567</a></p>
-							<p class="mb-2">International: <a href="tel:0123456789" class="text-decoration-none">(333) 456-6670</a></p>
-							<p class="mb-2">Fax: (222) 531-8999</p>
+							<h5 class="text-3 mb-3 pb-1">CONTACT INFO</h5>
+							<p class="text-3 text-color-light font-weight-bold">SUCHITWA MISSION</p>							
 							<ul class="list list-icons list-icons-lg">
-								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
-								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p></li>
+								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="mb-2">4th Floor, Revenue Tower Public Office Compound, Trivandrum, Kerala, India. PIN - 695 033</p>
+								<li class="mb-1"><i class="fa fa-phone text-color-primary"></i><p class="m-0">0471-2319831, 0471-2312730</p></li>
+								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:sanitation.sm@kerala.gov.in">sanitation.sm@kerala.gov.in</a></p></li>
+								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:iec.sm@kerala.gov.in">iec.sm@kerala.gov.in</a></p></li>
 							</ul>
 							<ul class="footer-social-icons social-icons mt-4">
 								<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2"></i></a></li>

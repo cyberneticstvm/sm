@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 pt-3 bg-eee mb-3">
-                <h2>See All What's New</h2>
+                <h4 class="px-3 text-white">See All What's New</h4>
             </div>
             @forelse($news as $key => $ne)
             <div class="col-md-12">

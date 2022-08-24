@@ -25,7 +25,7 @@ h2{
     color: #01295a !important;
 }
 .bg-eee{
-    background-color: #eee;
+    background-color: #009f24;
 }
 
 #footer{
@@ -37,8 +37,8 @@ h2{
     background: #191828;
 }
 
-.text-capitalize{
-    text-transform: capitalize !important;
+.fcar img{
+    width: 60% !important;
 }
 
 .bggrey{background-color: #dee1e6; }
