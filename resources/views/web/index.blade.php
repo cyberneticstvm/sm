@@ -34,7 +34,7 @@
                     </div>              
                     <div class="card rounded-0 card-info bg-primary text-center text-white mt-1 pt-1 pb-1">Plastic Ban</div>
                     <div class="card rounded-0 card-info bg-info text-center text-white mt-1 pt-1 pb-1">Take a Break</div>
-                    <div class="card rounded-0 card-info bg-warning text-center text-white mt-1 pt-1 pb-1">Government Orders</div>
+                    <div class="card rounded-0 card-info bg-warning text-center text-white mt-1 pt-1 pb-1"><a href="/government-orders/">Government Orders</a></div>
                     <div class="card rounded-0 card-info bg-danger text-center mt-1 pt-1 pb-1"><a href="#quickLinksModal" data-bs-toggle="modal" class="text-white">Quick Links</a></div>
                 </div>
             </div>

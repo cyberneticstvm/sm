@@ -37,6 +37,10 @@ h2{
     background: #191828;
 }
 
+.text-capitalize{
+    text-transform: capitalize !important;
+}
+
 .bggrey{background-color: #dee1e6; }
 .wtzblk {padding-left: 0px;}
 .fbox {

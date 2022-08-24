@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 pt-3 bg-eee">
-                <h2>Photo Gallery</h2>
+                <h4>Photo Gallery</h4>
             </div>
             <!--@forelse($albums as $key => $album)
             @php $image = DB::table('album_images')->where('album_id', $album->id)->get()->first(); @endphp
