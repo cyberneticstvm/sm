@@ -46,7 +46,7 @@
                 <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                     <div class="featured-box bggrey">
                         <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                            <img src="{{ public_path().'/web/img/sm/icons/ban.png' }}" alt="Plastic Ban" class="img-fluid" />
+                            <a href="/web/plastic-ban/"><img src="{{ public_path().'/web/img/sm/icons/ban.png' }}" alt="Plastic Ban" class="img-fluid" /></a>
                             <h5 class="font-weight-normal">Plastic Ban</h5>
                         </div>
                     </div>
