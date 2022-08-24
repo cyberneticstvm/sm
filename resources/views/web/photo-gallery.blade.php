@@ -30,6 +30,7 @@
                                 <a class="img-thumbnail img-thumbnail-no-borders img-thumbnail-hover-icon" href="{{ public_path().'/storage/albums/'.$img->album_id.'/'.$img->img_name }}">
                                     <img class="img-fluid" src="{{ public_path().'/storage/albums/'.$img->album_id.'/'.$img->img_name }}" alt="Project Image">
                                 </a>
+                                <div class="text-justify"><small>{{ $album->album_title }}</small></div>
                             </div>
                             @endforeach
                         </div>
