@@ -56,7 +56,7 @@
                                             @if($content->section_id == $section->id)
                                                 @if($content->content_type == 1 && !empty($contents[$i]->content_title))
                                                     <li class="nav-item">
-                                                        <a class="nav-link {{ ($i == 0) ? 'active' : '' }}" href="#{{ str_replace(' ', '_', $contents[$i]->content_title) }}" data-bs-toggle="tab">{{ $contents[$i]->content_title }}</a>
+                                                        <a class="nav-link {{ ($i == 0) ? 'active' : '' }}" href="#{{ str_replace(' ', '_', $contents[$i]->content_title).'_'.$contents[$i]->id }}" data-bs-toggle="tab">{{ $contents[$i]->content_title }}</a>
                                                     </li>
                                                     @break                                    
                                                 @endif
@@ -72,7 +72,7 @@
                                             @foreach($contents as $cval => $content)
                                                 @if($content->section_id == $section->id)
                                                     @if($content->content_type == 1 && !empty($contents[$i]->content_title))
-                                                        <div id="{{ str_replace(' ', '_', $contents[$i]->content_title) }}" class="tab-pane {{ ($i == 0) ? 'active' : '' }}">
+                                                        <div id="{{ str_replace(' ', '_', $contents[$i]->content_title).'_'.$contents[$i]->id }}" class="tab-pane {{ ($i == 0) ? 'active' : '' }}">
                                                             {!! $contents[$i]->content !!}
                                                         </div>
                                                         @break                                     
