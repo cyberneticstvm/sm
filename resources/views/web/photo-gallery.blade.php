@@ -21,7 +21,7 @@
             @endforelse-->
             @forelse($albums as $key => $album)
                 @php $images = DB::table('album_images')->where('album_id', $album->id)->get(); @endphp
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <!--<h4>{{ $album->album_title }}</h4>-->
                     <div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
 						<div class="owl-carousel owl-theme stage-margin" data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': false, 'dots': false, 'stagePadding': 40}">
