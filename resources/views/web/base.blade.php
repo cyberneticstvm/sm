@@ -106,7 +106,7 @@
 													</li>
 													@foreach($main_menu as $key => $value)
 														@php $submenu = DB::table('menus')->where('parent', $value->id)->get(); @endphp
-														<li class="{{ (count($submenu)>0) ? 'dropdown' : '' }}"><a class="dropdown-item dropdown-toggle" href="#">{{ $value->menu_item_name }}</a>
+														<li class="{{ (count($submenu)>0) ? 'dropdown' : '' }}"><a class="dropdown-item dropdown-toggle" href="{{ (count($submenu)>0) ? '#' : $value->page_url }}">{{ $value->menu_item_name }}</a>
 														@if($submenu)
 															<ul class="dropdown-menu">
 																@foreach($submenu as $skey => $sval)
