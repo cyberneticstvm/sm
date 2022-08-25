@@ -58,7 +58,7 @@
     <div class="sidebar my-3 px-4 py-2 py-md-3 rounded bg-dark">
         <div class="d-flex flex-column h-100">
             <div class="d-flex align-items-center mb-4 mt-2">
-                <h4 class="sidebar-title mb-0 flex-grow-1">AL<span>-UI Admin</span></h4>
+                <h4 class="sidebar-title mb-0 flex-grow-1">SM<span> Admin</span></h4>
                 <div class="dropdown Language">
                     <a class="nav-link text-light dropdown-toggle pulse p-0" href="#" role="button" data-bs-toggle="dropdown">
                         <i class="fa fa-language"></i>
@@ -202,7 +202,7 @@
                         <div class="card-body">
                             <div class="row justify-content-between align-items-center">
                                 <div class="col">
-                                    <p class="font-size-sm mb-0">© AL-UI. <span class="d-none d-sm-inline-block"><script>document.write(/\d{4}/.exec(Date())[0])</script> ThemeMakker.</span></p>
+                                    <p class="font-size-sm mb-0">© Suchitwa Mission. <span class="d-none d-sm-inline-block"><script>document.write(/\d{4}/.exec(Date())[0])</script> sanitation.kerala.gov.in</span></p>
                                 </div>
                                 <div class="col-auto">
                                     <ul class="list-inline d-flex justify-content-end mb-0">
@@ -635,7 +635,7 @@
         <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                        <h5 class="modal-title">AL-UI Setting</h5>
+                        <h5 class="modal-title">SM Setting</h5>
                     </div>
                     <div class="modal-body custom_scroll">
                     <!-- Settings: Font -->
