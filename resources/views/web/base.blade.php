@@ -73,9 +73,9 @@
 								<div class="header-column justify-content-end">
 									<div class="header-row">
 										<ul class="header-social-icons social-icons d-none d-sm-block social-icons-clean social-icons-icon-light">
-											<li class="social-icons-facebook"><a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-											<li class="social-icons-twitter"><a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-											<li class="social-icons-linkedin"><a href="https://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+											<li class="social-icons-facebook"><a href="https://www.facebook.com/SuchitwaMissionKerala" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+											<li class="social-icons-twitter"><a href="https://twitter.com/MissionSuchitwa" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+											<li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UCnMXjCBTfTsg8achlj_7dng" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
 										</ul>
 									</div>
 								</div>
@@ -223,9 +223,9 @@
 								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:iec.sm@kerala.gov.in">iec.sm@kerala.gov.in</a></p></li>
 							</ul>
 							<ul class="footer-social-icons social-icons mt-4">
-								<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2"></i></a></li>
-								<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter text-2"></i></a></li>
-								<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in text-2"></i></a></li>
+								<li class="social-icons-facebook"><a href="https://www.facebook.com/SuchitwaMissionKerala" target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2"></i></a></li>
+								<li class="social-icons-twitter"><a href="https://twitter.com/MissionSuchitwa" target="_blank" title="Twitter"><i class="fab fa-twitter text-2"></i></a></li>
+								<li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UCnMXjCBTfTsg8achlj_7dng" target="_blank" title="Youtube"><i class="fab fa-youtube text-2"></i></a></li>
 							</ul>
 						</div>
 					</div>

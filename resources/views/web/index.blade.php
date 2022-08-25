@@ -76,7 +76,7 @@
                 <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                     <div class="featured-box bggrey">
                         <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                            <a href="/web/resource-persons--service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                            <a href="/web/service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" /></a>
                             <h5 class="font-weight-normal">Service Providers</h5>
                         </div>
                     </div>
