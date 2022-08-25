@@ -24,6 +24,9 @@ h2{
     margin-bottom: 10px !important;
     color: #01295a !important;
 }
+h4{
+    letter-spacing: 0 !important;
+}
 .bg-eee{
     background-color: #009f24;
 }

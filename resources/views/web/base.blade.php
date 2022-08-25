@@ -61,10 +61,10 @@
 										<nav class="header-nav-top">
 											<ul class="nav nav-pills text-uppercase text-2">													
 												<li class="nav-item av-item-anim-icon">														
-													<a class="nav-link ps-0 text-light opacity-7" href="about-us.html"><i class="fas fa-phone"></i> +91 1234567890</a>
+													<a class="nav-link ps-0 text-light opacity-7" href="about-us.html"><i class="fas fa-phone"></i> 0471 2319831</a>
 												</li>												
 												<li class="nav-item av-item-anim-icon">														
-													<a class="nav-link text-light opacity-7 pe-0" href="contact-us.html"><i class="fas fa-envelope"></i> mail@suchitwamission.com</a>
+													<a class="nav-link text-light opacity-7 pe-0" href="contact-us.html"><i class="fas fa-envelope"></i> sanitation.sm@kerala.gov.in</a>
 												</li>											
 											</ul>										
 										</nav>
