@@ -97,7 +97,7 @@
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collapse12One{{$i}}" class="collapse {{ ($i == 1) ? 'show' : '' }}" aria-labelledby="collapse12HeadingOne" data-bs-parent="#accordion12">
+                                        <div id="collapse12One{{$i}}" class="collapse {{ ($i == 0) ? 'show' : '' }}" aria-labelledby="collapse12HeadingOne" data-bs-parent="#accordion12">
                                             <div class="card-body">                                                
                                                 @if($contents)
                                                     @foreach($contents as $cval => $content)
