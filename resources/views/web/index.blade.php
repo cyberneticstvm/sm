@@ -121,7 +121,7 @@
         </section>
     </div>
     <div class="container-fluid bg-light-green">
-        <div class="featured-boxes featured-boxes-style-6">
+        <div class=" container featured-boxes featured-boxes-style-6">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="featured-box featured-box-primary featured-box-effect-6">
