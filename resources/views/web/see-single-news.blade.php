@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 pt-3 bg-eee">
-                <h4 class="px-3 text-white">{{ ucwords(trans($news->page_title)) }}</h4>
+                <h4 class="px-3 text-white">{{ $news->page_title }}</h4>
             </div>
             <div class="col-md-12 mt-3">
                 <div class="post-image">
