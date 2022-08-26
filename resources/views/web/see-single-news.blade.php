@@ -14,7 +14,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-12 mb-5">{!! $news->content !!}</div>  
+            <div class="col-lg-12 mb-5 mt-3">{!! $news->content !!}</div>  
         </div>
     </div>
 </div>
