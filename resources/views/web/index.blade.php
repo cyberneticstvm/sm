@@ -120,7 +120,7 @@
             </div>
         </section>
     </div>
-    <div class="container">
+    <div class="container-fluid bg-light-green">
         <div class="featured-boxes featured-boxes-style-6">
             <div class="row">
                 <div class="col-lg-3">
