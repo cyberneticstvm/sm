@@ -42,6 +42,7 @@ $(function() {
             //var ele = dis.find('textarea').last().attr('class');
             var cls = (Math.random() + 1).toString(36).substring(7);
             dis.find('textarea').last().addClass(cls);
+            CKFinder.setupCKEditor();
             CKEDITOR.replaceAll(cls);
         }else{
             /*$.ajax({
