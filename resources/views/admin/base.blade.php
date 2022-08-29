@@ -812,7 +812,10 @@
 <script src="{{ public_path().'/admin/js/script.js' }}"></script>
 
 <script type="text/javascript">
-    var editor1 = CKEDITOR.replaceAll('textarea');
+    var editor1 = CKEDITOR.replaceAll('textarea', {
+        config.filebrowserBrowseUrl = '/ckfinder/ckfinder.html';
+        config.filebrowserUploadUrl = '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
+    });
     CKFinder.setupCKEditor( editor1 );
 </script>
 </body>
