@@ -43,10 +43,7 @@ $(function() {
             var cls = (Math.random() + 1).toString(36).substring(7);
             dis.find('textarea').last().addClass(cls);
             CKFinder.setupCKEditor();
-            CKEDITOR.replaceAll(cls, {
-                filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
-                filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
-            });
+            CKEDITOR.replaceAll(cls);
         }else{
             /*$.ajax({
                 type: 'GET',
