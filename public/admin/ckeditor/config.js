@@ -10,4 +10,7 @@ CKEDITOR.editorConfig = function( config ) {
 	//config.filebrowserBrowseUrl = '/elfinder/index.php';
 	//config.extraPlugins = 'bootstrapVisibility';
 	//config.extraPlugins = 'imageuploader';
+	config.filebrowserBrowseUrl = '/ckfinder/ckfinder.html';
+    config.filebrowserUploadUrl = '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
+	config.filebrowserUploadMethod = 'form';
 };
