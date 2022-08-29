@@ -50,7 +50,7 @@ class AlbumController extends Controller
             DB::table('album_images')->insert(['album_id' => $album->id, 'img_name' => $fileName]);
         endforeach;
         return redirect()->route('admin.album-list')
-            ->with('success','GO created successfully');
+            ->with('success','Photo Gallery created successfully');
     }
 
     /**
@@ -72,7 +72,9 @@ class AlbumController extends Controller
      */
     public function edit($id)
     {
-        //
+        $album = Album::find($id);
+        $images = DB::table('album_images')->where('album_id', $id)->get();
+        return view('admin.edit-album', compact('album', 'images'));
     }
 
     /**
@@ -84,7 +86,21 @@ class AlbumController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'album_title' => 'required|unique:albums,album_title,'.$id,
+        ]);
+        $input = $request->all();
+        $album = Album::find($id);
+        $album->update($input);
+        if(!empty($request->file('imgs'))):
+            foreach($request->file('imgs') as $key => $file):
+                $fileName = $file->getClientOriginalName();
+                $path = $file->storeAs('albums/'.$album->id, $fileName, 'public');
+                DB::table('album_images')->insert(['album_id' => $album->id, 'img_name' => $fileName]);
+            endforeach;
+        endif;
+        return redirect()->route('admin.album-list')
+            ->with('success','Photo Gallery updated successfully');
     }
 
     /**

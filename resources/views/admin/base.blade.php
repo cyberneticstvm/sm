@@ -160,12 +160,30 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#album-Menus"  href="#"><i class="fa fa-picture-o"></i> <span>Album Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#album-Menus"  href="#"><i class="fa fa-picture-o"></i> <span>Photo Gallery Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="album-Menus">
-                                <li><a class="ms-link" href="/admin/album/create/">Create New Album</a></li>
-                                <li><a class="ms-link" href="/admin/album-list/">Album List</a></li>
+                                <li><a class="ms-link" href="/admin/album/create/">Create Photo Gallery</a></li>
+                                <li><a class="ms-link" href="/admin/album-list/">Photo Gallery List</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#video-Menus"  href="#"><i class="fa fa-youtube-play"></i> <span>Video Gallery Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="video-Menus">
+                                <li><a class="ms-link" href="/admin/video/create/">Create Video Gallery</a></li>
+                                <li><a class="ms-link" href="/admin/video-list/">Video Gallery List</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapsed">
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#document-Menus"  href="#"><i class="fa fa-files-o"></i> <span>Document Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+        
+                            <!-- Menu: Sub menu ul -->
+                            <ul class="sub-menu collapse" id="document-Menus">
+                                <li><a class="ms-link" href="/admin/document/create/">Create document</a></li>
+                                <li><a class="ms-link" href="/admin/document-list/">Document List</a></li>
                             </ul>
                         </li>
                         <li class="collapsed">
@@ -783,6 +801,7 @@
 <script src="{{ public_path().'/admin/bundles/libscripts.bundle.js' }}"></script>
 
 <script src="{{ public_path().'/admin/ckeditor/ckeditor.js' }}"></script>
+<script src="{{ public_path().'/ckfinder/ckfinder.js' }}"></script>
 
 <!-- Plugin Js -->
 <script src="{{ public_path().'/admin/bundles/dataTables.bundle.js' }}"></script>
@@ -793,10 +812,11 @@
 <script src="{{ public_path().'/admin/js/script.js' }}"></script>
 
 <script type="text/javascript">
-    CKEDITOR.replaceAll('textarea', {
-        filebrowserUploadUrl: "{{route('upp', ['_token' => csrf_token() ])}}",
-        filebrowserUploadMethod: 'form'
+    var editor1 = CKEDITOR.replaceAll('textarea', {
+        filebrowserUploadUrl: "/tinymce/upload/",
+        filebrowserBrowseUrl: '/browser/browse.php',
     });
+    CKFinder.setupCKEditor( editor1 );
 </script>
 </body>
 </html>

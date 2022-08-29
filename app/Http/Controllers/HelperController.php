@@ -79,4 +79,11 @@ class HelperController extends Controller
         return redirect()->route('admin.listUpload')
                         ->with('success','File deleted successfully');
     }
+
+    public function delete($id, $type){
+        if($type == 'album_image'):
+            DB::table('album_images')->where('id', $id)->delete();
+        endif;
+        echo "Record deleted successfully.";
+    }
 }

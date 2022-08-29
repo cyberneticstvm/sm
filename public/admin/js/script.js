@@ -64,4 +64,21 @@ $(function() {
         $(this).closest('form').submit();
     });
 
+    $(document).on("click", ".dlt", function(){
+        var id = $(this).data("id");
+        var type = $(this).data('type');
+        $.ajax({
+            type: 'POST',
+            url: '/admin/delete/'+id+'/'+type,
+            data: {},
+            success: function(data){
+                alert(data);
+                location.reload();
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+                console.log(XMLHttpRequest);
+            },
+        });
+    });
+
 });

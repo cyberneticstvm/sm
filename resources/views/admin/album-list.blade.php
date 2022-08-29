@@ -30,13 +30,13 @@
                                 <h5>Album List</h5>
                             </div>
                             <div class="card-body table-responsive">
-                                <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Album Title</th><th>Delete</th></tr></thead><tbody>
+                                <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Album Title</th><th>Edit</th><th>Delete</th></tr></thead><tbody>
                                     @php $c = 1; @endphp
                                     @forelse ($albums as $key => $album)
                                         <tr>
                                             <td>{{ $c++ }}</td>
                                             <td>{{ $album->album_title }}</td>
-                                            
+                                            <td class="text-center"><a href="{{ route('admin.album.edit', $album->id) }}"><i class="fa fa-pencil text-warning"></i></a></td>
                                             <td class='text-center'>
                                             <form method="post" action="{{ route('admin.album.delete', $album->id) }}">
                                                 @csrf 

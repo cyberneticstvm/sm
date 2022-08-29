@@ -8,6 +8,8 @@ use App\Http\Controllers\GosController;
 use App\Http\Controllers\NewsEventsController;
 use App\Http\Controllers\WhatsNewController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\VideoController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\HelperController;
 
 /*
@@ -76,6 +78,20 @@ Route::get('/admin/album/edit/{id}/', [AlbumController::class, 'edit'])->name('a
 Route::put('/admin/album/edit/{id}/', [AlbumController::class, 'update'])->name('admin.album.update');
 Route::delete('/admin/album/delete/{id}/', [AlbumController::class, 'destroy'])->name('admin.album.delete');
 
+Route::get('/admin/video/create/', [VideoController::class, 'create'])->name('admin.video.create');
+Route::post('/admin/video/create/', [VideoController::class, 'store'])->name('admin.video.save');
+Route::get('/admin/video-list/', [VideoController::class, 'index'])->name('admin.video-list');
+Route::get('/admin/video/edit/{id}/', [VideoController::class, 'edit'])->name('admin.video.edit');
+Route::put('/admin/video/edit/{id}/', [VideoController::class, 'update'])->name('admin.video.update');
+Route::delete('/admin/video/delete/{id}/', [VideoController::class, 'destroy'])->name('admin.video.delete');
+
+Route::get('/admin/document/create/', [DocumentController::class, 'create'])->name('admin.document.create');
+Route::post('/admin/document/create/', [DocumentController::class, 'store'])->name('admin.document.save');
+Route::get('/admin/document-list/', [DocumentController::class, 'index'])->name('admin.document-list');
+Route::get('/admin/document/edit/{id}/', [DocumentController::class, 'edit'])->name('admin.document.edit');
+Route::put('/admin/document/edit/{id}/', [DocumentController::class, 'update'])->name('admin.document.update');
+Route::delete('/admin/document/delete/{id}/', [DocumentController::class, 'destroy'])->name('admin.document.delete');
+
 Route::get('/admin/file/upload/', [HelperController::class, 'listUpload'])->name('admin.listUpload');
 Route::post('/admin/file/upload/', [HelperController::class, 'fileUpload'])->name('admin.fileUpload');
 Route::delete('/admin/file/delete/{id}/', [HelperController::class, 'deleteFile'])->name('admin.file.delete');
@@ -87,3 +103,5 @@ Route::get('/see-all-news-and-events/', [HelperController::class, 'seeallnews'])
 Route::get('/see-all-whats-new/', [HelperController::class, 'seeallwhatsnew']);
 Route::get('/news-and-events/{id}/', [HelperController::class, 'singlenews']);
 Route::post('/tinymce/upload/', [HelperController::class, 'upload'])->name('upp');
+
+Route::post('/admin/delete/{id}/{type}/', [HelperController::class, 'delete']);
