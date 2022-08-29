@@ -813,8 +813,8 @@
 
 <script type="text/javascript">
     var editor1 = CKEDITOR.replaceAll('textarea', {
-        filebrowserBrowseUrl: '/ckfinder/ckfinder.html';
-        filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
+        filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+        filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
     });
     CKFinder.setupCKEditor( editor1 );
 </script>
