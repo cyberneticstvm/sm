@@ -8,6 +8,4 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	//config.filebrowserBrowseUrl = '/elfinder/index.php';
-	//config.extraPlugins = 'bootstrapVisibility';
-	//config.extraPlugins = 'imageuploader';
 };
