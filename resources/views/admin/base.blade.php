@@ -813,8 +813,8 @@
 
 <script type="text/javascript">
     var editor1 = CKEDITOR.replaceAll('textarea', {
-        filebrowserUploadUrl: "/tinymce/upload/",
-        filebrowserBrowseUrl: '/browser/browse.php',
+        filebrowserUploadUrl: '/ckfinder/ckfinder.html',
+        filebrowserBrowseUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
     });
     CKFinder.setupCKEditor( editor1 );
 </script>
