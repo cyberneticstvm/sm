@@ -96,11 +96,15 @@ class GosController extends Controller
             'go_doc' => 'required',
             'go_subject' => 'required',
         ]);
-        $input = $request->all();        
-        $fileName=$request->file('go_doc')->getClientOriginalName();
-        $path=$request->file('go_doc')->storeAs('gos', $fileName, 'public');
-        $input['go_doc'] = $path;
+        $input = $request->all();
         $go = GovtOrder::find($id);
+        if(!empty($request->file('go_doc'))):        
+            $fileName=$request->file('go_doc')->getClientOriginalName();
+            $path=$request->file('go_doc')->storeAs('gos', $fileName, 'public');
+            $input['go_doc'] = $path;
+        else:
+            $input['go_doc'] = $go->getOriginal('go_doc');
+        endif;        
         $go->update($input);
         return redirect()->route('admin.gos-list')
                         ->with('success','GO updated successfully');

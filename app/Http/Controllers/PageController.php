@@ -160,7 +160,7 @@ class PageController extends Controller
         }
         
         return redirect()->route('admin.page-list')
-                        ->with('success','Page created successfully');
+                        ->with('success','Page updated successfully');
     }
 
     /**

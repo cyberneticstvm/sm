@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Video;
 
 class VideoController extends Controller
 {
@@ -13,7 +14,8 @@ class VideoController extends Controller
      */
     public function index()
     {
-        //
+        $videos = Video::get();
+        return(view('admin.video-list', compact('videos')));
     }
 
     /**
@@ -23,7 +25,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
+        return(view('admin.create-video'));
     }
 
     /**
@@ -34,7 +36,15 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|unique:videos,title',
+            'description' => 'required',
+            'video_id' => 'required|unique:videos,video_id',
+        ]);
+        $input = $request->all();
+        $video = Video::create($input);
+        return redirect()->route('admin.video-list')
+                        ->with('success','Video created successfully');
     }
 
     /**
@@ -56,7 +66,8 @@ class VideoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $video = Video::find($id);
+        return view('admin.edit-video', compact('video'));
     }
 
     /**
@@ -68,7 +79,16 @@ class VideoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|unique:videos,title,'.$id,
+            'description' => 'required',
+            'video_id' => 'required|unique:videos,video_id,'.$id,
+        ]);
+        $input = $request->all();
+        $video = Video::find($id);
+        $video->update($input);
+        return redirect()->route('admin.video-list')
+                        ->with('success','Video updated successfully');
     }
 
     /**
@@ -79,6 +99,8 @@ class VideoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Video::find($id)->delete();
+        return redirect()->route('admin.video-list')
+                        ->with('success','Video deleted successfully');
     }
 }

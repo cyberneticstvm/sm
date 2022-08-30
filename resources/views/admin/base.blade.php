@@ -178,7 +178,7 @@
                             </ul>
                         </li>
                         <li class="collapsed">
-                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#document-Menus"  href="#"><i class="fa fa-files-o"></i> <span>Document Manager</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
+                            <a class="m-link"  data-bs-toggle="collapse" data-bs-target="#document-Menus"  href="#"><i class="fa fa-files-o"></i> <span>IEC Documents</span> <span class="arrow fa fa-angle-down ms-auto text-end"></span></a>
         
                             <!-- Menu: Sub menu ul -->
                             <ul class="sub-menu collapse" id="document-Menus">
@@ -801,7 +801,6 @@
 <script src="{{ public_path().'/admin/bundles/libscripts.bundle.js' }}"></script>
 
 <script src="{{ public_path().'/admin/ckeditor/ckeditor.js' }}"></script>
-<!--<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>-->
 <script src="{{ public_path().'/ckfinder/ckfinder.js' }}"></script>
 
 <!-- Plugin Js -->
