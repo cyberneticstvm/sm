@@ -811,13 +811,12 @@
 <script src="{{ public_path().'/admin/js/template.js' }}"></script>
 <script src="{{ public_path().'/admin/js/script.js' }}"></script>
 
+@push('scripts')
 <script type="text/javascript">
     var editor1 = CKEDITOR.replaceAll('textarea', {
-        filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
-        filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
-        filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-        filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-        removeButtons: 'PasteFromWord'
+        //filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+        filebrowserUploadUrl: "{{route('upp', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
     });
     CKFinder.setupCKEditor( editor1 );
 </script>
