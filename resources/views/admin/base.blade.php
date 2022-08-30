@@ -801,6 +801,7 @@
 <script src="{{ public_path().'/admin/bundles/libscripts.bundle.js' }}"></script>
 
 <script src="{{ public_path().'/admin/ckeditor/ckeditor.js' }}"></script>
+<!--<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>-->
 <script src="{{ public_path().'/ckfinder/ckfinder.js' }}"></script>
 
 <!-- Plugin Js -->
@@ -813,11 +814,7 @@
 
 @push('scripts')
 <script type="text/javascript">
-    var editor1 = CKEDITOR.replaceAll('textarea', {
-        //filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
-        filebrowserUploadUrl: "{{route('upp', ['_token' => csrf_token() ])}}",
-        filebrowserUploadMethod: 'form'
-    });
+    var editor1 = CKEDITOR.replaceAll('textarea');
     CKFinder.setupCKEditor( editor1 );
 </script>
 </body>
