@@ -131,35 +131,41 @@
 													@endforeach-->
 													@foreach($main_menu as $key => $value)
 														@php $submenu = DB::table('menus')->where('parent', $value->id)->get(); @endphp
-														<li class="{{ (count($submenu)>0) ? 'dropdown dropdown-mega' : '' }}">
+														<li class="{{ (count($submenu)>0 && $value->menu_category == 'mega') ? 'dropdown dropdown-mega' : 'dropdown' }}">
 															<a class="dropdown-item dropdown-toggle" href="{{ (count($submenu)>0) ? '#' : $value->page_url }}">
 															{{ $value->menu_item_name }}
 															</a>
-															@if($submenu)
+															@if($submenu && $value->menu_category == 'mega')
 																<ul class="dropdown-menu">
 																	<li>
 																		<div class="dropdown-mega-content">
 																			<div class="row">
 																				@foreach($submenu as $skey => $sval)
-																				@php 
-																				$nextmenu = DB::table('menus')->where('parent', $sval->id)->get();
-																				$slug = DB::table('pages')->where('id', $sval->page_id)->value('slug'); @endphp
-																				<div class="col-lg-3">
-																					<span class="dropdown-mega-sub-title"><a href="{{ ($sval->page_id == 0) ? '/'.$nextmenu->page_url : '/web/'.$slug.'/' }}">{{ $sval->menu_item_name }}</a></span>
-																					@if(!empty($nextmenu))
-																						<ul class="dropdown-mega-sub-nav">
-																						@forelse($nextmenu as $key => $next)
-																							@php $nextslug = DB::table('pages')->where('id', $next->page_id)->value('slug'); @endphp
-																								<li><a class="dropdown-item smenuitem" href="{{ ($next->page_id == 0) ? '/'.$next->page_url : '/web/'.$nextslug.'/' }}">{{ $next->menu_item_name }}</a></li>
-																							@empty
-																						@endforelse
-																						</ul>
-																					@endif
-																				</div>
+																					@php 
+																					$nextmenu = DB::table('menus')->where('parent', $sval->id)->get();
+																					$slug = DB::table('pages')->where('id', $sval->page_id)->value('slug'); @endphp
+																					<div class="col-lg-3">
+																						<span class="dropdown-mega-sub-title"><a href="{{ ($sval->page_id == 0) ? '/'.$nextmenu->page_url : '/web/'.$slug.'/' }}">{{ $sval->menu_item_name }}</a></span>
+																						@if(!empty($nextmenu))
+																							<ul class="dropdown-mega-sub-nav">
+																							@forelse($nextmenu as $key => $next)
+																								@php $nextslug = DB::table('pages')->where('id', $next->page_id)->value('slug'); @endphp
+																									<li><a class="dropdown-item smenuitem" href="{{ ($next->page_id == 0) ? '/'.$next->page_url : '/web/'.$nextslug.'/' }}">{{ $next->menu_item_name }}</a></li>
+																								@empty
+																							@endforelse
+																							</ul>
+																						@endif
+																					</div>
 																				@endforeach
 																			</div>
 																		</div>
 																	</li>
+																</ul>
+															@elseif($submenu && $value->menu_category == 'single')
+																<ul class="dropdown-menu">
+																	@foreach($submenu as $skey => $sval)
+																		<li><a class="dropdown-item" href="">{{ $sval->menu_item_name }}</a></li>
+																	@endforeach
 																</ul>
 															@endif
 														</li>
