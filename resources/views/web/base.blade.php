@@ -104,7 +104,7 @@
 															HOME
 														</a>														
 													</li>
-													@foreach($main_menu as $key => $value)
+													<!--@foreach($main_menu as $key => $value)
 														@php $submenu = DB::table('menus')->where('parent', $value->id)->get(); @endphp
 														<li class="{{ (count($submenu)>0) ? 'dropdown' : '' }}"><a class="dropdown-item dropdown-toggle" href="{{ (count($submenu)>0) ? '#' : $value->page_url }}">{{ $value->menu_item_name }}</a>
 														@if($submenu)
@@ -128,6 +128,41 @@
 															</ul>
 														@endif
 													</li>
+													@endforeach-->
+													@foreach($main_menu as $key => $value)
+														@php $submenu = DB::table('menus')->where('parent', $value->id)->get(); @endphp
+														<li class="{{ (count($submenu)>0) ? 'dropdown dropdown-mega' : '' }}">
+															<a class="dropdown-item dropdown-toggle" href="{{ (count($submenu)>0) ? '#' : $value->page_url }}">
+															{{ $value->menu_item_name }}
+															</a>
+															@if($submenu)
+																<ul class="dropdown-menu">
+																	<li>
+																		<div class="dropdown-mega-content">
+																			<div class="row">
+																				@foreach($submenu as $skey => $sval)
+																				@php 
+																				$nextmenu = DB::table('menus')->where('parent', $sval->id)->get();
+																				$slug = DB::table('pages')->where('id', $sval->page_id)->value('slug'); @endphp
+																				<div class="col-lg-3">
+																					<span class="dropdown-mega-sub-title"><a href="{{ ($sval->page_id == 0) ? '/'.$nextmenu->page_url : '/web/'.$slug.'/' }}">{{ $sval->menu_item_name }}</a></span>
+																					@if(!empty($nextmenu))
+																						<ul class="dropdown-mega-sub-nav">
+																						@forelse($nextmenu as $key => $next)
+																							@php $nextslug = DB::table('pages')->where('id', $next->page_id)->value('slug'); @endphp
+																								<li><a class="dropdown-item smenuitem" href="{{ ($next->page_id == 0) ? '/'.$next->page_url : '/web/'.$nextslug.'/' }}">{{ $next->menu_item_name }}</a></li>
+																							@empty
+																						@endforelse
+																						</ul>
+																					@endif
+																				</div>
+																				@endforeach
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															@endif
+														</li>
 													@endforeach
 												</ul>
 											</nav>
