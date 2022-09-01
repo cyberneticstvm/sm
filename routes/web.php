@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SliderController;
@@ -23,13 +24,27 @@ use App\Http\Controllers\HelperController;
 |
 */
 Route::get('/', [HelperController::class, 'home']);
+Route::get('/web/{slug}/', [HelperController::class, 'index']);
+Route::get('/government-orders/', [HelperController::class, 'gorder']);
+Route::get('/photo-gallery/', [HelperController::class, 'photogallery']);
+Route::get('/see-all-news-and-events/', [HelperController::class, 'seeallnews']);
+Route::get('/see-all-whats-new/', [HelperController::class, 'seeallwhatsnew']);
+Route::get('/news-and-events/{id}/', [HelperController::class, 'singlenews']);
+Route::post('/tinymce/upload/', [HelperController::class, 'upload'])->name('upp');
+Route::get('/tinymce/upload/', [HelperController::class, 'browse'])->name('browse');
 
-Route::get('/admin/dash/', function () {
-    return view('admin.dash');
-});
 Route::get('/admin/login/', function () {
     return view('admin.login');
 });
+Route::post('/admin/login/', [UserController::class, 'login'])->name('login');
+
+
+
+Route::group(['middleware' => ['auth']], function(){
+
+Route::get('/admin/dash/', function () {
+    return view('admin.dash');
+})->name('admin.dash');
 
 Route::get('/admin/page/create/', [PageController::class, 'create'])->name('admin.create-page');
 Route::post('/admin/page/create/', [PageController::class, 'store'])->name('admin.page.save');
@@ -99,16 +114,8 @@ Route::get('/admin/file/upload/', [HelperController::class, 'listUpload'])->name
 Route::post('/admin/file/upload/', [HelperController::class, 'fileUpload'])->name('admin.fileUpload');
 Route::delete('/admin/file/delete/{id}/', [HelperController::class, 'deleteFile'])->name('admin.file.delete');
 
-Route::get('/web/{slug}/', [HelperController::class, 'index']);
-Route::get('/government-orders/', [HelperController::class, 'gorder']);
-Route::get('/photo-gallery/', [HelperController::class, 'photogallery']);
-Route::get('/see-all-news-and-events/', [HelperController::class, 'seeallnews']);
-Route::get('/see-all-whats-new/', [HelperController::class, 'seeallwhatsnew']);
-Route::get('/news-and-events/{id}/', [HelperController::class, 'singlenews']);
-Route::post('/tinymce/upload/', [HelperController::class, 'upload'])->name('upp');
-Route::get('/tinymce/upload/', [HelperController::class, 'browse'])->name('browse');
-
 Route::post('/admin/delete/{id}/{type}/', [HelperController::class, 'delete']);
+});
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
