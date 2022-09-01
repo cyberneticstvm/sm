@@ -27,6 +27,9 @@ Route::get('/', [HelperController::class, 'home']);
 Route::get('/admin/dash/', function () {
     return view('admin.dash');
 });
+Route::get('/admin/login/', function () {
+    return view('admin.login');
+});
 
 Route::get('/admin/page/create/', [PageController::class, 'create'])->name('admin.create-page');
 Route::post('/admin/page/create/', [PageController::class, 'store'])->name('admin.page.save');
@@ -107,6 +110,6 @@ Route::get('/tinymce/upload/', [HelperController::class, 'browse'])->name('brows
 
 Route::post('/admin/delete/{id}/{type}/', [HelperController::class, 'delete']);
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web']], function () {
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
