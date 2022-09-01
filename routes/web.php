@@ -107,6 +107,6 @@ Route::get('/tinymce/upload/', [HelperController::class, 'browse'])->name('brows
 
 Route::post('/admin/delete/{id}/{type}/', [HelperController::class, 'delete']);
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
