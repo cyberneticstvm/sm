@@ -1,3 +1,9 @@
+var options = {
+    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+  };
 $(function() {
     "use strict";
 
@@ -41,9 +47,9 @@ $(function() {
             dis.find(".content").html("<input type='hidden' name='cctype[]' value='"+type+"' /><input type='hidden' name='sectype[]' value='"+cntrl+"'/><input type='text' class='form-control' name='content_title[]' placeholder='Content Title' /><textarea class='form-control' name='ccontent[]' required></textarea>");
             //var ele = dis.find('textarea').last().attr('class');
             var cls = (Math.random() + 1).toString(36).substring(7);
-            dis.find('textarea').last().addClass(cls);
-            CKFinder.setupCKEditor();
-            CKEDITOR.replaceAll(cls);
+            //dis.find('textarea').last().addClass(cls);
+            dis.find('textarea').last().attr("id", cls);
+            CKEDITOR.replace(cls, options);
         }else{
             /*$.ajax({
                 type: 'GET',

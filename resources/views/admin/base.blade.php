@@ -801,7 +801,6 @@
 <script src="{{ public_path().'/admin/bundles/libscripts.bundle.js' }}"></script>
 
 <script src="{{ public_path().'/admin/ckeditor/ckeditor.js' }}"></script>
-<script src="{{ public_path().'/ckfinder/ckfinder.js' }}"></script>
 
 <!-- Plugin Js -->
 <script src="{{ public_path().'/admin/bundles/dataTables.bundle.js' }}"></script>
@@ -813,8 +812,7 @@
 
 @push('scripts')
 <script type="text/javascript">
-    var editor1 = CKEDITOR.replaceAll('textarea');
-    CKFinder.setupCKEditor( editor1 );
+    CKEDITOR.replace('news-events', options);
 </script>
 </body>
 </html>
