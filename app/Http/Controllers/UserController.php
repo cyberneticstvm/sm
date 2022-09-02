@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Session;
 
 class UserController extends Controller
 {
@@ -26,6 +27,12 @@ class UserController extends Controller
             return redirect()->route('admin.dash')->with('success','User logged in successfully');
         }  
         return redirect("/admin/login/")->withErrors('Login details are not valid');
+    }
+
+    public function logout(){
+        Session::flush();
+        Auth::logout();  
+        return Redirect('/admin/login/');
     }
     public function index()
     {

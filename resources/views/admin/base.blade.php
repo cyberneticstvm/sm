@@ -48,7 +48,7 @@
 
             <!-- Menu collapse -->
             <li class="nav-item"><a class="nav-link p-2 p-lg-3" href="#" title="Settings" data-bs-toggle="modal" data-bs-target="#SettingsModal"><i class="fa fa-gear"></i></a></li>
-            <li class="nav-item d-none d-sm-block"><a class="nav-link p-2 p-lg-3" href="#" title="Menu collapse"><i class="fa fa-user"></i></a></li>
+            <li class="nav-item d-none d-sm-block"><a class="nav-link p-2 p-lg-3" href="/admin/logout/" title="Logout"><i class="fa fa-power-off"></i></a></li>
 
         </ul>
 
