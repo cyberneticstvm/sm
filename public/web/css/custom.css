@@ -65,3 +65,7 @@ h4{
     color: #000 !important;
     margin-left: 10px !important;
 }
+
+section.section{
+    padding: 10px 0 !important;
+}

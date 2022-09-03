@@ -164,7 +164,10 @@
 															@elseif($submenu && $value->menu_category == 'single')
 																<ul class="dropdown-menu">
 																	@foreach($submenu as $skey => $sval)
-																		<li><a class="dropdown-item" href="">{{ $sval->menu_item_name }}</a></li>
+																		@php 
+																		$nextmenu = DB::table('menus')->where('parent', $sval->id)->get();
+																		$slug = DB::table('pages')->where('id', $sval->page_id)->value('slug'); @endphp
+																		<li><a class="dropdown-item" href="{{ ($sval->page_id == 0) ? '/'.$nextmenu->page_url : '/web/'.$slug.'/' }}">{{ $sval->menu_item_name }}</a></li>
 																	@endforeach
 																</ul>
 															@endif
