@@ -11,14 +11,26 @@
             <div class="col-lg-12 mt-5">
                 <h5>Active {{ $category->name }}</h5>
                 @forelse($actives as $key => $active)
-                    <p>{{ $active->title }}</p>
+                    <ul>
+                    @if($active->doc_type == 'pdf')
+                        <li><a href="{{ public_path().'/storage/documents/'.$active-document}}" target="_blank">{{ $active->title }}</a></li>
+                    @else
+                        <li><a href="{{ $active->url }}" target="_blank">{{ $active->title }}</a></li>
+                    @endif
+                    </ul>
                 @empty
                 @endforelse
             </div>
             <div class="col-lg-12 mt-5">
                 <h5>Archived {{ $category->name }}</h5>
                 @forelse($archives as $key => $archive)
-                    <p>{{ $active->title }}</p>
+                    <ul>
+                        @if($active->doc_type == 'pdf')
+                            <li><a href="{{ public_path().'/storage/documents/'.$active-document}}" target="_blank">{{ $active->title }}</a></li>
+                        @else
+                            <li><a href="{{ $active->url }}" target="_blank">{{ $active->title }}</a></li>
+                        @endif
+                    </ul>
                 @empty
                 @endforelse
             </div>
