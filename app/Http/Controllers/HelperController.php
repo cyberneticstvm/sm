@@ -7,9 +7,16 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\NewsAndEvents;
 use DB;
+use Hash;
 
 class HelperController extends Controller
 {
+    public function updatepassword(){
+        $pwd = Hash::make('sm123');
+        $update = DB::table('users')->where('id', 1)->update(['password' => $pwd]);
+        echo "Password updated successfully!";
+        die;
+    }
     public function home(){
         $sliders = DB::table('sliders')->orderBy('order_by')->get();
         $news = DB::table('news_and_events')->orderBy('date')->limit(3)->get();
