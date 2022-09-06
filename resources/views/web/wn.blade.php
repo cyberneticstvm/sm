@@ -26,7 +26,7 @@
                 @forelse($archives as $key => $archive)
                     <ul>
                         @if($active->doc_type == 'pdf')
-                            <li><a href="{{ public_path().'/storage/documents/'.$active-document}}" target="_blank">{{ $active->title }}</a></li>
+                            <li><a href="{{ public_path().'/storage/documents/'.$active->document}}" target="_blank">{{ $active->title }}</a></li>
                         @else
                             <li><a href="{{ $active->url }}" target="_blank">{{ $active->title }}</a></li>
                         @endif
