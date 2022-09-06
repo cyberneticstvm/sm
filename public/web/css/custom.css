@@ -69,3 +69,7 @@ h4{
 section.section{
     padding: 10px 0 !important;
 }
+
+.bg-blue{
+    background-color: #01295a;
+}

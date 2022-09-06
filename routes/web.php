@@ -31,6 +31,7 @@ Route::get('/video-gallery/', [HelperController::class, 'videogallery']);
 Route::get('/see-all-news-and-events/', [HelperController::class, 'seeallnews']);
 Route::get('/see-all-whats-new/', [HelperController::class, 'seeallwhatsnew']);
 Route::get('/news-and-events/{id}/', [HelperController::class, 'singlenews']);
+Route::get('/iec/', [HelperController::class, 'iec']);
 
 Route::get('/admin/login/', function () {
     return view('admin.login');
@@ -119,6 +120,6 @@ Route::post('/admin/delete/{id}/{type}/', [HelperController::class, 'delete']);
 
 });
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth']], function () {
+/*Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
-});
+});*/
