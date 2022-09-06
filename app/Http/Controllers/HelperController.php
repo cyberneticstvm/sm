@@ -17,6 +17,12 @@ class HelperController extends Controller
         $qlinks = DB::table('menus')->where('menu_type_id', 2)->get();
         return view('web.index', compact('sliders', 'news', 'whats', 'qlinks'));
     }
+    public function whatsnew($catid){
+        $category = DB::table('whats_new_category')->find($catid);
+        $actives = DB::table('whats_news')->where('category', $catid)->where('status', 1)->orderbyDesc('created_at')->get();
+        $archives = DB::table('whats_news')->where('category', $catid)->where('status', 0)->orderbyDesc('created_at')->get();
+        return view('web.wn', compact('actives', 'archives', 'category'));
+    }
     public function index($slug){
         $page = DB::table('pages')->where('slug', $slug)->first();
         $sections = DB::table('sections')->where('page_id', $page->id)->get();        
