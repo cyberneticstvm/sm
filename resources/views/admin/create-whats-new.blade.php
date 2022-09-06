@@ -70,7 +70,17 @@
                                             <small class="text-danger">{{ $errors->first('url') }}</small>
                                             @enderror
                                         </div>                                        
-                                                                                
+                                        <div class="col-lg-2">
+                                            <label for="TextInput" class="form-label">Status</label>
+                                            <select class="form-control select2" name="status" required>
+                                                <option value="">Select</option>
+                                                <option value="1">Active</option>
+                                                <option value="0">Archive</option>
+                                            </select>
+                                            @error('status')
+                                            <small class="text-danger">{{ $errors->first('status') }}</small>
+                                            @enderror
+                                        </div>                                        
                                         <div class="col-lg-6">
                                             <label for="TextInput" class="form-label">Document</label>
                                             <input type="file" class="form-control" name="document"/>

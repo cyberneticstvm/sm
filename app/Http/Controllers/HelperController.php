@@ -44,6 +44,10 @@ class HelperController extends Controller
         $albums = DB::table('albums')->orderByDesc('created_at')->get();
         return view('web.photo-gallery', compact('albums'));
     }
+    public function videogallery(){
+        $videos = DB::table('videos')->orderByDesc('created_at')->get();
+        return view('web.video-gallery', compact('videos'));
+    }
     public function getpagelist(){
         $data = DB::table('pages')->select('id', 'page_title as name')->get();
         return response()->json($data);

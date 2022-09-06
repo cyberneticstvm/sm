@@ -43,6 +43,7 @@ class WhatsNewController extends Controller
             'title' => 'required',
             'doc_type' => 'required',
             'category' => 'required',
+            'status' => 'required',
         ]);
         $input = $request->all();
         if(!empty($request->file('document'))):        
@@ -92,6 +93,7 @@ class WhatsNewController extends Controller
             'title' => 'required',
             'doc_type' => 'required',
             'category' => 'required',
+            'status' => 'required',
         ]);
         $input = $request->all();
         if(!empty($request->file('document'))):        

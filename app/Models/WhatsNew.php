@@ -15,5 +15,6 @@ class WhatsNew extends Model
         'url',
         'document',
         'category',
+        'status',
     ];
 }
