@@ -26,6 +26,7 @@ use App\Http\Controllers\HelperController;
 Route::get('/', [HelperController::class, 'home']);
 Route::get('/web/{slug}/', [HelperController::class, 'index']);
 Route::get('/notification/{catid}/', [HelperController::class, 'whatsnew']);
+Route::get('/downloads/{catid}/', [HelperController::class, 'downloads']);
 Route::get('/government-orders/', [HelperController::class, 'gorder']);
 Route::get('/photo-gallery/', [HelperController::class, 'photogallery']);
 Route::get('/video-gallery/', [HelperController::class, 'videogallery']);

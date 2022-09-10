@@ -30,6 +30,11 @@ class HelperController extends Controller
         $archives = DB::table('whats_news')->where('category', $catid)->where('status', 0)->orderbyDesc('created_at')->get();
         return view('web.wn', compact('actives', 'archives', 'category'));
     }
+    public function downloads($catid){
+        $category = DB::table('document_types')->find($catid);
+        $docs = DB::table('documents')->where('document_type', $catid)->orderbyDesc('created_at')->get();
+        return view('web.downloads', compact('docs', 'category'));
+    }
     public function index($slug){
         $page = DB::table('pages')->where('slug', $slug)->first();
         $sections = DB::table('sections')->where('page_id', $page->id)->get();        
