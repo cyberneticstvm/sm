@@ -29,6 +29,7 @@ Route::get('/notification/{catid}/', [HelperController::class, 'whatsnew']);
 Route::get('/downloads/{catid}/', [HelperController::class, 'downloads']);
 Route::get('/government-orders/', [HelperController::class, 'gorder']);
 Route::get('/photo-gallery/', [HelperController::class, 'photogallery']);
+Route::get('/photo-gallery/{id}/', [HelperController::class, 'pgallery']);
 Route::get('/video-gallery/', [HelperController::class, 'videogallery']);
 Route::get('/see-all-news-and-events/', [HelperController::class, 'seeallnews']);
 Route::get('/see-all-whats-new/', [HelperController::class, 'seeallwhatsnew']);

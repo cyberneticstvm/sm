@@ -66,6 +66,10 @@ class HelperController extends Controller
         $videos = DB::table('videos')->orderByDesc('created_at')->get();
         return view('web.video-gallery', compact('videos'));
     }
+    public function pgallery($id){
+        $images = DB::table('album_images')->where('album_id', $id)->get();
+        return view('web.photo-gallery-lightbox', compact('images'));
+    }
     public function getpagelist(){
         $data = DB::table('pages')->select('id', 'page_title as name')->get();
         return response()->json($data);
