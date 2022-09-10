@@ -25,13 +25,13 @@
                             <div class="row">
                                 <div class="col-lg-12 table-responsive">
                                     @php $c = 1; @endphp
-                                    <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Notification</th><th>Document</th><th>Date</th></tr></thead><tbody>
+                                    <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Notification</th><th>Title</th><th>Date</th></tr></thead><tbody>
                                         @forelse ($gos as $key => $go)
                                             @if($go->type_id == 1)
                                                 <tr>
                                                 <td>{{ $c++ }}</td>
                                                 <td>{{ $go->go_notification_number }}</td>
-                                                <td><a href="{{ public_path().'/storage/'.$go->go_doc }}" target="_blank">{{ $go->go_doc }}</a></td>
+                                                <td><a href="{{ public_path().'/storage/'.$go->go_doc }}" target="_blank">{{ $go->go_subject }}</a></td>
                                                 <td>{{ $go->go_date }}</td>
                                                 </tr>
                                             @endif
@@ -46,13 +46,13 @@
                             <div class="row">
                                 <div class="col-lg-12 table-responsive">
                                     @php $c = 1; @endphp
-                                    <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Notification</th><th>Document</th><th>Date</th></tr></thead><tbody>
+                                    <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Notification</th><th>Title</th><th>Date</th></tr></thead><tbody>
                                         @forelse ($gos as $key => $go)
                                             @if($go->type_id == 2)
                                                 <tr>
                                                 <td>{{ $c++ }}</td>
                                                 <td>{{ $go->go_notification_number }}</td>
-                                                <td><a href="{{ public_path().'/storage/'.$go->go_doc }}" target="_blank">{{ $go->go_doc }}</a></td>
+                                                <td><a href="{{ public_path().'/storage/'.$go->go_doc }}" target="_blank">{{ $go->go_subject }}</a></td>
                                                 <td>{{ $go->go_date }}</td>
                                                 </tr>
                                             @endif
@@ -67,13 +67,13 @@
                             <div class="row">
                                 <div class="col-lg-12 table-responsive">
                                     @php $c = 1; @endphp
-                                    <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Notification</th><th>Document</th><th>Date</th></tr></thead><tbody>
+                                    <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Notification</th><th><Title></Title></th><th>Date</th></tr></thead><tbody>
                                         @forelse ($gos as $key => $go)
                                             @if($go->type_id == 3)
                                                 <tr>
                                                 <td>{{ $c++ }}</td>
                                                 <td>{{ $go->go_notification_number }}</td>
-                                                <td><a href="{{ public_path().'/storage/'.$go->go_doc }}" target="_blank">{{ $go->go_doc }}</a></td>
+                                                <td><a href="{{ public_path().'/storage/'.$go->go_doc }}" target="_blank">{{ $go->go_subject }}</a></td>
                                                 <td>{{ $go->go_date }}</td>
                                                 </tr>
                                             @endif

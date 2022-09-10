@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-light-green">
+    <div class="container-fluid">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col mb-4 mb-lg-0">
