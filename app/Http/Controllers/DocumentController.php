@@ -16,7 +16,7 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        $documents = DB::table('documents as d')->leftJoin('document_types as t', 'd.document_type', '=', 't.id')->selectRaw("d.id, d.title, d.description, d.doc_url, d.date, d.attachment_type, t.name as type, CASE WHEN d.status = 0 THEN 'Archive' ELSE 'Active' END AS status")->get();
+        $documents = DB::table('documents as d')->leftJoin('document_types as t', 'd.document_type', '=', 't.id')->selectRaw("d.id, d.doc_url, d.title, t.name as type, d.preview")->get();
         return(view('admin.document-list', compact('documents')));
     }
 
@@ -41,16 +41,18 @@ class DocumentController extends Controller
     {
         $this->validate($request, [
             'document_type' => 'required',
-            'date' => 'required',
             'title' => 'required',
-            'attachment_type' => 'required',
-            'status' => 'required',
         ]);
         $input = $request->all();
         if(!empty($request->file('doc'))):        
             $fileName=$request->file('doc')->getClientOriginalName();
             $path=$request->file('doc')->storeAs('iecdocs', $fileName, 'public');
             $input['doc_url'] = $path;
+        endif;
+        if(!empty($request->file('preview'))):        
+            $fileName=$request->file('preview')->getClientOriginalName();
+            $path=$request->file('preview')->storeAs('iecdocs/previews', $fileName, 'public');
+            $input['preview'] = $path;
         endif;
         $doc = Document::create($input);
         return redirect()->route('admin.document-list')
@@ -92,10 +94,7 @@ class DocumentController extends Controller
     {
         $this->validate($request, [
             'document_type' => 'required',
-            'date' => 'required',
             'title' => 'required',
-            'attachment_type' => 'required',
-            'status' => 'required',
         ]);
         $input = $request->all();
         $doc = Document::find($id);
@@ -105,6 +104,13 @@ class DocumentController extends Controller
             $input['doc_url'] = $path;
         else:
             $input['doc_url'] = $doc->getOriginal('doc_url');
+        endif;
+        if(!empty($request->file('preview'))):        
+            $fileName=$request->file('preview')->getClientOriginalName();
+            $path=$request->file('preview')->storeAs('iecdocs/previews', $fileName, 'public');
+            $input['preview'] = $path;
+        else:
+            $input['preview'] = $doc->getOriginal('preview');
         endif;
         $doc->update($input);
         return redirect()->route('admin.document-list')

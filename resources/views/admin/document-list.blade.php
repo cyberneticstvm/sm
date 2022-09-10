@@ -30,15 +30,14 @@
                                 <h5>IEC Documents List</h5>
                             </div>
                             <div class="card-body table-responsive">
-                                <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Title</th><th>Description</th><th>Type</th><th>Status</th><th>Attachment</th><th>Edit</th><th>Delete</th></tr></thead><tbody>
+                                <table id="dataTbl" class="table table-bordered table-striped table-sm"><thead><tr><th>SL No</th><th>Title</th><th>Preview</th><th>Type</th><th>Attachment</th><th>Edit</th><th>Delete</th></tr></thead><tbody>
                                     @php $c = 1; @endphp
                                     @forelse ($documents as $key => $doc)
                                         <tr>
                                             <td>{{ $c++ }}</td>
                                             <td>{{ $doc->title }}</td>
-                                            <td>{{ $doc->description }}</td>
+                                            <td><a href="{{ public_path().'/storage/'.$doc->preview }}" target="_blank">{{ $doc->preview }}</a></td>
                                             <td>{{ $doc->type }}</td>
-                                            <td>{{ $doc->status }}</td>
                                             <td><a href="{{ public_path().'/storage/'.$doc->doc_url }}" target="_blank">{{ $doc->doc_url }}</a></td>                                            
                                             <td class="text-center"><a href="{{ route('admin.document.edit', $doc->id) }}"><i class="fa fa-pencil text-warning"></i></a></td>
                                             <td class='text-center'>

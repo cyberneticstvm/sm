@@ -12,10 +12,7 @@ class Document extends Model
     protected $fillable = [
         'document_type',
         'title',
-        'description',
-        'date',
-        'attachment_type',
-        'status',
         'doc_url',
+        'preview',
     ];
 }
