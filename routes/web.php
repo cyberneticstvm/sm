@@ -122,6 +122,6 @@ Route::post('/admin/delete/{id}/{type}/', [HelperController::class, 'delete']);
 
 });
 
-/*Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
-});*/
+});
