@@ -43,7 +43,7 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col mb-4 mb-lg-0">
+                <div class="col-lg-2 mb-4 mb-lg-0">
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="col-lg-2 mb-4 mb-lg-0">
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
@@ -63,22 +63,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="col-lg-2 mb-4 mb-lg-0">
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
                                 <a href="/web/iec-capacity-building/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">IEC / Capacity Building</h5>
+                                <h5 class="font-weight-normal">IEC / CB</h5>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="col-lg-2 mb-4 mb-lg-0">
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
                                 <a href="/web/service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Service Providers</h5>
+                                <h5 class="font-weight-normal">Providers</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4 mb-lg-0">
+                    <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
+                        <div class="featured-box bggrey">
+                            <div class="box-content px-lg-3 px-xl-4 py-lg-4">
+                                <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/pg.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                                <h5 class="font-weight-normal">Photo Gallery</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4 mb-lg-0">
+                    <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
+                        <div class="featured-box bggrey">
+                            <div class="box-content px-lg-3 px-xl-4 py-lg-4">
+                                <a href="video-gallery/"><img src="{{ public_path().'/web/img/sm/icons/vg.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                                <h5 class="font-weight-normal">Video Gallery</h5>
                             </div>
                         </div>
                     </div>
