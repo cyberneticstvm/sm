@@ -813,6 +813,10 @@
 @push('scripts')
 <script type="text/javascript">
     CKEDITOR.replace('news-events', options);
+    $(".edtCnt").each(function(){
+        var taid = $(this).attr("id");
+        CKEDITOR.replace(taid, options);
+    });
 </script>
 </body>
 </html>
