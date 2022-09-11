@@ -87,7 +87,7 @@
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/pg.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                                <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid" /></a>
                                 <h5 class="font-weight-normal">Photo Gallery</h5>
                             </div>
                         </div>
@@ -97,8 +97,8 @@
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="video-gallery/"><img src="{{ public_path().'/web/img/sm/icons/vg.png' }}" alt="Service Providers" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Video Gallery</h5>
+                                <a href="web/news"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                                <h5 class="font-weight-normal">Media Gallery</h5>
                             </div>
                         </div>
                     </div>
@@ -114,28 +114,28 @@
                         <div class="counter">
                             <strong data-to="1018" data-append="+">1018</strong>
                             <label class="mt-3">MCF(80%)</label>
-                            <p class="mt-2">Read More</p>
+                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/mcf---consolidated">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter">
                             <strong data-to="177" data-append="+">177</strong>
                             <label class="mt-3">RRF(65%)</label>
-                            <p class="mt-2">Read More</p>
+                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/rrf---consolidted">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                         <div class="counter">
                             <strong data-to="1010" data-append="+">1010</strong>
                             <label class="mt-3">HKS(90%)</label>
-                            <p class="mt-2">Read More</p>
+                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/hks---consolidted">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="counter">
                             <strong data-to="4085" data-append="+">4085</strong>
                             <label class="mt-3">C&S(75%)</label>
-                            <p class="mt-2">Read More</p>
+                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/c@s---consolidated">Read More</a></p>
                         </div>
                     </div>
                 </div>
