@@ -121,14 +121,14 @@
                         <div class="counter">
                             <strong data-to="177" data-append="+">177</strong>
                             <label class="mt-3">RRF(65%)</label>
-                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/rrf---consolidted">Read More</a></p>
+                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/rrf---consolidated">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                         <div class="counter">
                             <strong data-to="1010" data-append="+">1010</strong>
                             <label class="mt-3">HKS(90%)</label>
-                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/hks---consolidted">Read More</a></p>
+                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/hks---consolidated">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
