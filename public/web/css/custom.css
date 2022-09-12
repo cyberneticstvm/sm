@@ -43,9 +43,9 @@ h4{
     background: #191828;
 }
 
-.fcar img{
+/*.fcar img{
     width: 60% !important;
-}
+}*/
 
 .bggrey{background-color: #dee1e6; }
 .wtzblk {padding-left: 0px;}
@@ -68,8 +68,21 @@ h4{
 
 section.section{
     padding: 10px 0 !important;
+    border-top: 0px !important;
 }
 
 .bg-blue{
     background-color: #01295a;
+}
+.featured-box img{
+    width: 50%;
+}
+.counters strong{
+    font-size: 30px !important;
+}
+.counters label{
+    font-size: 15px !important;
+}
+.counter a{
+    color: #ffc107 !important;
 }

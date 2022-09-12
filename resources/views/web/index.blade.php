@@ -33,7 +33,7 @@
                     </marquee>
                     </div>              
                     <div class="card rounded-0 card-info bg-primary text-center text-white mt-1 pt-1 pb-1"><a class="text-decoration-none text-white" href="/web/harithamithram-app/">HarithaMithram App</></div>
-                    <div class="card rounded-0 card-info bg-info text-center text-white mt-1 pt-1 pb-1"><a class="text-decoration-none text-white" href="/web/take-a-break/">Take a Break</a></div>
+                    <div class="card rounded-0 card-info bg-info text-center text-white mt-1 pt-1 pb-1"><a class="text-decoration-none text-white" href="/web/project-status/">Project Status</a></div>
                     <div class="card rounded-0 card-info bg-warning text-center text-white mt-1 pt-1 pb-1"><a class="text-decoration-none text-white" href="/government-orders/">Government Orders</a></div>
                     <div class="card rounded-0 card-info bg-danger text-center mt-1 pt-1 pb-1"><a class="text-decoration-none text-white" href="#quickLinksModal" data-bs-toggle="modal">Quick Links</a></div>
                 </div>
@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="container">
+        <div class="container section">
             <div class="row justify-content-center">
                 <div class="col-lg-2 mb-4 mb-lg-0">
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
@@ -67,7 +67,7 @@
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="/web/iec-capacity-building/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" /></a>
+                                <a href="/iec/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" /></a>
                                 <h5 class="font-weight-normal">IEC / CB</h5>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
                                 <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Photo Gallery</h5>
+                                <h5 class="font-weight-normal">Gallery</h5>
                             </div>
                         </div>
                     </div>
@@ -97,8 +97,8 @@
                     <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
                         <div class="featured-box bggrey">
                             <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="web/news"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Media Gallery</h5>
+                                <a href="downloads/4"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                                <h5 class="font-weight-normal">Media</h5>
                             </div>
                         </div>
                     </div>
@@ -113,28 +113,28 @@
                     <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter">
                             <strong data-to="1018" data-append="+">1018</strong>
-                            <label class="mt-3">MCF(80%)</label>
+                            <label class="">MCF(80%)</label>
                             <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/mcf---consolidated">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter">
                             <strong data-to="177" data-append="+">177</strong>
-                            <label class="mt-3">RRF(65%)</label>
+                            <label class="">RRF(65%)</label>
                             <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/rrf---consolidated">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                         <div class="counter">
                             <strong data-to="1010" data-append="+">1010</strong>
-                            <label class="mt-3">HKS(90%)</label>
+                            <label class="">HKS(90%)</label>
                             <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/hks---consolidated">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="counter">
                             <strong data-to="4085" data-append="+">4085</strong>
-                            <label class="mt-3">C&S(75%)</label>
+                            <label class="">C@S(75%)</label>
                             <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/c@s---consolidated">Read More</a></p>
                         </div>
                     </div>
