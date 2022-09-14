@@ -1,7 +1,7 @@
 @extends("web.base")
 
 @section("content")
-<div role="main" class="main">
+<div role="main" class="main bggrey">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 pt-3 mb-5 bg-eee">
