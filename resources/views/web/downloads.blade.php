@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-2">
                 <h5>Side Menu</h5>
                 <ul>
                 @forelse($side_menu as $key => $smenu)
@@ -20,7 +20,7 @@
             </div>
             @forelse($docs as $key => $doc)
                 @if(empty($doc->preview))
-                    <div class="col-lg-9">
+                    <div class="col-lg-8">
                         <a href="{{ public_path().'/storage/'.$doc->doc_url }}" target="_blank">{{ $doc->title }}</a><br/>
                     </div>
                 @else
