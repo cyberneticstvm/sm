@@ -25,7 +25,7 @@
                     </div>
                 @else
                     <div class="col-lg-2 mb-3">
-                        <a href="{{ public_path().'/storage/'.$doc->doc_url }}" target="_blank"><img src="{{ public_path().'/storage/'.$doc->preview }}" class="img-fluid" /></a>
+                        <img src="{{ public_path().'/storage/'.$doc->preview }}" class="img-fluid" />
                     </div>
                 @endif
             @empty
