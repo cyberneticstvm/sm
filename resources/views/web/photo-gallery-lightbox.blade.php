@@ -1,8 +1,8 @@
 @extends("web.base")
 
 @section("content")
-<div role="main" class="main">
-    <div class="container">
+<div role="main" class="main bggrey">
+    <div class="container bg-white">
         <div class="row">
             <div class="col-lg-12">
                 <div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">

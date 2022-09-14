@@ -2,7 +2,7 @@
 
 @section("content")
 <div role="main" class="main bggrey">
-    <div class="container">
+    <div class="container bg-white">
         <div class="row">
             <div class="col-lg-12 pt-3 mb-5 bg-eee">
                 <h4 class="px-3 text-white">{{ $category->name }}</h4>
