@@ -5,9 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 pt-3 mb-5 bg-eee">
-                <h4 class="px-3 text-white">Notifications</h4>
+                <h4 class="px-3 text-white">{{ $category->name }}</h4>
             </div>
-            <h5>{{ $category->name }}</h5>
             <div class="accordion" id="accordion1">
                 <div class="card card-default">
                     <div class="card-header" id="collapse1HeadingOne">

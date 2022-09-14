@@ -2,7 +2,7 @@
 
 @section("content")
 <div role="main" class="main">
-    <div class="container-fluid bggrey">
+    <div class="container-fluid bg-sky-blue">
         <div class="row fbox">
             <div class="col-lg-9">
                 <div class="owl-carousel owl-theme nav-inside" data-plugin-options="{'items': 1, 'margin': 10, 'autoplay': true, 'autoplayTimeout': 5000, 'loop': true, 'nav': true, 'dots': false}">
@@ -40,68 +40,32 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="container section">
+    <div class="container-fluid bg-sky-blue">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-2 mb-4 mb-lg-0">
-                    <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
-                        <div class="featured-box bggrey">
-                            <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="/web/plastic-ban/"><img src="{{ public_path().'/web/img/sm/icons/ban.png' }}" alt="Plastic Ban" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Plastic Ban</h5>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                    <a href="/web/plastic-ban/"><img src="{{ public_path().'/web/img/sm/icons/ban.png' }}" alt="Plastic Ban" class="img-fluid" /></a>
+                    <h5 class="font-weight-normal">Plastic Ban</h5>
                 </div>
-                <div class="col-lg-2 mb-4 mb-lg-0">
-                    <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
-                        <div class="featured-box bggrey">
-                            <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="/web/schemes/"><img src="{{ public_path().'/web/img/sm/icons/scheme.png' }}" alt="Schemes" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Schemes</h5>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                    <a href="/web/schemes/"><img src="{{ public_path().'/web/img/sm/icons/scheme.png' }}" alt="Schemes" class="img-fluid" /></a>
+                    <h5 class="font-weight-normal">Schemes</h5>
                 </div>
-                <div class="col-lg-2 mb-4 mb-lg-0">
-                    <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
-                        <div class="featured-box bggrey">
-                            <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="/iec/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">IEC / CB</h5>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                    <a href="/iec/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" /></a>
+                    <h5 class="font-weight-normal">IEC / CB</h5>
                 </div>
-                <div class="col-lg-2 mb-4 mb-lg-0">
-                    <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
-                        <div class="featured-box bggrey">
-                            <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="/web/service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Providers</h5>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                    <a href="/web/service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                    <h5 class="font-weight-normal">Providers</h5>
                 </div>
-                <div class="col-lg-2 mb-4 mb-lg-0">
-                    <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
-                        <div class="featured-box bggrey">
-                            <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Gallery</h5>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                    <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                    <h5 class="font-weight-normal">Gallery</h5>
                 </div>
-                <div class="col-lg-2 mb-4 mb-lg-0">
-                    <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-2-hover-only featured-boxes-modern-style-primary my-4">
-                        <div class="featured-box bggrey">
-                            <div class="box-content px-lg-3 px-xl-4 py-lg-4">
-                                <a href="downloads/4"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid" /></a>
-                                <h5 class="font-weight-normal">Media</h5>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-2 text-center bg-white pt-3 mb-3">
+                    <a href="downloads/4"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                    <h5 class="font-weight-normal">Media</h5>
                 </div>
             </div>
         </div>

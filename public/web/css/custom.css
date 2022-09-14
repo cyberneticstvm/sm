@@ -68,15 +68,15 @@ h4{
 
 section.section{
     padding: 10px 0 !important;
-    border-top: 0px !important;
+    /*border-top: 0px !important;*/
 }
 
-.bg-blue{
+/*.bg-blue{
     background-color: #01295a;
 }
 .featured-box img{
     width: 50%;
-}
+}*/
 .counters strong{
     font-size: 30px !important;
 }
@@ -85,4 +85,7 @@ section.section{
 }
 .counter a{
     color: #ffc107 !important;
+}
+.bg-sky-blue{
+    background-color: #d6e8f5;
 }
