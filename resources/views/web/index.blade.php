@@ -44,27 +44,27 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
-                    <a href="/web/plastic-ban/"><img src="{{ public_path().'/web/img/sm/icons/ban.png' }}" alt="Plastic Ban" class="img-fluid" /></a>
+                    <a href="/web/plastic-ban/"><img src="{{ public_path().'/web/img/sm/icons/ban.png' }}" alt="Plastic Ban" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Plastic Ban</h5>
                 </div>
                 <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
-                    <a href="/web/schemes/"><img src="{{ public_path().'/web/img/sm/icons/scheme.png' }}" alt="Schemes" class="img-fluid" /></a>
+                    <a href="/web/schemes/"><img src="{{ public_path().'/web/img/sm/icons/scheme.png' }}" alt="Schemes" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Schemes</h5>
                 </div>
                 <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
-                    <a href="/iec/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid" /></a>
+                    <a href="/iec/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">IEC / CB</h5>
                 </div>
                 <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
-                    <a href="/web/service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                    <a href="/web/service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Providers</h5>
                 </div>
                 <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
-                    <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                    <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Gallery</h5>
                 </div>
                 <div class="col-lg-2 text-center bg-white pt-3 mb-3">
-                    <a href="downloads/4"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid" /></a>
+                    <a href="downloads/4"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Media</h5>
                 </div>
             </div>
@@ -154,7 +154,7 @@
                         <div class="mt-3 text-center"><a href="/video-gallery/" class="btn btn-outline btn-primary rounded-0 mb-2">More Videos</a></div>
                     </div>
                     <div class="col-lg-6 text-end">
-                        <a class="mt-1 mb-1 me-1 popup-youtube" href="https://www.youtube.com/watch?v=cDmUo436SiU"><img src="{{ public_path().'/web/img/sm/extras/video.jpg' }}" alt="video" class="img-fluid rounded" /></a>
+                        <a class="mt-1 mb-1 me-1 popup-youtube" href="https://www.youtube.com/watch?v=cDmUo436SiU"><img src="{{ public_path().'/web/img/sm/extras/video.jpg' }}" alt="video" class="p-3 img-fluid rounded" /></a>
                     </div>
                 </div>
             </div>

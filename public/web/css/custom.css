@@ -89,3 +89,6 @@ section.section{
 .bg-sky-blue{
     background-color: #d6e8f5;
 }
+.hover:hover{
+    opacity: 0.5;
+}
