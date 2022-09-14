@@ -21,11 +21,11 @@
             @forelse($docs as $key => $doc)
                 @if(empty($doc->preview))
                     <div class="col-lg-8">
-                        <a href="{{ public_path().'/storage/'.$doc->doc_url }}" target="_blank">{{ $doc->title }}</a><br/>
+                        <a href="{{ ($doc->doc_url) ? public_path().'/storage/'.$doc->doc_url : '#' }}" target="_blank">{{ $doc->title }}</a><br/>
                     </div>
                 @else
                     <div class="col-lg-2 mb-3">
-                        <img src="{{ public_path().'/storage/'.$doc->preview }}" class="img-fluid" />
+                        <a href="{{ ($doc->doc_url) ? public_path().'/storage/'.$doc->doc_url : '#' }}" target="_blank"><img src="{{ public_path().'/storage/'.$doc->preview }}" class="img-fluid" /></a>
                     </div>
                 @endif
             @empty
