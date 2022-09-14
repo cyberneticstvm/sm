@@ -18,6 +18,7 @@
                 @endforelse
                 </ul>
             </div>
+            <div class="col">
             @forelse($docs as $key => $doc)
                 @if(empty($doc->preview))
                     <div class="col-lg-8">
@@ -30,6 +31,7 @@
                 @endif
             @empty
             @endforelse
+            </div>
         </div>
     </div>
 </div>
