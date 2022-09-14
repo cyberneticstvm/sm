@@ -44,9 +44,9 @@
                         @forelse($archives as $key => $archive)
                             <ul>
                                 @if($active->doc_type == 'pdf')
-                                    <li><a href="{{ public_path().'/storage/'.$active->document}}" target="_blank">{{ $active->title }}</a></li>
+                                    <li><a href="{{ public_path().'/storage/'.$archive->document}}" target="_blank">{{ $archive->title }}</a></li>
                                 @else
-                                    <li><a href="{{ $active->url }}" target="_blank">{{ $active->title }}</a></li>
+                                    <li><a href="{{ $archive->url }}" target="_blank">{{ $archive->title }}</a></li>
                                 @endif
                             </ul>
                         @empty

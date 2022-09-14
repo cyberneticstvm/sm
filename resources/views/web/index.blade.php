@@ -18,7 +18,7 @@
             <div class="col-lg-3">
                 <div class="card text-center">
                     <div class="card-header bg-color-dark text-white">
-                        <div class="row"><div class="col text-start">What's New</div><div class="col text-end"><a class="text-decoration-none" href="/see-all-whats-new/">See All</a></div></div>
+                        <div class="row"><div class="col text-start">What's New</div><div class="col text-end"><a class="text-decoration-none" href="/see-all/">See All</a></div></div>
                     </div>
                     <div class="card-body">
                         <marquee id="mqdiv" direction="up" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" behavior="scroll">
@@ -151,7 +151,7 @@
                     <div class="col-lg-6 vid-desc">
                         <h4>My Waste My Responsibility</h4>
                         <p class="text-justify text-dark mt-3">Waste management is an important part of our daily living, especially if you are living in a city. Remember, managing food and bio degradable waste at home, keeping non bio degradable waste clean and dry and handing over to scrap dealers or local body collection systems are as important as consuming food!</p>
-                        <div class="mt-3 text-center"><a href="#" class="btn btn-outline btn-primary rounded-0 mb-2">More Videos</a></div>
+                        <div class="mt-3 text-center"><a href="/video-gallery/" class="btn btn-outline btn-primary rounded-0 mb-2">More Videos</a></div>
                     </div>
                     <div class="col-lg-6 text-end">
                         <a class="mt-1 mb-1 me-1 popup-youtube" href="https://www.youtube.com/watch?v=cDmUo436SiU"><img src="{{ public_path().'/web/img/sm/extras/video.jpg' }}" alt="video" class="img-fluid rounded" /></a>

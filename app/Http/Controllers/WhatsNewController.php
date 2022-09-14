@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\WhatsNew;
+use Illuminate\Support\Str;
 
 use DB;
 
@@ -47,7 +48,8 @@ class WhatsNewController extends Controller
         ]);
         $input = $request->all();
         if(!empty($request->file('document'))):        
-            $fileName=$request->file('document')->getClientOriginalName();
+            //$fileName=$request->file('document')->getClientOriginalName();
+            $fileName = Str::random(9);
             $path=$request->file('document')->storeAs('whats-new', $fileName, 'public');
             $input['document'] = $path;
         endif;
@@ -97,7 +99,8 @@ class WhatsNewController extends Controller
         ]);
         $input = $request->all();
         if(!empty($request->file('document'))):        
-            $fileName=$request->file('document')->getClientOriginalName();
+            //$fileName=$request->file('document')->getClientOriginalName();
+            $fileName = Str::random(9);
             $path=$request->file('document')->storeAs('whats-new', $fileName, 'public');
             $input['document'] = $path;
         endif;

@@ -75,8 +75,8 @@
                                             <label for="TextInput" class="form-label">Status</label>
                                             <select class="form-control select2" name="status" required>
                                                 <option value="">Select</option>
-                                                <option value="1" {{ ($doc->status == 1) ? 'selected' : '' }}>Active</option>
-                                                <option value="0" {{ ($doc->status == 0) ? 'selected' : '' }}>Archive</option>
+                                                <option value="1" {{ ($wn->status == 1) ? 'selected' : '' }}>Active</option>
+                                                <option value="0" {{ ($wn->status == 0) ? 'selected' : '' }}>Archive</option>
                                             </select>
                                             @error('status')
                                             <small class="text-danger">{{ $errors->first('status') }}</small>

@@ -32,7 +32,7 @@ class HelperController extends Controller
     }
     public function downloads($catid){
         $category = DB::table('document_types')->find($catid);
-        $side_menu = DB::table('menus')->where('menu_type_id', 3)->get();
+        $side_menu = DB::table('menus')->where('menu_type_id', 3)->where('publish', 1)->get();
         $docs = DB::table('documents')->where('document_type', $catid)->orderbyDesc('created_at')->get();
         return view('web.downloads', compact('docs', 'category', 'side_menu'));
     }
