@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Document;
+use Illuminate\Support\Str;
 
 use DB;
 
@@ -45,12 +46,14 @@ class DocumentController extends Controller
         ]);
         $input = $request->all();
         if(!empty($request->file('doc'))):        
-            $fileName=$request->file('doc')->getClientOriginalName();
+            //$fileName=$request->file('doc')->getClientOriginalName();
+            $fileName = Str::random(9);
             $path=$request->file('doc')->storeAs('iecdocs', $fileName, 'public');
             $input['doc_url'] = $path;
         endif;
         if(!empty($request->file('preview'))):        
-            $fileName=$request->file('preview')->getClientOriginalName();
+            //$fileName=$request->file('preview')->getClientOriginalName();
+            $fileName = Str::random(9);
             $path=$request->file('preview')->storeAs('iecdocs/previews', $fileName, 'public');
             $input['preview'] = $path;
         endif;
@@ -99,14 +102,16 @@ class DocumentController extends Controller
         $input = $request->all();
         $doc = Document::find($id);
         if(!empty($request->file('doc'))):        
-            $fileName=$request->file('doc')->getClientOriginalName();
+            //$fileName=$request->file('doc')->getClientOriginalName();
+            $fileName = Str::random(9);
             $path=$request->file('doc')->storeAs('iecdocs', $fileName, 'public');
             $input['doc_url'] = $path;
         else:
             $input['doc_url'] = $doc->getOriginal('doc_url');
         endif;
         if(!empty($request->file('preview'))):        
-            $fileName=$request->file('preview')->getClientOriginalName();
+            //$fileName=$request->file('preview')->getClientOriginalName();
+            $fileName = Str::random(9);
             $path=$request->file('preview')->storeAs('iecdocs/previews', $fileName, 'public');
             $input['preview'] = $path;
         else:

@@ -98,13 +98,15 @@ class WhatsNewController extends Controller
             'status' => 'required',
         ]);
         $input = $request->all();
+        $wn = WhatsNew::find($id);
         if(!empty($request->file('document'))):        
             //$fileName=$request->file('document')->getClientOriginalName();
             $fileName = Str::random(9);
             $path=$request->file('document')->storeAs('whats-new', $fileName, 'public');
             $input['document'] = $path;
-        endif;
-        $wn = WhatsNew::find($id);
+        else:
+            $input['document'] = $wn->getOriginal('document');
+        endif;        
         $wn->update($input);
         return redirect()->route('admin.whats-new-list')
                         ->with('success','Record updated successfully');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\NewsAndEvents;
+use Illuminate\Support\Str;
 
 use DB;
 
@@ -48,7 +49,8 @@ class NewsEventsController extends Controller
         ]);
         $input = $request->all();
         if(!empty($request->file('img_url'))):        
-            $fileName=$request->file('img_url')->getClientOriginalName();
+            //$fileName=$request->file('img_url')->getClientOriginalName();
+            $fileName = Str::random(9);
             $path=$request->file('img_url')->storeAs('news-events', $fileName, 'public');
             $input['img_url'] = $path;
         endif;
@@ -97,12 +99,15 @@ class NewsEventsController extends Controller
             'content' => 'required',
         ]);
         $input = $request->all();
+        $ne = NewsAndEvents::find($id);
         if(!empty($request->file('img_url'))):        
-            $fileName=$request->file('img_url')->getClientOriginalName();
+            //$fileName=$request->file('img_url')->getClientOriginalName();
+            $fileName = Str::random(9);
             $path=$request->file('img_url')->storeAs('news-events', $fileName, 'public');
             $input['img_url'] = $path;
-        endif;
-        $ne = NewsAndEvents::find($id);
+        else:
+            $input['img_url'] = $ne->getOriginal('img_url');
+        endif;        
         $ne->update($input);
         return redirect()->route('admin.news-events-list')
                         ->with('success','Record updated successfully');
