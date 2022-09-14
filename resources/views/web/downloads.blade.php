@@ -18,7 +18,7 @@
                 @endforelse
                 </ul>
             </div>
-            <div class="col">
+            <div class="col-lg-8">
             @forelse($docs as $key => $doc)
                 @if(empty($doc->preview))
                     <div class="col-lg-8">
