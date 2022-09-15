@@ -92,3 +92,6 @@ section.section{
 .hover:hover{
     opacity: 0.5;
 }
+.custom{
+    height: 70px !important;
+}

@@ -6,6 +6,8 @@ $(function(){
     });
 
     $('table').addClass('table-striped table-bordered');
+
+    $(".header-container .container").css({height: '70px'});
 });
 function Resize(){
     var side = $(".sldiv").height();

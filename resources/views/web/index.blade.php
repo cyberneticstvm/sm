@@ -43,27 +43,27 @@
     <div class="container-fluid bg-sky-blue">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                <div class="col-lg-2 text-center pt-3 mb-3 border-right">
                     <a href="/web/plastic-ban/"><img src="{{ public_path().'/web/img/sm/icons/ban.png' }}" alt="Plastic Ban" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Plastic Ban</h5>
                 </div>
-                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                <div class="col-lg-2 text-center pt-3 mb-3 border-right">
                     <a href="/web/schemes/"><img src="{{ public_path().'/web/img/sm/icons/scheme.png' }}" alt="Schemes" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Schemes</h5>
                 </div>
-                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                <div class="col-lg-2 text-center pt-3 mb-3 border-right">
                     <a href="/iec/"><img src="{{ public_path().'/web/img/sm/icons/capacity.png' }}" alt="IEC" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">IEC / CB</h5>
                 </div>
-                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                <div class="col-lg-2 text-center pt-3 mb-3 border-right">
                     <a href="/web/service-providers/"><img src="{{ public_path().'/web/img/sm/icons/service.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Providers</h5>
                 </div>
-                <div class="col-lg-2 text-center bg-white pt-3 mb-3 border-right">
+                <div class="col-lg-2 text-center pt-3 mb-3 border-right">
                     <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Gallery</h5>
                 </div>
-                <div class="col-lg-2 text-center bg-white pt-3 mb-3">
+                <div class="col-lg-2 text-center pt-3 mb-3">
                     <a href="downloads/4"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Media</h5>
                 </div>
@@ -161,7 +161,7 @@
         </section>
     </div>
     <div class="container">
-        <div class="row mt-5 mb-5">
+        <div class="row mt-5">
             <div class="col-lg-6"><h4 class="">News & Updates</h4></div>
             <div class="col-lg-6 text-end"><a href="/see-all-news-and-events/" class="btn btn-outline btn-primary rounded-0">See All News</a></div>
             <div class="col">
