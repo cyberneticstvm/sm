@@ -60,11 +60,11 @@
                     <h5 class="font-weight-normal">Providers</h5>
                 </div>
                 <div class="col-lg-2 text-center pt-3 mb-3 border-right">
-                    <a href="photo-gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
+                    <a href="/web/gallery/"><img src="{{ public_path().'/web/img/sm/icons/photo.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Gallery</h5>
                 </div>
                 <div class="col-lg-2 text-center pt-3 mb-3">
-                    <a href="downloads/4"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
+                    <a href="/web/media/"><img src="{{ public_path().'/web/img/sm/icons/media.png' }}" alt="Service Providers" class="img-fluid hover" /></a>
                     <h5 class="font-weight-normal">Media</h5>
                 </div>
             </div>
