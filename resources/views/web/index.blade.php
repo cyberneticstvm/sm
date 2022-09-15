@@ -200,7 +200,7 @@
     <div class="container-fluid bggrey pt-3">
         <div class="row">
             <div class="col">
-                <div class="owl-carousel owl-theme" data-plugin-options="{'items': 9, 'autoplay': true, 'autoplayTimeout': 3000}">
+                <div class="owl-carousel owl-theme" data-plugin-options="{'autoWidth': true, 'items': 9, 'autoplay': true, 'autoplayTimeout': 3000}">
                     <div class="fcar">
                         <img class="img-fluid" src="{{ public_path().'/web/img/sm/logos/log1.png' }}" alt="">
                     </div>
