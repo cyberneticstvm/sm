@@ -78,28 +78,28 @@
                         <div class="counter">
                             <strong data-to="1018" data-append="+">1018</strong>
                             <label class="">MCF(80%)</label>
-                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/mcf---consolidated">Read More</a></p>
+                            <p class="mt-2"><a target="_blank" href="https://schemes.suchitwamission.com/mcf/consolidated/">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter">
                             <strong data-to="177" data-append="+">177</strong>
                             <label class="">RRF(65%)</label>
-                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/rrf---consolidated">Read More</a></p>
+                            <p class="mt-2"><a target="_blank" href="https://schemes.suchitwamission.com/rrf/consolidated/">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                         <div class="counter">
                             <strong data-to="1010" data-append="+">1010</strong>
                             <label class="">HKS(90%)</label>
-                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/hks---consolidated">Read More</a></p>
+                            <p class="mt-2"><a target="_blank" href="https://schemes.suchitwamission.com/hks/consolidated/">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="counter">
                             <strong data-to="4085" data-append="+">4085</strong>
                             <label class="">C@S(75%)</label>
-                            <p class="mt-2"><a target="_blank" href="https://sweb.suchitwamission.com/web/c@s---consolidated">Read More</a></p>
+                            <p class="mt-2"><a target="_blank" href="https://schemes.suchitwamission.com/cschool/consolidated/">Read More</a></p>
                         </div>
                     </div>
                 </div>

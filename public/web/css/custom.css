@@ -95,3 +95,6 @@ section.section{
 .custom{
     height: 70px !important;
 }
+.photo-gallery img{
+    height: 250px;
+}
