@@ -41,9 +41,7 @@ Route::get('/admin/login/', function () {
     return view('admin.login');
 });
 Route::post('/admin/login/', [UserController::class, 'login'])->name('login');
-Route::get('/sitemap/', function () {
-    return view('web.sitemap');
-});
+Route::get('/sitemap/', [HelperController::class, 'sitemap'])->name('sitemap');
 
 
 Route::group(['middleware' => ['auth']], function(){
@@ -126,9 +124,9 @@ Route::post('/admin/delete/{id}/{type}/', [HelperController::class, 'delete']);
 
 });
 
-/*Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
-});*/
+});
 
 Route::any('{query}',
     function() { return redirect('/'); })

@@ -115,4 +115,8 @@ class HelperController extends Controller
     public function iec(){
         return view('web.iec');
     }
+    public function sitemap(){
+        $menus = DB::table('menus')->where('publish', 1)->orderBy('menu_item_name')->get();
+        return view('web.sitemap', compact('menus'));
+    }
 }
