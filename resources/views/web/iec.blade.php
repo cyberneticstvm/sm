@@ -12,23 +12,21 @@
             </div>
             <div class="col-lg-3">
                 <ul class="list list-icons list-icons-style-2">
-                    <li class="bg-primary text-white"><i class="fas fa-wrench text-white"></i> IEC Tools</li>
-                    <li class="bg-blue text-white"><i class="fa fa-pencil text-white"></i> IEC Updates</li>
-                    <li class="bg-primary text-white"><i class="fa fa-bullhorn text-white"></i> Key Messages</li>
-                    <li class="bg-blue text-white"><i class="far fa-building text-white"></i> Capacity Building</li>
-                    <li class="bg-primary text-white"><i class="fa fa-volume-up text-white"></i> Online Radio</li>
-                    <li class="bg-blue text-white"><i class="fa fa-question text-white"></i> FAQs?</li>
-                    <li class="bg-primary text-white"><i class="fa fa-microphone text-white"></i> Dissemination on Air</li>
+                    <li class="bg-primary text-white"><i class="fas fa-wrench text-white"></i> <a href="https://sweb.suchitwamission.com/downloads/1" target="_blank" class="text-white">Publications</a></li>
+                    <li class="bg-blue text-white"><i class="fa fa-pencil text-white"></i> <a href="https://sweb.suchitwamission.com/web/power-point-presentations" target="_blank" class="text-white">Presentations</a></li>
+                    <li class="bg-primary text-white"><i class="fa fa-bullhorn text-white"></i> <a href="https://sweb.suchitwamission.com/downloads/4" target="_blank" class="text-white">Press Release</a></li>
+                    <li class="bg-blue text-white"><i class="far fa-file text-white"></i> <a href="https://sweb.suchitwamission.com/web/documents" target="_blank" class="text-white">Documents</a></li>
+                    <li class="bg-primary text-white"><i class="fa fa-image text-white"></i> <a href="https://sweb.suchitwamission.com/photo-gallery" target="_blank" class="text-white">Photo Gallery</a></li>
+                    <li class="bg-blue text-white"><i class="fa fa-play text-white"></i> <a href="https://sweb.suchitwamission.com/video-gallery" target="_blank" class="text-white">Video Gallery</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <ul class="list list-icons list-icons-style-2">
-                    <li class="bg-blue text-white"><i class="fa fa-comments text-white"></i> Facebook Posts & Trolls</li>
-                    <li class="bg-primary text-white"><i class="fa fa-line-chart text-white"></i> Press Release</li>
-                    <li class="bg-blue text-white"><i class="fa fa-file text-white"></i> Related News & articles</li>
-                    <li class="bg-primary text-white"><i class="fa fa-file-pdf text-white"></i> News Letter</li>
-                    <li class="bg-blue text-white"><i class="fa fa-play text-white"></i> News in Media</li>
-                    <li class="bg-primary text-white"><i class="fa fa-user text-white"></i> Case Studies</li>
+                    <li class="bg-blue text-white"><i class="fa fa-comments text-white"></i> <a href="https://sweb.suchitwamission.com/downloads/5" target="_blank" class="text-white">News In Media</a></li>
+                    <li class="bg-primary text-white"><i class="fab fa-facebook text-white"></i> <a href=" https://www.facebook.com/SuchitwaMissionKerala" target="_blank" class="text-white">Facebook</a></li>
+                    <li class="bg-blue text-white"><i class="fab fa-youtube text-white"></i> <a href="https://www.youtube.com/c/SUCHITWAMISSIONKERALA" target="_blank" class="text-white">YouTube</a></li>
+                    <li class="bg-primary text-white"><i class="fab fa-twitter text-white"></i> <a href="https://twitter.com/missionsuchitwa" target="_blank" class="text-white">Twitter</a></li>
+                    <li class="bg-blue text-white"><i class="fab fa-instagram text-white"></i> <a href="https://www.instagram.com/suchitwamission/" target="_blank" class="text-white">Instagram</a></li>
                 </ul>
             </div>
         </div>

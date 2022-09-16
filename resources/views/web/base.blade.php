@@ -194,40 +194,47 @@
 								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
 									<h5 class="text-3 mb-3">Quick Links</h5>
 									<ul class="list list-icons list-icons-sm mb-0">
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">FAQs</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Acts & Rules</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Court Orders</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">RTI</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Feedback</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/frequently-asked-questions">FAQs</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/state-rules">Acts & Rules</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/government-orders">Court Orders</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/right-to-information">RTI</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/contact-us">Feedback</a></li>
 									</ul>
 								</div>
 								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
 									<h5 class="text-3 mb-3">Useful Links</h5>
 									<ul class="list list-icons list-icons-sm mb-0">
 										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Home</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">About Us</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/profile">About Us</a></li>
 										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://empanel.suchitwamission.com" target="_blank">Empanel</a></li>
 										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://dashboard.suchitwamission.com" target="_blank">Schemes</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="/">Sitemap</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-services.html">Contact Us</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" target="_blank" href="/sitemap/">Sitemap</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/contact-us">Contact Us</a></li>
 									</ul>
 								</div>
 								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
-									<h5 class="text-3 mb-3">EXTRA</h5>
+									<h5 class="text-3 mb-3">IEC</h5>
 									<ul class="list list-icons list-icons-sm mb-0">
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-team.html">Team</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-services.html">Services</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-careers.html">Careers</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-faq.html">FAQ</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/downloads/1" target="_blank">Publications</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/web/power-point-presentations" target="_blank">Presentations</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/downloads/4" target="_blank">Press Release</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/web/documents" target="_blank">Documents</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/photo-gallery" target="_blank">Photo Gallery</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/video-gallery" target="_blank">Video Gallery</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/downloads/5" target="_blank">News In Media</a></li>
 									</ul>
 								</div>
 								<div class="col-6 col-lg-3 mb-4 mb-lg-0">
-									<h5 class="text-3 mb-3">Portfolio</h5>
+									<h5 class="text-3 mb-3">Downloads</h5>
 									<ul class="list list-icons list-icons-sm mb-0">
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-team.html">Team</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-services.html">Services</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-careers.html">Careers</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="page-faq.html">FAQ</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/downloads/1">Publications</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/power-point-presentations">Presentations</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/activity-reports">Activity Reports</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/annual-reports">Annual Reports</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/documents">Documents</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/policies-and-guidelines">Policies & Guidelines</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a class="link-hover-style-1" href="https://sweb.suchitwamission.com/web/minutes">Minutes</a></li>
+										
 									</ul>
 								</div>
 							</div>

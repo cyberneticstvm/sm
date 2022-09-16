@@ -98,3 +98,6 @@ section.section{
 .photo-gallery img{
     height: 250px;
 }
+.bg-blue{
+    background-color: #01295a;
+}
