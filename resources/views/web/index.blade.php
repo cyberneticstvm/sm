@@ -40,6 +40,32 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-3 text-center mt-3">
+                    <img src="{{ public_path().'/storage/uploads/cm-300x300.jpg' }}" width="100%" alt="CM" />
+                    <span class="font-weight-normal text-black">Shri. Pinarayi Vijayan</span><br />
+                    <small>Hon. Chief Minister of Kerala</small>
+                </div>
+                <div class="col-md-3 text-center mt-3">
+                    <img src="{{ public_path().'/storage/photos/1/lsgdminister.jpg' }}" width="100%" alt="Minister" />
+                    <span class="font-weight-normal text-black">Shri. M. B. Rajesh</span><br />
+                    <small>Minister for Local Self Government Department</small>
+                </div>
+                <div class="col-md-3 text-center mt-3">
+                    <img src="{{ public_path().'/storage/uploads/acs-300x300.jpg' }}" width="100%" alt="ACS" />
+                    <span class="font-weight-normal text-black">Smt. Saradha Muralidharan IAS</span><br />
+                    <small>ACS, Local Self Government Department</small>
+                </div>
+                <div class="col-md-3 text-center mt-3">
+                    <img src="{{ public_path().'/storage/uploads/ed.jpg' }}" width="95%" alt="ED" />
+                    <span class="font-weight-normal text-black">Shri. K T Balabhaskaran</span><br />
+                    <small>Executive Director</small>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid bg-sky-blue">
         <div class="container">
             <div class="row justify-content-center">
