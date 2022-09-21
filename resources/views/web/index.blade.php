@@ -44,24 +44,24 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-3 text-center mt-3">
-                    <img src="{{ public_path().'/storage/uploads/cm-300x300.jpg' }}" width="100%" alt="CM" />
-                    <span class="font-weight-normal text-black">Shri. Pinarayi Vijayan</span><br />
-                    <small>Hon. Chief Minister of Kerala</small>
+                    <img src="{{ public_path().'/storage/uploads/cm-300x300.jpg' }}" width="50%" alt="CM" /><br />
+                    <span class="text-black font-weight-bold">Shri. Pinarayi Vijayan</span><br />
+                    <span class="text-black font-weight-normal">Hon. Chief Minister of Kerala</span>
                 </div>
                 <div class="col-md-3 text-center mt-3">
-                    <img src="{{ public_path().'/storage/photos/1/lsgdminister.jpg' }}" width="100%" alt="Minister" />
-                    <span class="font-weight-normal text-black">Shri. M. B. Rajesh</span><br />
-                    <small>Minister for Local Self Government Department</small>
+                    <img src="{{ public_path().'/storage/photos/1/lsgdminister.jpg' }}" width="50%" alt="Minister" /><br />
+                    <span class="font-weight-bold text-black">Shri. M. B. Rajesh</span><br />
+                    <span class="text-black font-weight-normal">Minister for Local Self Government Department</span>
                 </div>
                 <div class="col-md-3 text-center mt-3">
-                    <img src="{{ public_path().'/storage/uploads/acs-300x300.jpg' }}" width="100%" alt="ACS" />
-                    <span class="font-weight-normal text-black">Smt. Saradha Muralidharan IAS</span><br />
-                    <small>ACS, Local Self Government Department</small>
+                    <img src="{{ public_path().'/storage/uploads/acs-300x300.jpg' }}" width="50%" alt="ACS" /><br />
+                    <span class="font-weight-bold text-black">Smt. Saradha Muralidharan IAS</span><br />
+                    <span class="text-black font-weight-normal">Additional Chief Secretary, Local Self Government Department</span>
                 </div>
                 <div class="col-md-3 text-center mt-3">
-                    <img src="{{ public_path().'/storage/uploads/ed.jpg' }}" width="95%" alt="ED" />
-                    <span class="font-weight-normal text-black">Shri. K T Balabhaskaran</span><br />
-                    <small>Executive Director</small>
+                    <img src="{{ public_path().'/storage/uploads/ed.jpg' }}" width="47%" alt="ED" /><br />
+                    <span class="font-weight-bold text-black">Shri. K T Balabhaskaran</span><br />
+                    <span class="text-black font-weight-normal">Executive Director</span>
                 </div>
             </div>
         </div>
