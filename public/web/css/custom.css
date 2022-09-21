@@ -101,3 +101,6 @@ section.section{
 .bg-blue{
     background-color: #01295a;
 }
+#footer p{
+    color: #f7f7f7 !important;
+}

@@ -21,7 +21,7 @@ body {
 	color: #777;
 	font-family: "Poppins", Arial, sans-serif;
 	font-size: 14px;
-	line-height: 26px;
+	/*line-height: 26px;*/
 	margin: 0;
 }
 
@@ -10013,7 +10013,7 @@ a.text-light:focus, a.text-light:hover {
 }
 
 #footer a:not(.btn):not(.no-footer-css) {
-	color: #777;
+	color: #f7f7f7;
 	transition: all 0.1s ease-in-out;
 }
 
