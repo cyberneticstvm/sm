@@ -51,12 +51,12 @@
                 <div class="col-md-3 text-center mt-3">
                     <img src="{{ public_path().'/storage/photos/1/lsgdminister.jpg' }}" width="50%" alt="Minister" /><br />
                     <span class="font-weight-bold text-black">Shri. M. B. Rajesh</span><br />
-                    <span class="text-black font-weight-normal">Minister for Local Self Government Department</span>
+                    <span class="text-black font-weight-normal">Minister for <br/>Local Self Government Department</span>
                 </div>
                 <div class="col-md-3 text-center mt-3">
                     <img src="{{ public_path().'/storage/uploads/acs-300x300.jpg' }}" width="50%" alt="ACS" /><br />
                     <span class="font-weight-bold text-black">Smt. Saradha Muralidharan IAS</span><br />
-                    <span class="text-black font-weight-normal">Additional Chief Secretary, Local Self Government Department</span>
+                    <span class="text-black font-weight-normal">Additional Chief Secretary, <br/>Local Self Government Department</span>
                 </div>
                 <div class="col-md-3 text-center mt-3">
                     <img src="{{ public_path().'/storage/uploads/ed.jpg' }}" width="47%" alt="ED" /><br />
