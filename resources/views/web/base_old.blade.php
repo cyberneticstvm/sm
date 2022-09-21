@@ -220,7 +220,7 @@
 										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/downloads/4" target="_blank">Press Release</a></li>
 										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/web/documents" target="_blank">Documents</a></li>
 										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/photo-gallery" target="_blank">Photo Gallery</a></li>
-										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/web/videos" target="_blank">Video Gallery</a></li>
+										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/video-gallery" target="_blank">Video Gallery</a></li>
 										<li><i class="fas fa-angle-right top-8"></i> <a href="https://sweb.suchitwamission.com/downloads/5" target="_blank">News In Media</a></li>
 									</ul>
 								</div>
