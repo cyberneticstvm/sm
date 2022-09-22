@@ -17,7 +17,7 @@
                     <li class="bg-primary text-white"><i class="fa fa-bullhorn text-white"></i> <a href="https://sweb.suchitwamission.com/downloads/4" target="_blank" class="text-white">Press Release</a></li>
                     <li class="bg-blue text-white"><i class="far fa-file text-white"></i> <a href="https://sweb.suchitwamission.com/web/documents" target="_blank" class="text-white">Documents</a></li>
                     <li class="bg-primary text-white"><i class="fa fa-image text-white"></i> <a href="https://sweb.suchitwamission.com/photo-gallery" target="_blank" class="text-white">Photo Gallery</a></li>
-                    <li class="bg-blue text-white"><i class="fa fa-play text-white"></i> <a href="https://sweb.suchitwamission.com/video-gallery" target="_blank" class="text-white">Video Gallery</a></li>
+                    <li class="bg-blue text-white"><i class="fa fa-play text-white"></i> <a href="https://sweb.suchitwamission.com/web/videos/" target="_blank" class="text-white">Video Gallery</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
