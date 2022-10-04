@@ -86,14 +86,17 @@ class SliderController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'img_url' => 'required',
             'order_by' => 'required',
         ]);
-        $input = $request->all();        
-        $fileName=$request->file('img_url')->getClientOriginalName();
-        $path=$request->file('img_url')->storeAs('slider', $fileName, 'public');
-        $input['img_url'] = $path;
+        $input = $request->all();
         $slider = Slider::find($id);
+        if(!empty($request->file('img_url'))):       
+            $fileName=$request->file('img_url')->getClientOriginalName();
+            $path=$request->file('img_url')->storeAs('slider', $fileName, 'public');
+            $input['img_url'] = $path;
+        else:
+            $input['img_url'] = $slider->getOriginal('img_url');
+        endif;        
         $slider->update($input);
         return redirect()->route('admin.slider-list')
                         ->with('success','Slider item updated successfully');

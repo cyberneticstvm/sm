@@ -9,7 +9,7 @@
                     @foreach($sliders as $key => $slider)
                     <div class="sldiv">
                         <div class="img-thumbnail border-0 p-0 d-block">
-                            <img class="img-fluid border-radius-0" src="{{ public_path().'/storage/'.$slider->img_url }}" alt="">
+                            <a href="{{ ($slider->page_url) ? $slider->page_url : '#' }}" target="_blank"><img class="img-fluid border-radius-0" src="{{ public_path().'/storage/'.$slider->img_url }}" alt=""></a>
                         </div>
                     </div>
                     @endforeach

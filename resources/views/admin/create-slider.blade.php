@@ -54,6 +54,10 @@
                                         @error('img_url')
                                         <small class="text-danger">{{ $errors->first('img_url') }}</small>
                                         @enderror
+                                        <div class="col-5">
+                                            <label for="TextInput" class="form-label">Page URL</label>
+                                            <input type="text" class="form-control" name="page_url" placeholder="Page URL"/>
+                                        </div>
                                     </div>
                                     <div class="row g-3 mt-3">
                                         <div class="col">
