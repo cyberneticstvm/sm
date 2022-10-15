@@ -44,7 +44,7 @@ class HelperController extends Controller
         return view('web.page', compact('page', 'sections'));
     }
     public function seeallnews(){
-        $news = DB::table('news_and_events')->orderBy('date')->get();
+        $news = DB::table('news_and_events')->orderBy('date')->orderByDesc('id')->get();
         return view('web.see-all-news', compact('news'));
     }
     public function seeallwhatsnew(){
