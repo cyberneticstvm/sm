@@ -18,7 +18,7 @@ class HelperController extends Controller
         die;
     }
     public function home(){
-        $sliders = DB::table('sliders')->orderBy('order_by')->get();
+        $sliders = DB::table('sliders')->where('publish', 1)->orderBy('order_by')->get();
         $news = DB::table('news_and_events')->orderBy('date')->limit(3)->get();
         $whats = DB::table('whats_news')->orderBy('created_at')->limit(5)->get();
         $qlinks = DB::table('menus')->where('menu_type_id', 2)->get();
