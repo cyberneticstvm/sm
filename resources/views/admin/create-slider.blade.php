@@ -58,6 +58,13 @@
                                             <label for="TextInput" class="form-label">Page URL</label>
                                             <input type="text" class="form-control" name="page_url" placeholder="Page URL"/>
                                         </div>
+                                        <div class="col-5">
+                                            <label for="TextInput" class="form-label">Publish</label>
+                                            <select class="form-control" name="publish">
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="row g-3 mt-3">
                                         <div class="col">

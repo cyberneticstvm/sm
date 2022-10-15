@@ -60,6 +60,13 @@
                                             <label for="TextInput" class="form-label">Page URL</label>
                                             <input type="text" class="form-control" name="page_url" value="{{ $slider->page_url }}" placeholder="Page URL"/>
                                         </div>
+                                        <div class="col-5">
+                                            <label for="TextInput" class="form-label">Publish</label>
+                                            <select class="form-control" name="publish">
+                                                <option value="1" {{ ($slider->publish == 1) ? 'selected' : '' }}>Yes</option>
+                                                <option value="0" {{ ($slider->publish == 0) ? 'selected' : '' }}>No</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="row g-3 mt-3">
                                         <div class="col">

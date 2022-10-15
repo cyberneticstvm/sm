@@ -13,6 +13,7 @@ class Slider extends Model
         'name',
         'img_url',
         'page_url',
+        'publish',
         'order_by',
     ];
 }
